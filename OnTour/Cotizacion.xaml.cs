@@ -30,7 +30,7 @@ namespace OnTour
             NavigationService.Navigate(new Menu());
         }
 
-        private void BtnInfo_Click(object sender, RoutedEventArgs e)
+        private void BtnInfo_Click_1(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new informacion());
         }

@@ -24,5 +24,34 @@ namespace OnTour
         {
             InitializeComponent();
         }
+
+        private void BtnInfo_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new informacion());
+        }
+
+        private void BtnDame_Click(object sender, RoutedEventArgs e)
+        {
+            Paquetes();
+        }
+
+        private void BtnNoruega_Click(object sender, RoutedEventArgs e)
+        {
+            Paquetes();
+        }
+
+        private void BtnBariloche_Click(object sender, RoutedEventArgs e)
+        {
+            Paquetes();
+        }
+
+        private void BtnTorres_Click(object sender, RoutedEventArgs e)
+        {
+            Paquetes();
+        }
+
+        private void Paquetes() {
+            NavigationService.Navigate(new PaqueteTuristico());
+        }
     }
 }
