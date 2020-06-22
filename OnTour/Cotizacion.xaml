@@ -5,9 +5,16 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:OnTour"
       mc:Ignorable="d" d:DesignWidth="800"
-      Title="Cotizacion" Height="881.333">
+      Title="Cotizacion" Height="881.333"
+      TextElement.Foreground="Black"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
 
-    <Grid>
+    <Grid Margin="0,0,0,0.333" Background="#FFF3E44B">
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
@@ -21,7 +28,7 @@
                     <RowDefinition Height="204*"/>
                     <RowDefinition Height="89*"/>
                 </Grid.RowDefinitions>
-                <Rectangle Fill="#FFF3E44B" HorizontalAlignment="Left" Stroke="Black" Width="824" Margin="-28,-2,-20,-1" Height="882" VerticalAlignment="Top" Grid.RowSpan="2" />
+                <Rectangle Fill="#FFF3E44B" Stroke="Black" Margin="-28,-2,0,-0.667" Height="882" VerticalAlignment="Top" Grid.RowSpan="2" />
                 <Image HorizontalAlignment="Left" Height="24" Margin="148,72,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/usuario (1).png"/>
                 <Image HorizontalAlignment="Left" Height="25" Margin="148,158,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (4).png"/>
                 <Image HorizontalAlignment="Left" Height="22" Margin="150,189,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
@@ -30,8 +37,8 @@
                 <Image HorizontalAlignment="Left" Height="26" Margin="151,268,0,0" VerticalAlignment="Top" Width="27" Source="imagenes/pngocean.com (1).png"/>
                 <Image HorizontalAlignment="Left" Height="22" Margin="181,302,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (6).png"/>
                 <Image HorizontalAlignment="Left" Height="22" Margin="401,303,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (6).png"/>
-                <TextBox x:Name="txtCantidadAlumnos" HorizontalAlignment="Left" Height="22" Margin="286,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48"/>
-                <TextBox x:Name="txtCantidadAlumnos_Copy" HorizontalAlignment="Left" Height="22" Margin="576,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48"/>
+                <TextBox x:Name="txtCantidadAlumnos" HorizontalAlignment="Left" Height="22" Margin="295,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" Background="White"/>
+                <TextBox x:Name="txtCantidadAlumnos_Copy" HorizontalAlignment="Left" Height="22" Margin="588,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" Background="White"/>
                 <Image HorizontalAlignment="Left" Height="22" Margin="152,358,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
                 <Image HorizontalAlignment="Left" Height="22" Margin="153,382,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
                 <Image HorizontalAlignment="Left" Height="22" Margin="152,329,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (7).png"/>
@@ -54,22 +61,22 @@
         <Label Content="Cantidad alumnos" HorizontalAlignment="Left" Margin="178,330,0,0" VerticalAlignment="Top"/>
         <Label Content="Cantidad profesores/apoderados" HorizontalAlignment="Left" Margin="386,331,0,0" VerticalAlignment="Top"/>
         <Label Content="Mensaje" HorizontalAlignment="Left" Margin="179,407,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="356,386,0,0" VerticalAlignment="Top" Width="268"/>
+        <ComboBox HorizontalAlignment="Left" Margin="356,386,0,0" VerticalAlignment="Top" Width="268" Background="White"/>
         <Label Content="Seleccione paquete turistico" HorizontalAlignment="Left" Margin="178,358,0,0" VerticalAlignment="Top"/>
         <Label Content="Servicio adicionales" HorizontalAlignment="Left" Margin="179,384,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="356,360,0,0" VerticalAlignment="Top" Width="268"/>
-        <TextBox HorizontalAlignment="Left" Height="22" Margin="310,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314"/>
-        <TextBox HorizontalAlignment="Left" Height="22" Margin="310,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314"/>
-        <TextBox HorizontalAlignment="Left" Height="24" Margin="310,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314"/>
-        <TextBox HorizontalAlignment="Left" Height="24" Margin="310,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314"/>
-        <TextBox HorizontalAlignment="Left" Height="24" Margin="310,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314"/>
-        <TextBox HorizontalAlignment="Left" Height="24" Margin="310,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314"/>
+        <ComboBox HorizontalAlignment="Left" Margin="356,360,0,0" VerticalAlignment="Top" Width="268" Background="White"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="310,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="310,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="310,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="310,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="310,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="310,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White"/>
         <DatePicker HorizontalAlignment="Left" Margin="469,305,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="168" Margin="180,431,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="444"/>
+        <TextBox HorizontalAlignment="Left" Height="168" Margin="180,431,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="444" Background="White"/>
         <ScrollBar HorizontalAlignment="Left" Margin="606,432,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.186,-0.093" Height="166" Width="16"/>
         <Rectangle Fill="black" HorizontalAlignment="Left" Height="10" Margin="310,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="154"/>
-        <ComboBox HorizontalAlignment="Left" Margin="310,193,0,0" VerticalAlignment="Top" Width="220"/>
-        <ComboBox HorizontalAlignment="Left" Margin="310,221,0,0" VerticalAlignment="Top" Width="220"/>
+        <ComboBox HorizontalAlignment="Left" Margin="310,193,0,0" VerticalAlignment="Top" Width="220" Background="White"/>
+        <ComboBox HorizontalAlignment="Left" Margin="310,221,0,0" VerticalAlignment="Top" Width="220" Background="White"/>
         <Image HorizontalAlignment="Left" Height="26" Margin="148,133,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (3).png"/>
         <Image HorizontalAlignment="Left" Height="24" Margin="148,105,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (2).png"/>
         <Button x:Name="btnInfo" Content="INFO/AYUDA" HorizontalAlignment="Left" Margin="671,0,0,159" VerticalAlignment="Bottom" Width="94" Background="Black" Height="28" Foreground="White" Click="BtnInfo_Click"/>
