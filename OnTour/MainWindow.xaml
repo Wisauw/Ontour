@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:OnTour"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="OnTour.MainWindow"
         mc:Ignorable="d"
-        Title="OnTour" Height="875" Width="800" Loaded="Window_Loaded" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+        Title="OnTour" Height="875" Width="800" Loaded="Window_Loaded" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen"
+        Icon="imagenes/Ontour logo.png">
     <Grid Margin="0,0,0,1">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -45,9 +46,6 @@
             <Button Content="Ayuda"  Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="75"  Background="White" Click="Button_Click_5" Foreground="Black" />
         </StackPanel>
         <Frame x:Name="Main" Margin="0,111,0,-1" NavigationUIVisibility="Hidden" Source="/OnTour;component/Menu.xaml"/>
-        <materialDesign:Transitioner SelectedIndex="0">
-           
-        </materialDesign:Transitioner>
 
 
     </Grid>
