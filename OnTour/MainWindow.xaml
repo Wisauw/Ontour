@@ -1,0 +1,49 @@
+﻿<Window x:Class="OnTour.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OnTour"
+        mc:Ignorable="d"
+        Title="OnTour" Height="875" Width="800" Loaded="Window_Loaded">
+    <Grid Margin="0,0,0,1">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel Margin="0,110,0,-1">
+            <Grid Width="775">
+                <Rectangle Fill="#FFF3E44B" Stroke="Black" Margin="-10,0,-17,-1" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="802" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+
+            </Grid>
+
+        </DockPanel>
+
+        <Rectangle Fill="#050505" HorizontalAlignment="Left" Height="110" Stroke="Black" VerticalAlignment="Top" Width="815" Margin="-15,0,-8,0" />
+        <Image HorizontalAlignment="Left" Height="92" Margin="21,18,0,0" VerticalAlignment="Top" Width="87" Source="imagenes/Ontour logo.png"/>
+        <Label Content="Crear cuenta" HorizontalAlignment="Left" Margin="672,35,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="btnIniciarSesion" Content="Iniciar sesión" HorizontalAlignment="Left" Margin="666,18,0,0" VerticalAlignment="Top" Width="89" Background="#F8E308" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="792" Margin="0,0,0,-1">
+            <Button Content="Menú Principal" HorizontalAlignment="Left" Margin="151,90,0,0" VerticalAlignment="Top" Width="93" Background="white" Click="Button_Click_3" Foreground="black"/>
+            <Button x:Name="btnRegistroCliente" Content="Registro Cliente" HorizontalAlignment="Left" Margin="0,90,0,0" VerticalAlignment="Top" Width="96" Background="White" Click="Button_Click_1" Foreground="black"/>
+            <Button Content="Paquetes Turisticos" HorizontalAlignment="Left" Margin="0,90,0,0" VerticalAlignment="Top"  Background="White" RenderTransformOrigin="-0.048,-3.85" Click="Button_Click"/>
+            <Button Content="On Tour" HorizontalAlignment="Left" Margin="0,90,0,0" VerticalAlignment="Top" Width="75" Background="White" Click="Button_Click_4"/>
+            <Button x:Name="btnCotizacion" Content="Cotización" HorizontalAlignment="Left" Margin="0,90,0,0" VerticalAlignment="Top" Width="75" Background="white" Click="Button_Click_2" Foreground="black"/>
+            <Button Content="Ayuda" HorizontalAlignment="Left" Margin="0,90,0,0" VerticalAlignment="Top" Width="75"  Background="White" Click="Button_Click_5" />
+        </StackPanel>
+        <Frame x:Name="Main" Margin="0,111,0,-1" NavigationUIVisibility="Hidden"/>
+
+    </Grid>
+</Window>
