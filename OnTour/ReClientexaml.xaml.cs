@@ -34,5 +34,10 @@ namespace OnTour
         {
             NavigationService.Navigate(new informacion());
         }
+
+        private void BtnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Menu());
+        }
     }
 }

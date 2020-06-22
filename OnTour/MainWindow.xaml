@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OnTour"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="OnTour.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        x:Class="OnTour.MainWindow"
         mc:Ignorable="d"
         Title="OnTour" Height="875" Width="800" Loaded="Window_Loaded" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen"
         Icon="imagenes/Ontour logo.png">
@@ -19,20 +20,11 @@
         <DockPanel Margin="0,110,0,-1">
             <Grid Width="775">
                 <Rectangle Fill="#FFF3E44B" Stroke="Black" Margin="-10,0,-17,-1" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="802" >
-                    <Rectangle.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleX="-1"/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Rectangle.RenderTransform>
                 </Rectangle>
-
             </Grid>
 
         </DockPanel>
-
+<!--#region Barra de navegacion-->
         <Rectangle Fill="#050505" HorizontalAlignment="Left" Height="110" Stroke="Black" VerticalAlignment="Top" Width="800" Margin="0,0,-6.667,0" />
         <Image HorizontalAlignment="Left" Height="92" Margin="10,10,0,0" VerticalAlignment="Top" Width="87" Source="imagenes/Ontour logo.png"/>
         <Label Content="Crear cuenta" HorizontalAlignment="Left" Margin="656,45,0,0" VerticalAlignment="Top" Foreground="White"/>
@@ -46,7 +38,17 @@
             <Button Content="Ayuda"  Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="75"  Background="White" Click="Button_Click_5" Foreground="Black" />
         </StackPanel>
         <Frame x:Name="Main" Margin="0,111,0,-1" NavigationUIVisibility="Hidden" Source="/OnTour;component/Menu.xaml"/>
-
+        <!--#endregion-->
+        <!--#region mensaje de bienvenida-->
+        <materialDesign:DialogHost IsOpen="True">
+            <materialDesign:DialogHost.DialogContent>
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20" Width="380" Height="200">
+                    <TextBlock Text="Bienvenidos a nuestra aplicación, este es un prototipo funcional" />
+                    <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Style="{StaticResource MaterialDesignRaisedButton}" Content="Cerrar"></Button>
+                </Grid>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+        <!--#endregion-->
 
     </Grid>
 </Window>

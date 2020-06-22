@@ -58,17 +58,10 @@ namespace OnTour
         }
 
 
-      
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //DoubleAnimation animacionOnTour = new DoubleAnimation(0, 1, new Duration(TimeSpan.FromSeconds(1)));
-            //label1.BeginAnimation(OpacityProperty, animacionOnTour);
-
-            //DoubleAnimation animacionOnTourFade = new DoubleAnimation(1, 0, new Duration(TimeSpan.FromSeconds(1)));
-            //label1.BeginAnimation(OpacityProperty, animacionOnTourFade);
-
-            //Main.Content = new Menu();
-
+            
         }
     }
-}
+    }
