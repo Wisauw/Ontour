@@ -31,7 +31,7 @@
 
         </DockPanel>
 
-        <Rectangle Fill="#050505" HorizontalAlignment="Left" Height="110" Stroke="Black" VerticalAlignment="Top" Width="815" Margin="-15,0,-8,0" />
+        <Rectangle Fill="#050505" HorizontalAlignment="Left" Height="110" Stroke="Black" VerticalAlignment="Top" Width="800" Margin="0,0,-6.667,0" />
         <Image HorizontalAlignment="Left" Height="92" Margin="21,18,0,0" VerticalAlignment="Top" Width="87" Source="imagenes/Ontour logo.png"/>
         <Label Content="Crear cuenta" HorizontalAlignment="Left" Margin="672,35,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Button x:Name="btnIniciarSesion" Content="Iniciar sesión" HorizontalAlignment="Left" Margin="666,18,0,0" VerticalAlignment="Top" Width="89" Background="#F8E308" />
