@@ -30,7 +30,7 @@
         <Label Content="Crear cuenta" HorizontalAlignment="Left" Margin="656,45,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Button x:Name="btnIniciarSesion" Style="{StaticResource MaterialDesignRaisedAccentButton}" Content="Iniciar sesión" HorizontalAlignment="Left" Margin="636,13,0,0" VerticalAlignment="Top" Width="120" Background="#F8E308" />
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="792" Margin="0,0,0,-1">
-            <Button Content="Menú Principal" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="85,80,0,0" VerticalAlignment="Top" Width="126" Background="white" Click="Button_Click_3" Foreground="black"/>
+            <Button Content="Menú Principal" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="73,80,0,0" VerticalAlignment="Top" Width="126" Background="white" Click="Button_Click_3" Foreground="black"/>
             <Button x:Name="btnRegistroCliente" Style="{StaticResource MaterialDesignRaisedButton}"  Content="Registro Cliente" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="132" Background="White" Click="Button_Click_1" Foreground="black"/>
             <Button Content="Paquetes Turisticos"  Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top"  Background="White" RenderTransformOrigin="-0.048,-3.85" Click="Button_Click" Foreground="Black"/>
             <Button Content="On Tour" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="112" Background="White" Click="Button_Click_4" Foreground="Black"/>
