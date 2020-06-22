@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OnTour"
         mc:Ignorable="d"
-        Title="OnTour" Height="875" Width="800" Loaded="Window_Loaded">
+        Title="OnTour" Height="875" Width="800" Loaded="Window_Loaded" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,0,1">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -43,7 +43,7 @@
             <Button x:Name="btnCotizacion" Content="Cotización" HorizontalAlignment="Left" Margin="0,90,0,0" VerticalAlignment="Top" Width="75" Background="white" Click="Button_Click_2" Foreground="black"/>
             <Button Content="Ayuda" HorizontalAlignment="Left" Margin="0,90,0,0" VerticalAlignment="Top" Width="75"  Background="White" Click="Button_Click_5" />
         </StackPanel>
-        <Frame x:Name="Main" Margin="0,111,0,-1" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="Main" Margin="0,111,0,-1" NavigationUIVisibility="Hidden" Source="/OnTour;component/Menu.xaml"/>
 
     </Grid>
 </Window>
