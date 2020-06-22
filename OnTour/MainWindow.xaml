@@ -32,16 +32,16 @@
         </DockPanel>
 
         <Rectangle Fill="#050505" HorizontalAlignment="Left" Height="110" Stroke="Black" VerticalAlignment="Top" Width="800" Margin="0,0,-6.667,0" />
-        <Image HorizontalAlignment="Left" Height="92" Margin="21,18,0,0" VerticalAlignment="Top" Width="87" Source="imagenes/Ontour logo.png"/>
-        <Label Content="Crear cuenta" HorizontalAlignment="Left" Margin="672,35,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Button x:Name="btnIniciarSesion" Content="Iniciar sesión" HorizontalAlignment="Left" Margin="666,18,0,0" VerticalAlignment="Top" Width="89" Background="#F8E308" />
+        <Image HorizontalAlignment="Left" Height="92" Margin="10,10,0,0" VerticalAlignment="Top" Width="87" Source="imagenes/Ontour logo.png"/>
+        <Label Content="Crear cuenta" HorizontalAlignment="Left" Margin="656,45,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="btnIniciarSesion" Content="Iniciar sesión" HorizontalAlignment="Left" Margin="636,13,0,0" VerticalAlignment="Top" Width="111" Background="#F8E308" />
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="792" Margin="0,0,0,-1">
-            <Button Content="Menú Principal" HorizontalAlignment="Left" Margin="151,90,0,0" VerticalAlignment="Top" Width="93" Background="white" Click="Button_Click_3" Foreground="black"/>
-            <Button x:Name="btnRegistroCliente" Content="Registro Cliente" HorizontalAlignment="Left" Margin="0,90,0,0" VerticalAlignment="Top" Width="96" Background="White" Click="Button_Click_1" Foreground="black"/>
-            <Button Content="Paquetes Turisticos" HorizontalAlignment="Left" Margin="0,90,0,0" VerticalAlignment="Top"  Background="White" RenderTransformOrigin="-0.048,-3.85" Click="Button_Click"/>
-            <Button Content="On Tour" HorizontalAlignment="Left" Margin="0,90,0,0" VerticalAlignment="Top" Width="75" Background="White" Click="Button_Click_4"/>
-            <Button x:Name="btnCotizacion" Content="Cotización" HorizontalAlignment="Left" Margin="0,90,0,0" VerticalAlignment="Top" Width="75" Background="white" Click="Button_Click_2" Foreground="black"/>
-            <Button Content="Ayuda" HorizontalAlignment="Left" Margin="0,90,0,0" VerticalAlignment="Top" Width="75"  Background="White" Click="Button_Click_5" />
+            <Button Content="Menú Principal" HorizontalAlignment="Left" Margin="85,80,0,0" VerticalAlignment="Top" Width="126" Background="white" Click="Button_Click_3" Foreground="black"/>
+            <Button x:Name="btnRegistroCliente" Content="Registro Cliente" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="132" Background="White" Click="Button_Click_1" Foreground="black"/>
+            <Button Content="Paquetes Turisticos" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top"  Background="White" RenderTransformOrigin="-0.048,-3.85" Click="Button_Click" Foreground="Black"/>
+            <Button Content="On Tour" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="112" Background="White" Click="Button_Click_4" Foreground="Black"/>
+            <Button x:Name="btnCotizacion" Content="Cotización" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="104" Background="white" Click="Button_Click_2" Foreground="black"/>
+            <Button Content="Ayuda" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="75"  Background="White" Click="Button_Click_5" Foreground="Black" />
         </StackPanel>
         <Frame x:Name="Main" Margin="0,111,0,-1" NavigationUIVisibility="Hidden" Source="/OnTour;component/Menu.xaml"/>
 
