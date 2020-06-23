@@ -28,7 +28,7 @@
         <Rectangle Fill="#050505" HorizontalAlignment="Left" Height="110" Stroke="Black" VerticalAlignment="Top" Width="800" Margin="0,0,-6.667,0" />
         <Image HorizontalAlignment="Left" Height="92" Margin="10,10,0,0" VerticalAlignment="Top" Width="87" Source="imagenes/Ontour logo.png"/>
         <Label Content="Crear cuenta" HorizontalAlignment="Left" Margin="656,45,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Button x:Name="btnIniciarSesion" Style="{StaticResource MaterialDesignRaisedAccentButton}" Content="Iniciar sesión" HorizontalAlignment="Left" Margin="636,13,0,0" VerticalAlignment="Top" Width="120" Background="#F8E308" />
+        <Button x:Name="btnIniciarSesion" Style="{StaticResource MaterialDesignRaisedAccentButton}" Content="Iniciar sesión" HorizontalAlignment="Left" Margin="636,13,0,0" VerticalAlignment="Top" Width="120" Background="#F8E308" Click="BtnIniciarSesion_Click" />
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="792" Margin="0,0,0,-1">
             <Button Content="Menú Principal" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="73,80,0,0" VerticalAlignment="Top" Width="126" Background="white" Click="Button_Click_3" Foreground="black"/>
             <Button x:Name="btnRegistroCliente" Style="{StaticResource MaterialDesignRaisedButton}"  Content="Registro Cliente" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="132" Background="White" Click="Button_Click_1" Foreground="black"/>

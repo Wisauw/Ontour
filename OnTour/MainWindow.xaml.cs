@@ -63,5 +63,11 @@ namespace OnTour
         {
             
         }
+
+        private void BtnIniciarSesion_Click(object sender, RoutedEventArgs e)
+        {
+            Logeo logeo = new Logeo();
+            logeo.ShowDialog();
+        }
     }
     }
