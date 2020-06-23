@@ -13,7 +13,7 @@
     <Grid Margin="0,0,-0.333,0">
         <Label Content="Login" Margin="172,4,55,0" VerticalAlignment="Top" Width="254" FontFamily="Segoe UI Black" FontSize="24" Foreground="black" HorizontalAlignment="Center"/>
         <Rectangle Fill="black" HorizontalAlignment="Left" Height="9" Margin="172,44,0,0" Stroke="Black" VerticalAlignment="Top" Width="154"/>
-        <TextBox HorizontalAlignment="Left" Height="38" Margin="136,117,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="243" Background="White" materialDesign:HintAssist.Hint="Nombredeprueba123"/>
+        <TextBox HorizontalAlignment="Left" Height="38" Margin="136,117,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="243" Background="White" materialDesign:HintAssist.Hint="Nombredeprueba1235"/>
         <Label Content="Usuario" HorizontalAlignment="Left" Margin="134,78,0,0" VerticalAlignment="Top" Height="39" Width="99"/>
         <Label Content="Contraseña" HorizontalAlignment="Left" Margin="134,163,0,0" VerticalAlignment="Top" Height="39" Width="138"/>
         <TextBox HorizontalAlignment="Left" Height="37" Margin="136,202,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="243" Background="White" materialDesign:HintAssist.Hint="**********"/>
