@@ -36,20 +36,36 @@
         <!--#endregion-->
         <!--#region Botones Paquetes con imagenes-->
         <Button x:Name="BtnBariloche" HorizontalAlignment="Left" Margin="95,384,0,0" VerticalAlignment="Top" Width="292" Height="202" Background="{x:Null}" BorderThickness="0" Click="BtnBariloche_Click">
-            <Image Source="imagenes/bariloche.jpg" IsEnabled="True" Height="184"/>
+            <Image Source="imagenes/bariloche.jpg" IsEnabled="True" Height="184">
+                <Image.Effect>
+                    <DropShadowEffect ShadowDepth="25" Color="#FFE7DA62" BlurRadius="30"/>
+                </Image.Effect>
+            </Image>
         </Button>
         <Rectangle Fill="#FFF3E44B" HorizontalAlignment="Left" Height="34" Margin="446,600,0,0" Stroke="Black" VerticalAlignment="Top" Width="278"/>
         <Rectangle Fill="#FFF3E44B" HorizontalAlignment="Left" Height="34" Margin="109,600,0,0" Stroke="Black" VerticalAlignment="Top" Width="278"/>
         <TextBlock HorizontalAlignment="Left" Margin="446,604,0,0" TextWrapping="Wrap" Text="Torres del Paine, Chile" VerticalAlignment="Top" Height="30" Width="276" FontSize="18" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="111,604,0,0" TextWrapping="Wrap" Text="Bariloche, Argentina" VerticalAlignment="Top" Height="30" Width="276" FontSize="18" TextAlignment="Center"/>
         <Button x:Name="btnTorres" HorizontalAlignment="Left" Margin="446,384,0,0" VerticalAlignment="Top" Width="276" Height="202" Background="{x:Null}" BorderThickness="0" Click="BtnTorres_Click">
-            <Image Source="imagenes/Torres.jpg"/>
+            <Image Source="imagenes/Torres.jpg">
+                <Image.Effect>
+                    <DropShadowEffect ShadowDepth="25" Color="#FFE7DA62" BlurRadius="30"/>
+                </Image.Effect>
+            </Image>
         </Button>
         <Button x:Name="btnNoruega" HorizontalAlignment="Left" Margin="446,102,0,0" VerticalAlignment="Top" Width="276" Height="202" Background="{x:Null}" BorderThickness="0" Click="BtnNoruega_Click">
-            <Image Source="imagenes/nor.jpg" Height="179"/>
+            <Image Source="imagenes/nor.jpg" Height="179">
+                <Image.Effect>
+                    <DropShadowEffect ShadowDepth="25" Color="#FFE7DA62" BlurRadius="30"/>
+                </Image.Effect>
+            </Image>
         </Button>
         <Button x:Name="btnDame" HorizontalAlignment="Left" Margin="100,102,0,0" VerticalAlignment="Top" Width="276" Height="202" Background="{x:Null}" BorderThickness="0" Click="BtnDame_Click">
-            <Image Source="imagenes/dame dulac.jpg"/>
+            <Image Source="imagenes/dame dulac.jpg">
+                <Image.Effect>
+                    <DropShadowEffect ShadowDepth="25" Color="#FFE7DA62" BlurRadius="30"/>
+                </Image.Effect>
+            </Image>
         </Button>
         <!--#endregion-->
 

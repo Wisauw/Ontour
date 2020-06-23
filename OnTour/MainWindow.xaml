@@ -40,14 +40,14 @@
         <Frame x:Name="Main" Margin="0,111,0,-1" NavigationUIVisibility="Hidden" Source="/OnTour;component/Menu.xaml"/>
         <!--#endregion-->
         <!--#region mensaje de bienvenida-->
-        <materialDesign:DialogHost IsOpen="True">
+        <!--<materialDesign:DialogHost IsOpen="True">
             <materialDesign:DialogHost.DialogContent>
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20" Width="380" Height="200">
                     <TextBlock Text="Bienvenidos a nuestra aplicación, este es un prototipo funcional" />
                     <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Style="{StaticResource MaterialDesignRaisedButton}" Content="Cerrar"></Button>
                 </Grid>
             </materialDesign:DialogHost.DialogContent>
-        </materialDesign:DialogHost>
+        </materialDesign:DialogHost>-->
         <!--#endregion-->
 
     </Grid>
