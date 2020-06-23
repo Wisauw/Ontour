@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OnTourDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CLIENTE">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre_Completo" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Id_Colegio" Type="int" Nullable="false" />
+          <Property Name="Id_Ejecutivo" Type="int" Nullable="false" />
+          <Property Name="Id_Paquete_Turistico" Type="int" Nullable="false" />
+          <Property Name="Id_Region" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="COLEGIO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Telefono" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="Nombre_Rector" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="Telefono_Rector" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="Nombre_Representante" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="Telefono_Representante" Type="nvarchar" MaxLength="12" Nullable="false" />
+        </EntityType>
+        <EntityType Name="COMUNA">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Id_Region" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DESTINO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EJECUTIVO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre_Completo" Type="nvarchar" MaxLength="70" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PAQUETE_TURISTICO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Id_Destino" Type="int" Nullable="false" />
+          <Property Name="Id_Servicio" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="REGION">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="40" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SERVICIO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__CLIENTE__Id_Cole__31EC6D26">
+          <End Role="COLEGIO" Type="Self.COLEGIO" Multiplicity="1" />
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COLEGIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="Id_Colegio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CLIENTE__Id_Ejec__32E0915F">
+          <End Role="EJECUTIVO" Type="Self.EJECUTIVO" Multiplicity="1" />
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EJECUTIVO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="Id_Ejecutivo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CLIENTE__Id_Paqu__33D4B598">
+          <End Role="PAQUETE_TURISTICO" Type="Self.PAQUETE_TURISTICO" Multiplicity="1" />
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAQUETE_TURISTICO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="Id_Paquete_Turistico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CLIENTE__Id_Regi__34C8D9D1">
+          <End Role="REGION" Type="Self.REGION" Multiplicity="1" />
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGION">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="Id_Region" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__COMUNA__Id_Regio__2B3F6F97">
+          <End Role="REGION" Type="Self.REGION" Multiplicity="1" />
+          <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGION">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="COMUNA">
+              <PropertyRef Name="Id_Region" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PAQUETE_T__Id_De__35BCFE0A">
+          <End Role="DESTINO" Type="Self.DESTINO" Multiplicity="1" />
+          <End Role="PAQUETE_TURISTICO" Type="Self.PAQUETE_TURISTICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DESTINO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PAQUETE_TURISTICO">
+              <PropertyRef Name="Id_Destino" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PAQUETE_T__Id_Se__36B12243">
+          <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="1" />
+          <End Role="PAQUETE_TURISTICO" Type="Self.PAQUETE_TURISTICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PAQUETE_TURISTICO">
+              <PropertyRef Name="Id_Servicio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OnTourDBModelStoreContainer">
+          <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COLEGIO" EntityType="Self.COLEGIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COMUNA" EntityType="Self.COMUNA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DESTINO" EntityType="Self.DESTINO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EJECUTIVO" EntityType="Self.EJECUTIVO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PAQUETE_TURISTICO" EntityType="Self.PAQUETE_TURISTICO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REGION" EntityType="Self.REGION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SERVICIO" EntityType="Self.SERVICIO" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__CLIENTE__Id_Cole__31EC6D26" Association="Self.FK__CLIENTE__Id_Cole__31EC6D26">
+            <End Role="COLEGIO" EntitySet="COLEGIO" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CLIENTE__Id_Ejec__32E0915F" Association="Self.FK__CLIENTE__Id_Ejec__32E0915F">
+            <End Role="EJECUTIVO" EntitySet="EJECUTIVO" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CLIENTE__Id_Paqu__33D4B598" Association="Self.FK__CLIENTE__Id_Paqu__33D4B598">
+            <End Role="PAQUETE_TURISTICO" EntitySet="PAQUETE_TURISTICO" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CLIENTE__Id_Regi__34C8D9D1" Association="Self.FK__CLIENTE__Id_Regi__34C8D9D1">
+            <End Role="REGION" EntitySet="REGION" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COMUNA__Id_Regio__2B3F6F97" Association="Self.FK__COMUNA__Id_Regio__2B3F6F97">
+            <End Role="REGION" EntitySet="REGION" />
+            <End Role="COMUNA" EntitySet="COMUNA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PAQUETE_T__Id_De__35BCFE0A" Association="Self.FK__PAQUETE_T__Id_De__35BCFE0A">
+            <End Role="DESTINO" EntitySet="DESTINO" />
+            <End Role="PAQUETE_TURISTICO" EntitySet="PAQUETE_TURISTICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PAQUETE_T__Id_Se__36B12243" Association="Self.FK__PAQUETE_T__Id_Se__36B12243">
+            <End Role="SERVICIO" EntitySet="SERVICIO" />
+            <End Role="PAQUETE_TURISTICO" EntitySet="PAQUETE_TURISTICO" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OnTourDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CLIENTE">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre_Completo" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id_Colegio" Type="Int32" Nullable="false" />
+          <Property Name="Id_Ejecutivo" Type="Int32" Nullable="false" />
+          <Property Name="Id_Paquete_Turistico" Type="Int32" Nullable="false" />
+          <Property Name="Id_Region" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="COLEGIO" Relationship="Self.FK__CLIENTE__Id_Cole__31EC6D26" FromRole="CLIENTE" ToRole="COLEGIO" />
+          <NavigationProperty Name="EJECUTIVO" Relationship="Self.FK__CLIENTE__Id_Ejec__32E0915F" FromRole="CLIENTE" ToRole="EJECUTIVO" />
+          <NavigationProperty Name="PAQUETE_TURISTICO" Relationship="Self.FK__CLIENTE__Id_Paqu__33D4B598" FromRole="CLIENTE" ToRole="PAQUETE_TURISTICO" />
+          <NavigationProperty Name="REGION" Relationship="Self.FK__CLIENTE__Id_Regi__34C8D9D1" FromRole="CLIENTE" ToRole="REGION" />
+        </EntityType>
+        <EntityType Name="COLEGIO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nombre_Rector" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Telefono_Rector" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nombre_Representante" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Telefono_Representante" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="CLIENTE" Relationship="Self.FK__CLIENTE__Id_Cole__31EC6D26" FromRole="COLEGIO" ToRole="CLIENTE" />
+        </EntityType>
+        <EntityType Name="COMUNA">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id_Region" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="REGION" Relationship="Self.FK__COMUNA__Id_Regio__2B3F6F97" FromRole="COMUNA" ToRole="REGION" />
+        </EntityType>
+        <EntityType Name="DESTINO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PAQUETE_TURISTICO" Relationship="Self.FK__PAQUETE_T__Id_De__35BCFE0A" FromRole="DESTINO" ToRole="PAQUETE_TURISTICO" />
+        </EntityType>
+        <EntityType Name="EJECUTIVO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre_Completo" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="CLIENTE" Relationship="Self.FK__CLIENTE__Id_Ejec__32E0915F" FromRole="EJECUTIVO" ToRole="CLIENTE" />
+        </EntityType>
+        <EntityType Name="PAQUETE_TURISTICO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id_Destino" Type="Int32" Nullable="false" />
+          <Property Name="Id_Servicio" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CLIENTE" Relationship="Self.FK__CLIENTE__Id_Paqu__33D4B598" FromRole="PAQUETE_TURISTICO" ToRole="CLIENTE" />
+          <NavigationProperty Name="DESTINO" Relationship="Self.FK__PAQUETE_T__Id_De__35BCFE0A" FromRole="PAQUETE_TURISTICO" ToRole="DESTINO" />
+          <NavigationProperty Name="SERVICIO" Relationship="Self.FK__PAQUETE_T__Id_Se__36B12243" FromRole="PAQUETE_TURISTICO" ToRole="SERVICIO" />
+        </EntityType>
+        <EntityType Name="REGION">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="CLIENTE" Relationship="Self.FK__CLIENTE__Id_Regi__34C8D9D1" FromRole="REGION" ToRole="CLIENTE" />
+          <NavigationProperty Name="COMUNA" Relationship="Self.FK__COMUNA__Id_Regio__2B3F6F97" FromRole="REGION" ToRole="COMUNA" />
+        </EntityType>
+        <EntityType Name="SERVICIO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PAQUETE_TURISTICO" Relationship="Self.FK__PAQUETE_T__Id_Se__36B12243" FromRole="SERVICIO" ToRole="PAQUETE_TURISTICO" />
+        </EntityType>
+        <Association Name="FK__CLIENTE__Id_Cole__31EC6D26">
+          <End Role="COLEGIO" Type="Self.COLEGIO" Multiplicity="1" />
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COLEGIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="Id_Colegio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CLIENTE__Id_Ejec__32E0915F">
+          <End Role="EJECUTIVO" Type="Self.EJECUTIVO" Multiplicity="1" />
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EJECUTIVO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="Id_Ejecutivo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CLIENTE__Id_Paqu__33D4B598">
+          <End Role="PAQUETE_TURISTICO" Type="Self.PAQUETE_TURISTICO" Multiplicity="1" />
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAQUETE_TURISTICO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="Id_Paquete_Turistico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CLIENTE__Id_Regi__34C8D9D1">
+          <End Role="REGION" Type="Self.REGION" Multiplicity="1" />
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGION">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="Id_Region" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__COMUNA__Id_Regio__2B3F6F97">
+          <End Role="REGION" Type="Self.REGION" Multiplicity="1" />
+          <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGION">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="COMUNA">
+              <PropertyRef Name="Id_Region" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PAQUETE_T__Id_De__35BCFE0A">
+          <End Role="DESTINO" Type="Self.DESTINO" Multiplicity="1" />
+          <End Role="PAQUETE_TURISTICO" Type="Self.PAQUETE_TURISTICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DESTINO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PAQUETE_TURISTICO">
+              <PropertyRef Name="Id_Destino" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PAQUETE_T__Id_Se__36B12243">
+          <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="1" />
+          <End Role="PAQUETE_TURISTICO" Type="Self.PAQUETE_TURISTICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PAQUETE_TURISTICO">
+              <PropertyRef Name="Id_Servicio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OnTourDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" />
+          <EntitySet Name="COLEGIO" EntityType="Self.COLEGIO" />
+          <EntitySet Name="COMUNA" EntityType="Self.COMUNA" />
+          <EntitySet Name="DESTINO" EntityType="Self.DESTINO" />
+          <EntitySet Name="EJECUTIVO" EntityType="Self.EJECUTIVO" />
+          <EntitySet Name="PAQUETE_TURISTICO" EntityType="Self.PAQUETE_TURISTICO" />
+          <EntitySet Name="REGION" EntityType="Self.REGION" />
+          <EntitySet Name="SERVICIO" EntityType="Self.SERVICIO" />
+          <AssociationSet Name="FK__CLIENTE__Id_Cole__31EC6D26" Association="Self.FK__CLIENTE__Id_Cole__31EC6D26">
+            <End Role="COLEGIO" EntitySet="COLEGIO" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CLIENTE__Id_Ejec__32E0915F" Association="Self.FK__CLIENTE__Id_Ejec__32E0915F">
+            <End Role="EJECUTIVO" EntitySet="EJECUTIVO" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CLIENTE__Id_Paqu__33D4B598" Association="Self.FK__CLIENTE__Id_Paqu__33D4B598">
+            <End Role="PAQUETE_TURISTICO" EntitySet="PAQUETE_TURISTICO" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CLIENTE__Id_Regi__34C8D9D1" Association="Self.FK__CLIENTE__Id_Regi__34C8D9D1">
+            <End Role="REGION" EntitySet="REGION" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COMUNA__Id_Regio__2B3F6F97" Association="Self.FK__COMUNA__Id_Regio__2B3F6F97">
+            <End Role="REGION" EntitySet="REGION" />
+            <End Role="COMUNA" EntitySet="COMUNA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PAQUETE_T__Id_De__35BCFE0A" Association="Self.FK__PAQUETE_T__Id_De__35BCFE0A">
+            <End Role="DESTINO" EntitySet="DESTINO" />
+            <End Role="PAQUETE_TURISTICO" EntitySet="PAQUETE_TURISTICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PAQUETE_T__Id_Se__36B12243" Association="Self.FK__PAQUETE_T__Id_Se__36B12243">
+            <End Role="SERVICIO" EntitySet="SERVICIO" />
+            <End Role="PAQUETE_TURISTICO" EntitySet="PAQUETE_TURISTICO" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OnTourDBModelStoreContainer" CdmEntityContainer="OnTourDBEntities">
+          <EntitySetMapping Name="CLIENTE">
+            <EntityTypeMapping TypeName="OnTourDBModel.CLIENTE">
+              <MappingFragment StoreEntitySet="CLIENTE">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre_Completo" ColumnName="Nombre_Completo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Id_Colegio" ColumnName="Id_Colegio" />
+                <ScalarProperty Name="Id_Ejecutivo" ColumnName="Id_Ejecutivo" />
+                <ScalarProperty Name="Id_Paquete_Turistico" ColumnName="Id_Paquete_Turistico" />
+                <ScalarProperty Name="Id_Region" ColumnName="Id_Region" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COLEGIO">
+            <EntityTypeMapping TypeName="OnTourDBModel.COLEGIO">
+              <MappingFragment StoreEntitySet="COLEGIO">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Nombre_Rector" ColumnName="Nombre_Rector" />
+                <ScalarProperty Name="Telefono_Rector" ColumnName="Telefono_Rector" />
+                <ScalarProperty Name="Nombre_Representante" ColumnName="Nombre_Representante" />
+                <ScalarProperty Name="Telefono_Representante" ColumnName="Telefono_Representante" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COMUNA">
+            <EntityTypeMapping TypeName="OnTourDBModel.COMUNA">
+              <MappingFragment StoreEntitySet="COMUNA">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id_Region" ColumnName="Id_Region" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DESTINO">
+            <EntityTypeMapping TypeName="OnTourDBModel.DESTINO">
+              <MappingFragment StoreEntitySet="DESTINO">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EJECUTIVO">
+            <EntityTypeMapping TypeName="OnTourDBModel.EJECUTIVO">
+              <MappingFragment StoreEntitySet="EJECUTIVO">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre_Completo" ColumnName="Nombre_Completo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PAQUETE_TURISTICO">
+            <EntityTypeMapping TypeName="OnTourDBModel.PAQUETE_TURISTICO">
+              <MappingFragment StoreEntitySet="PAQUETE_TURISTICO">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id_Destino" ColumnName="Id_Destino" />
+                <ScalarProperty Name="Id_Servicio" ColumnName="Id_Servicio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REGION">
+            <EntityTypeMapping TypeName="OnTourDBModel.REGION">
+              <MappingFragment StoreEntitySet="REGION">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SERVICIO">
+            <EntityTypeMapping TypeName="OnTourDBModel.SERVICIO">
+              <MappingFragment StoreEntitySet="SERVICIO">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
