@@ -33,6 +33,7 @@
         <Button x:Name="btnLocalizacion" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Left" Margin="559,685,0,0" VerticalAlignment="Top" Width="32"   Height="27" Background="Black" RenderTransformOrigin="-0.586,0.537">
             <materialDesign:PackIcon Kind="MapMarker" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="18" ></materialDesign:PackIcon>
         </Button>
+        <Rectangle Fill="black" HorizontalAlignment="Left" Height="10" Margin="222,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="226"/>
         <!--#endregion-->
     </Grid>
 

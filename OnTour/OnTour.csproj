@@ -69,6 +69,9 @@
     <Compile Include="informacion.xaml.cs">
       <DependentUpon>informacion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Logeo.xaml.cs">
+      <DependentUpon>Logeo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
@@ -86,6 +89,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="informacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Logeo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
