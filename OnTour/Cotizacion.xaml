@@ -23,12 +23,14 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
+        <!--#region iconos de variables-->
         <DockPanel Margin="-4,87,20,23">
             <Grid Width="776" Margin="0,-84,0,-24">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="204*"/>
                     <RowDefinition Height="89*"/>
                 </Grid.RowDefinitions>
+                
                 <Image HorizontalAlignment="Left" Height="24" Margin="148,72,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/usuario (1).png"/>
                 <Image HorizontalAlignment="Left" Height="25" Margin="148,158,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (4).png"/>
                 <Image HorizontalAlignment="Left" Height="22" Margin="150,189,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
@@ -43,10 +45,12 @@
                 <Image HorizontalAlignment="Left" Height="22" Margin="153,426,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
                 <Image HorizontalAlignment="Left" Height="22" Margin="153,344,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (7).png"/>
                 <Image HorizontalAlignment="Left" Height="22" Margin="359,344,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (7).png"/>
-
+                
             </Grid>
 
         </DockPanel>
+        <!--#endregion-->
+        <!--#region Labels, textbox y esas cosas-->
         <Label Content="COTIZACIÓN" HorizontalAlignment="Left" Margin="304,7,0,0" VerticalAlignment="Top" Width="168" FontFamily="Segoe UI Black" FontSize="24" Foreground="black"/>
         <Label Content="Nombre Completo" HorizontalAlignment="Left" Margin="178,75,0,0" VerticalAlignment="Top"/>
         <Label Content="E-Mail" HorizontalAlignment="Left" Margin="178,103,0,0" VerticalAlignment="Top"/>
@@ -72,6 +76,7 @@
         <TextBox HorizontalAlignment="Left" Height="24" Margin="310,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese Origen" />
         <TextBox HorizontalAlignment="Left" Height="24" Margin="310,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese Destino" />
         <DatePicker HorizontalAlignment="Left" Margin="469,305,0,0" VerticalAlignment="Top"  Width="23"/>
+        <DatePicker HorizontalAlignment="Left" Margin="231,305,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="168" Margin="180,485,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="444" Background="White" materialDesign:HintAssist.Hint="Escriba su mensaje" />
         <ScrollBar HorizontalAlignment="Left" Margin="607,485,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.186,-0.093" Height="166" Width="16"/>
         <Rectangle Fill="black" HorizontalAlignment="Left" Height="10" Margin="310,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="154"/>
@@ -79,16 +84,41 @@
         <ComboBox HorizontalAlignment="Left" Margin="310,221,0,0" VerticalAlignment="Top" Width="220" Background="White" materialDesign:HintAssist.Hint="Seleccione una Comuna" />
         <Image HorizontalAlignment="Left" Height="26" Margin="148,133,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (3).png"/>
         <Image HorizontalAlignment="Left" Height="24" Margin="148,105,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (2).png"/>
-        <Image HorizontalAlignment="Left" Height="22" Margin="711,680,0,0" VerticalAlignment="Top" Width="24" Source="imagenes/pngocean.com (9).png"/>
-        <Image HorizontalAlignment="Left" Height="22" Margin="683,680,0,0" VerticalAlignment="Top" Width="24" Source="imagenes/pngocean.com (8).png"/>
-        <Image HorizontalAlignment="Left" Height="26" Margin="654,677,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (1).png"/>
+        <!--#endregion-->
+        
+        <!--#region botones Principales-->
         <Button x:Name="btnMenuPrincipal" Style="{StaticResource MaterialDesignRaisedButton}" Content="Menú principal" HorizontalAlignment="Left" Margin="178,670,0,0" VerticalAlignment="Top" Width="138" Background="White" Click="BtnMenuPrincipal_Click" Foreground="Black"/>
         <Button x:Name="btnCancelar" Style="{StaticResource MaterialDesignRaisedButton}" Content="Cancelar" HorizontalAlignment="Left" Margin="356,671,0,0" VerticalAlignment="Top" Width="89" Background="White" Foreground="Black"/>
-        <Button x:Name="btnSolicitarCotizacion" Style="{StaticResource MaterialDesignRaisedButton}" Content="Solicitar cotización" HorizontalAlignment="Left" Margin="484,670,0,0" VerticalAlignment="Top" Width="154" Background="Black" Height="33" Foreground="White"/>
-        <DatePicker HorizontalAlignment="Left" Margin="231,305,0,0" VerticalAlignment="Top"/>
+        <!--Esta parte de programacion esta hecha para que al presionar el boton de solicitar muestre una ventana emergente tipo Android-->
+        <materialDesign:DialogHost CloseOnClickAway="True">
+            <materialDesign:DialogHost.DialogContent>
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20" Width="250" Height="200">
+                    <TextBlock Text="Esta funcionalidad esta siendo programada" />
+                    <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Style="{StaticResource MaterialDesignRaisedButton}" Content="Cerrar"></Button>
+                </Grid>
+            </materialDesign:DialogHost.DialogContent>
+            <Button x:Name="btnSolicitarCotizacion" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" Style="{StaticResource MaterialDesignRaisedButton}"  Content="Solicitar cotización" HorizontalAlignment="Left" Margin="484,670,0,0" VerticalAlignment="Top" Width="154" Background="Black" Height="33" Foreground="White"/>
+        </materialDesign:DialogHost>
+        <!--#endregion-->
+        
+        <!--#region Botones de ayuda-->
         <Button x:Name="btnInfo" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Left" Margin="739,676,0,0" VerticalAlignment="Top" Width="31"  Click="BtnInfo_Click_1" Height="27" Background="#FF04000C">
             <materialDesign:PackIcon Kind="AboutVariant" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="18" ></materialDesign:PackIcon>
         </Button>
+        <Button x:Name="btnFace" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Left" Margin="707,676,0,0" VerticalAlignment="Top" Width="32"   Height="27" Background="Black" RenderTransformOrigin="-0.586,0.537">
+            <materialDesign:PackIcon Kind="Facebook" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="18" ></materialDesign:PackIcon>
+        </Button>
+        <Button x:Name="btnWsp" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Left" Margin="675,677,0,0" VerticalAlignment="Top" Width="32"   Height="27" Background="Black" RenderTransformOrigin="-0.586,0.537">
+            <materialDesign:PackIcon Kind="Whatsapp" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="18" ></materialDesign:PackIcon>
+        </Button>
+        <Button x:Name="btnLocalizacion" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Left" Margin="643,677,0,0" VerticalAlignment="Top" Width="32"   Height="27" Background="Black" RenderTransformOrigin="-0.586,0.537">
+            <materialDesign:PackIcon Kind="MapMarker" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="18" ></materialDesign:PackIcon>
+        </Button>
+        <!--#endregion -->
+       
+
+
+
 
     </Grid>
 </Page>
