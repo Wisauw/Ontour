@@ -5,12 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="51ab711eaa154a149d5d50a7f9a71de8" Name="Diagram1">
-        <EntityTypeShape EntityType="OnTourDBModel.CLIENTE" Width="1.5" PointX="5.5" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnTourDBModel.CLIENTE" Width="1.75" PointX="5.25" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="OnTourDBModel.COLEGIO" Width="1.5" PointX="2" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="OnTourDBModel.COMUNA" Width="1.5" PointX="0.5" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="OnTourDBModel.DESTINO" Width="1.5" PointX="10.375" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="OnTourDBModel.EJECUTIVO" Width="1.5" PointX="5.625" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="OnTourDBModel.PAQUETE_TURISTICO" Width="1.5" PointX="8.125" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnTourDBModel.DESTINO" Width="1.5" PointX="11.875" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnTourDBModel.EJECUTIVO" Width="1.625" PointX="5.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnTourDBModel.PAQUETE_TURISTICO" Width="2" PointX="8" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="OnTourDBModel.REGION" Width="1.5" PointX="2.875" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="OnTourDBModel.SERVICIO" Width="1.5" PointX="8" PointY="0.625" IsExpanded="true" />
         <AssociationConnector Association="OnTourDBModel.FK__CLIENTE__Id_Cole__31EC6D26" ManuallyRouted="false" />

@@ -80,8 +80,8 @@
         <TextBox HorizontalAlignment="Left" Height="168" Margin="180,485,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="444" Background="White" materialDesign:HintAssist.Hint="Escriba su mensaje" />
         <ScrollBar HorizontalAlignment="Left" Margin="607,485,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.186,-0.093" Height="166" Width="16"/>
         <Rectangle Fill="black" HorizontalAlignment="Left" Height="10" Margin="310,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="154"/>
-        <ComboBox HorizontalAlignment="Left" Margin="310,193,0,0" VerticalAlignment="Top" Width="220" Background="White" materialDesign:HintAssist.Hint="Seleccione una region" />
-        <ComboBox HorizontalAlignment="Left" Margin="310,221,0,0" VerticalAlignment="Top" Width="220" Background="White" materialDesign:HintAssist.Hint="Seleccione una Comuna" />
+        <ComboBox x:Name="cboRegion" HorizontalAlignment="Left" Margin="310,193,0,0" VerticalAlignment="Top" Width="220" Background="White" materialDesign:HintAssist.Hint="Seleccione una region" SelectionChanged="CboRegion_SelectionChanged" />
+        <ComboBox x:Name="cboComuna" HorizontalAlignment="Left" Margin="310,221,0,0" VerticalAlignment="Top" Width="220" Background="White" materialDesign:HintAssist.Hint="Seleccione una Comuna" />
         <Image HorizontalAlignment="Left" Height="26" Margin="148,133,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (3).png"/>
         <Image HorizontalAlignment="Left" Height="24" Margin="148,105,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (2).png"/>
         <!--#endregion-->
@@ -90,7 +90,7 @@
         <Button x:Name="btnMenuPrincipal" Style="{StaticResource MaterialDesignRaisedButton}" Content="Menú principal" HorizontalAlignment="Left" Margin="178,670,0,0" VerticalAlignment="Top" Width="138" Background="White" Click="BtnMenuPrincipal_Click" Foreground="Black"/>
         <Button x:Name="btnCancelar" Style="{StaticResource MaterialDesignRaisedButton}" Content="Cancelar" HorizontalAlignment="Left" Margin="356,671,0,0" VerticalAlignment="Top" Width="89" Background="White" Foreground="Black"/>
         <!--Esta parte de programacion esta hecha para que al presionar el boton de solicitar muestre una ventana emergente tipo Android-->
-        <materialDesign:DialogHost CloseOnClickAway="True">
+        <materialDesign:DialogHost CloseOnClickAway="True" Margin="-1,7,1,-7">
             <materialDesign:DialogHost.DialogContent>
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20" Width="250" Height="200">
                     <TextBlock Text="Esta funcionalidad esta siendo programada" />
