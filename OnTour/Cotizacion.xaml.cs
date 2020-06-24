@@ -52,5 +52,22 @@ namespace OnTour
             cboComuna.SelectedValuePath = "Id";
             cboComuna.SelectedIndex = -1;
         }
+
+        private void BtnPrint_Click_1(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.IsEnabled = false;
+                PrintDialog printDialog = new PrintDialog();
+                if (printDialog.ShowDialog() == true)
+                {
+                    printDialog.PrintVisual(Cotiza, "Cotización");
+                }
+            }
+            finally
+            {
+                this.IsEnabled = true;
+            }
+        }
     }
 }
