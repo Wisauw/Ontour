@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using MaterialDesignThemes.Wpf;
 namespace OnTour
 {
     /// <summary>
@@ -27,6 +27,25 @@ namespace OnTour
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnIniciar_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (txtUsuario.Text == "Admin" && txtPass.Password == "Admin")
+            {
+                this.Close();
+            }
+            if (txtUsuario.Text == "empleado" && txtPass.Password == "123") {
+                this.Close();
+            }
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed) {
+                DragMove();
+            }
         }
     }
 }
