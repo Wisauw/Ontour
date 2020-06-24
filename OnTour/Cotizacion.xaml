@@ -34,16 +34,16 @@
                 <Image HorizontalAlignment="Left" Height="24" Margin="148,72,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/usuario (1).png"/>
                 <Image HorizontalAlignment="Left" Height="25" Margin="148,158,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (4).png"/>
                 <Image HorizontalAlignment="Left" Height="22" Margin="150,189,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
-                <Image HorizontalAlignment="Left" Height="22" Margin="151,215,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
-                <Image HorizontalAlignment="Left" Height="26" Margin="149,242,0,0" VerticalAlignment="Top" Width="27" Source="imagenes/pngocean.com (1).png"/>
-                <Image HorizontalAlignment="Left" Height="26" Margin="151,268,0,0" VerticalAlignment="Top" Width="27" Source="imagenes/pngocean.com (1).png"/>
-                <Image HorizontalAlignment="Left" Height="22" Margin="181,302,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (6).png"/>
+                <Image HorizontalAlignment="Left" Height="22" Margin="150,215,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
+                <Image HorizontalAlignment="Left" Height="26" Margin="148,242,0,0" VerticalAlignment="Top" Width="27" Source="imagenes/pngocean.com (1).png"/>
+                <Image HorizontalAlignment="Left" Height="26" Margin="148,268,0,0" VerticalAlignment="Top" Width="27" Source="imagenes/pngocean.com (1).png"/>
+                <Image HorizontalAlignment="Left" Height="22" Margin="242,302,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (6).png"/>
                 <Image HorizontalAlignment="Left" Height="22" Margin="401,303,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (6).png"/>
                 <TextBox x:Name="txtCantidadAlumnos" HorizontalAlignment="Left" Height="22" Margin="297,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" Background="White" materialDesign:HintAssist.Hint="0"/>
                 <TextBox x:Name="txtCantidadAlumnos_Copy" HorizontalAlignment="Left" Height="22" Margin="582,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="45" Background="White" materialDesign:HintAssist.Hint="0"/>
-                <Image HorizontalAlignment="Left" Height="22" Margin="153,380,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
-                <Image HorizontalAlignment="Left" Height="22" Margin="153,426,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
-                <Image HorizontalAlignment="Left" Height="22" Margin="153,344,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (7).png"/>
+                <Image HorizontalAlignment="Left" Height="22" Margin="150,380,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
+                <Image HorizontalAlignment="Left" Height="22" Margin="150,426,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
+                <Image HorizontalAlignment="Left" Height="22" Margin="149,344,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (7).png"/>
                 <Image HorizontalAlignment="Left" Height="22" Margin="359,344,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (7).png"/>
                 
             </Grid>
@@ -56,48 +56,48 @@
         <Label Content="E-Mail" HorizontalAlignment="Left" Margin="178,103,0,0" VerticalAlignment="Top"/>
         <Label Content="Teléfono" HorizontalAlignment="Left" Margin="178,133,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.156,0.088"/>
         <Label Content="Nombre colegio" HorizontalAlignment="Left" Margin="178,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.483,0.289"/>
-        <Label Content="Región" HorizontalAlignment="Left" Margin="178,189,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.481,0.557"/>
-        <Label Content="Comuna" HorizontalAlignment="Left" Margin="178,217,0,0" VerticalAlignment="Top"/>
-        <Label Content="Origen" HorizontalAlignment="Left" Margin="178,245,0,0" VerticalAlignment="Top"/>
-        <Label Content="Destino" HorizontalAlignment="Left" Margin="178,273,0,0" VerticalAlignment="Top"/>
-        <Label Content="Ida" HorizontalAlignment="Left" Margin="200,303,0,0" VerticalAlignment="Top"/>
+        <Label Content="Región" HorizontalAlignment="Left" Margin="178,190,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.481,0.557"/>
+        <Label Content="Comuna" HorizontalAlignment="Left" Margin="178,220,0,0" VerticalAlignment="Top"/>
+        <Label Content="Origen" HorizontalAlignment="Left" Margin="178,248,0,0" VerticalAlignment="Top"/>
+        <Label Content="Destino" HorizontalAlignment="Left" Margin="178,276,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ida" HorizontalAlignment="Left" Margin="260,303,0,0" VerticalAlignment="Top"/>
         <Label Content="Vuelta" HorizontalAlignment="Left" Margin="420,303,0,0" VerticalAlignment="Top"/>
         <Label Content="Cantidad alumnos" HorizontalAlignment="Left" Margin="178,347,0,0" VerticalAlignment="Top"/>
         <Label Content="Cantidad profesores/apoderados" HorizontalAlignment="Left" Margin="382,347,0,0" VerticalAlignment="Top"/>
-        <Label Content="Mensaje" HorizontalAlignment="Left" Margin="180,456,0,0" VerticalAlignment="Top"/>
+        <Label Content="Mensaje" HorizontalAlignment="Left" Margin="178,456,0,0" VerticalAlignment="Top"/>
         <ComboBox HorizontalAlignment="Left" Margin="361,424,0,0" VerticalAlignment="Top" Width="268" Background="White" materialDesign:HintAssist.Hint="Seleccione servicios adicionales" />
-        <Label Content="Seleccione paquete turistico" HorizontalAlignment="Left" Margin="187,384,0,0" VerticalAlignment="Top"/>
-        <Label Content="Servicio adicionales" HorizontalAlignment="Left" Margin="180,428,0,0" VerticalAlignment="Top"/>
+        <Label Content="Seleccione paquete turistico" HorizontalAlignment="Left" Margin="178,384,0,0" VerticalAlignment="Top"/>
+        <Label Content="Servicio adicionales" HorizontalAlignment="Left" Margin="178,428,0,0" VerticalAlignment="Top"/>
         <ComboBox HorizontalAlignment="Left" Margin="361,380,0,0" VerticalAlignment="Top" Width="268" Background="White" materialDesign:HintAssist.Hint="Seleccione un paquete" />
-        <TextBox HorizontalAlignment="Left" Height="22" Margin="310,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese nombre completo" />
-        <TextBox HorizontalAlignment="Left" Height="22" Margin="310,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese E-Mail" />
-        <TextBox HorizontalAlignment="Left" Height="24" Margin="310,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese su numero de telefono" materialDesign:HintAssist.HelperText="Debe comenzar con +569" />
-        <TextBox HorizontalAlignment="Left" Height="24" Margin="310,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese nombre del establecimiento"/>
-        <TextBox HorizontalAlignment="Left" Height="24" Margin="310,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese Origen" />
-        <TextBox HorizontalAlignment="Left" Height="24" Margin="310,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese Destino" />
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="310,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese nombre completo" />
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="310,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese E-Mail" />
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="310,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese su numero de telefono" materialDesign:HintAssist.HelperText="Debe comenzar con +569" />
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="310,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese nombre del establecimiento"/>
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="310,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese Origen" />
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="310,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese Destino" />
         <DatePicker HorizontalAlignment="Left" Margin="469,305,0,0" VerticalAlignment="Top"  Width="23"/>
-        <DatePicker HorizontalAlignment="Left" Margin="231,305,0,0" VerticalAlignment="Top"/>
+        <DatePicker HorizontalAlignment="Left" Margin="290,305,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="168" Margin="180,485,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="444" Background="White" materialDesign:HintAssist.Hint="Escriba su mensaje" />
         <ScrollBar HorizontalAlignment="Left" Margin="607,485,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.186,-0.093" Height="166" Width="16"/>
         <Rectangle Fill="black" HorizontalAlignment="Left" Height="10" Margin="310,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="154"/>
-        <ComboBox HorizontalAlignment="Left" Margin="310,193,0,0" VerticalAlignment="Top" Width="220" Background="White" materialDesign:HintAssist.Hint="Seleccione una region" />
-        <ComboBox HorizontalAlignment="Left" Margin="310,221,0,0" VerticalAlignment="Top" Width="220" Background="White" materialDesign:HintAssist.Hint="Seleccione una Comuna" />
-        <Image HorizontalAlignment="Left" Height="26" Margin="148,133,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (3).png"/>
-        <Image HorizontalAlignment="Left" Height="24" Margin="148,105,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (2).png"/>
+        <ComboBox x:Name="cboRegion" HorizontalAlignment="Left" Margin="310,188,0,0" VerticalAlignment="Top" Width="220" Background="White" materialDesign:HintAssist.Hint="Seleccione una region" SelectionChanged="CboRegion_SelectionChanged" />
+        <ComboBox x:Name="cboComuna" HorizontalAlignment="Left" Margin="310,218,0,0" VerticalAlignment="Top" Width="220" Background="White" materialDesign:HintAssist.Hint="Seleccione una Comuna" />
+        <Image HorizontalAlignment="Left" Height="26" Margin="147,133,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (3).png"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="147,105,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (2).png"/>
         <!--#endregion-->
         
         <!--#region botones Principales-->
         <Button x:Name="btnMenuPrincipal" Style="{StaticResource MaterialDesignRaisedButton}" Content="Menú principal" HorizontalAlignment="Left" Margin="178,670,0,0" VerticalAlignment="Top" Width="138" Background="White" Click="BtnMenuPrincipal_Click" Foreground="Black"/>
         <Button x:Name="btnCancelar" Style="{StaticResource MaterialDesignRaisedButton}" Content="Cancelar" HorizontalAlignment="Left" Margin="356,671,0,0" VerticalAlignment="Top" Width="89" Background="White" Foreground="Black"/>
         <!--Esta parte de programacion esta hecha para que al presionar el boton de solicitar muestre una ventana emergente tipo Android-->
-        <materialDesign:DialogHost CloseOnClickAway="True">
+        <materialDesign:DialogHost CloseOnClickAway="True" Margin="-1,7,1,-7">
             <materialDesign:DialogHost.DialogContent>
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20" Width="250" Height="200">
                     <TextBlock Text="Esta funcionalidad esta siendo programada" />
                     <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Style="{StaticResource MaterialDesignRaisedButton}" Content="Cerrar"></Button>
                 </Grid>
             </materialDesign:DialogHost.DialogContent>
-            <Button x:Name="btnSolicitarCotizacion" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" Style="{StaticResource MaterialDesignRaisedButton}"  Content="Solicitar cotización" HorizontalAlignment="Left" Margin="484,670,0,0" VerticalAlignment="Top" Width="154" Background="Black" Height="33" Foreground="White"/>
+            <Button x:Name="btnSolicitarCotizacion" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" Style="{StaticResource MaterialDesignRaisedButton}"  Content="Solicitar cotización" HorizontalAlignment="Left" Margin="477,664,0,0" VerticalAlignment="Top" Width="154" Background="Black" Height="33" Foreground="White"/>
         </materialDesign:DialogHost>
         <!--#endregion-->
         

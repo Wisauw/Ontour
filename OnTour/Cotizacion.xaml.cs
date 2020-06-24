@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CapaLogicaNegocio;
 
 namespace OnTour
 {
@@ -23,6 +24,15 @@ namespace OnTour
         public Cotizacion()
         {
             InitializeComponent();
+            CargarRegiones();
+        }
+
+        private void CargarRegiones()
+        {
+            cboRegion.ItemsSource = new Region().listadoRegion();
+            cboRegion.DisplayMemberPath = "Nombre";
+            cboRegion.SelectedValuePath = "Id";
+            cboRegion.SelectedIndex = -1;
         }
 
         private void BtnMenuPrincipal_Click(object sender, RoutedEventArgs e)
@@ -33,6 +43,14 @@ namespace OnTour
         private void BtnInfo_Click_1(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new informacion());
+        }
+
+        private void CboRegion_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            cboComuna.ItemsSource = new Comuna().listadoComunas((int)cboRegion.SelectedValue);
+            cboComuna.DisplayMemberPath = "Nombre";
+            cboComuna.SelectedValuePath = "Id";
+            cboComuna.SelectedIndex = -1;
         }
     }
 }
