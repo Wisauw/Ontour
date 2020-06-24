@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="OnTourDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="OnTourDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CLIENTE">
           <Key>
             <PropertyRef Name="Id" />
@@ -29,6 +29,7 @@
           <Property Name="Telefono_Rector" Type="nvarchar" MaxLength="12" Nullable="false" />
           <Property Name="Nombre_Representante" Type="nvarchar" MaxLength="70" Nullable="false" />
           <Property Name="Telefono_Representante" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="Id_curso" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="COMUNA">
           <Key>
@@ -37,6 +38,13 @@
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Id_Region" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CURSO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="DESTINO">
           <Key>
@@ -123,6 +131,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__COLEGIO__Id_curs__49C3F6B7">
+          <End Role="CURSO" Type="Self.CURSO" Multiplicity="1" />
+          <End Role="COLEGIO" Type="Self.COLEGIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CURSO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="COLEGIO">
+              <PropertyRef Name="Id_curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__COMUNA__Id_Regio__2B3F6F97">
           <End Role="REGION" Type="Self.REGION" Multiplicity="1" />
           <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="*" />
@@ -163,6 +183,7 @@
           <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="COLEGIO" EntityType="Self.COLEGIO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="COMUNA" EntityType="Self.COMUNA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CURSO" EntityType="Self.CURSO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DESTINO" EntityType="Self.DESTINO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EJECUTIVO" EntityType="Self.EJECUTIVO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PAQUETE_TURISTICO" EntityType="Self.PAQUETE_TURISTICO" Schema="dbo" store:Type="Tables" />
@@ -184,6 +205,10 @@
             <End Role="REGION" EntitySet="REGION" />
             <End Role="CLIENTE" EntitySet="CLIENTE" />
           </AssociationSet>
+          <AssociationSet Name="FK__COLEGIO__Id_curs__49C3F6B7" Association="Self.FK__COLEGIO__Id_curs__49C3F6B7">
+            <End Role="CURSO" EntitySet="CURSO" />
+            <End Role="COLEGIO" EntitySet="COLEGIO" />
+          </AssociationSet>
           <AssociationSet Name="FK__COMUNA__Id_Regio__2B3F6F97" Association="Self.FK__COMUNA__Id_Regio__2B3F6F97">
             <End Role="REGION" EntitySet="REGION" />
             <End Role="COMUNA" EntitySet="COMUNA" />
@@ -197,8 +222,7 @@
             <End Role="PAQUETE_TURISTICO" EntitySet="PAQUETE_TURISTICO" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="OnTourDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -231,6 +255,8 @@
           <Property Name="Nombre_Representante" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Telefono_Representante" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="CLIENTE" Relationship="Self.FK__CLIENTE__Id_Cole__31EC6D26" FromRole="COLEGIO" ToRole="CLIENTE" />
+          <Property Name="Id_curso" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CURSO" Relationship="OnTourDBModel.FK__COLEGIO__Id_curs__49C3F6B7" FromRole="COLEGIO" ToRole="CURSO" />
         </EntityType>
         <EntityType Name="COMUNA">
           <Key>
@@ -407,7 +433,32 @@
             <End Role="SERVICIO" EntitySet="SERVICIO" />
             <End Role="PAQUETE_TURISTICO" EntitySet="PAQUETE_TURISTICO" />
           </AssociationSet>
+          <EntitySet Name="CURSO" EntityType="OnTourDBModel.CURSO" />
+          <AssociationSet Name="FK__COLEGIO__Id_curs__49C3F6B7" Association="OnTourDBModel.FK__COLEGIO__Id_curs__49C3F6B7">
+            <End Role="CURSO" EntitySet="CURSO" />
+            <End Role="COLEGIO" EntitySet="COLEGIO" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="CURSO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="COLEGIO" Relationship="OnTourDBModel.FK__COLEGIO__Id_curs__49C3F6B7" FromRole="CURSO" ToRole="COLEGIO" />
+        </EntityType>
+        <Association Name="FK__COLEGIO__Id_curs__49C3F6B7">
+          <End Type="OnTourDBModel.CURSO" Role="CURSO" Multiplicity="1" />
+          <End Type="OnTourDBModel.COLEGIO" Role="COLEGIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CURSO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="COLEGIO">
+              <PropertyRef Name="Id_curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -430,6 +481,7 @@
           <EntitySetMapping Name="COLEGIO">
             <EntityTypeMapping TypeName="OnTourDBModel.COLEGIO">
               <MappingFragment StoreEntitySet="COLEGIO">
+                <ScalarProperty Name="Id_curso" ColumnName="Id_curso" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Direccion" ColumnName="Direccion" />
@@ -489,6 +541,14 @@
               <MappingFragment StoreEntitySet="SERVICIO">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CURSO">
+            <EntityTypeMapping TypeName="OnTourDBModel.CURSO">
+              <MappingFragment StoreEntitySet="CURSO">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

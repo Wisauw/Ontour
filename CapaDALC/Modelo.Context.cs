@@ -33,5 +33,6 @@ namespace CapaDALC
         public DbSet<PAQUETE_TURISTICO> PAQUETE_TURISTICO { get; set; }
         public DbSet<REGION> REGION { get; set; }
         public DbSet<SERVICIO> SERVICIO { get; set; }
+        public DbSet<CURSO> CURSO { get; set; }
     }
 }

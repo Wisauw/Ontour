@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="51ab711eaa154a149d5d50a7f9a71de8" Name="Diagram1">
         <EntityTypeShape EntityType="OnTourDBModel.CLIENTE" Width="1.75" PointX="5.25" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="OnTourDBModel.COLEGIO" Width="1.5" PointX="2" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnTourDBModel.COLEGIO" Width="1.5" PointX="2.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="OnTourDBModel.COMUNA" Width="1.5" PointX="0.5" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="OnTourDBModel.DESTINO" Width="1.5" PointX="11.875" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="OnTourDBModel.EJECUTIVO" Width="1.625" PointX="5.625" PointY="0.5" IsExpanded="true" />
@@ -20,6 +20,8 @@
         <AssociationConnector Association="OnTourDBModel.FK__COMUNA__Id_Regio__2B3F6F97" ManuallyRouted="false" />
         <AssociationConnector Association="OnTourDBModel.FK__PAQUETE_T__Id_De__35BCFE0A" ManuallyRouted="false" />
         <AssociationConnector Association="OnTourDBModel.FK__PAQUETE_T__Id_Se__36B12243" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="OnTourDBModel.CURSO" Width="1.5" PointX="0.5" PointY="1.375" />
+        <AssociationConnector Association="OnTourDBModel.FK__COLEGIO__Id_curs__49C3F6B7" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
