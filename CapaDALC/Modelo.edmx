@@ -83,6 +83,14 @@
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
+        <EntityType Name="SIGLA">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Id_Curso" Type="int" Nullable="false" />
+        </EntityType>
         <Association Name="FK__CLIENTE__Id_Cole__31EC6D26">
           <End Role="COLEGIO" Type="Self.COLEGIO" Multiplicity="1" />
           <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
@@ -179,6 +187,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__SIGLA__Id_Curso__5EBF139D">
+          <End Role="CURSO" Type="Self.CURSO" Multiplicity="1" />
+          <End Role="SIGLA" Type="Self.SIGLA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CURSO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SIGLA">
+              <PropertyRef Name="Id_Curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="OnTourDBModelStoreContainer">
           <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="COLEGIO" EntityType="Self.COLEGIO" Schema="dbo" store:Type="Tables" />
@@ -189,6 +209,7 @@
           <EntitySet Name="PAQUETE_TURISTICO" EntityType="Self.PAQUETE_TURISTICO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="REGION" EntityType="Self.REGION" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SERVICIO" EntityType="Self.SERVICIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SIGLA" EntityType="Self.SIGLA" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__CLIENTE__Id_Cole__31EC6D26" Association="Self.FK__CLIENTE__Id_Cole__31EC6D26">
             <End Role="COLEGIO" EntitySet="COLEGIO" />
             <End Role="CLIENTE" EntitySet="CLIENTE" />
@@ -220,6 +241,10 @@
           <AssociationSet Name="FK__PAQUETE_T__Id_Se__36B12243" Association="Self.FK__PAQUETE_T__Id_Se__36B12243">
             <End Role="SERVICIO" EntitySet="SERVICIO" />
             <End Role="PAQUETE_TURISTICO" EntitySet="PAQUETE_TURISTICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SIGLA__Id_Curso__5EBF139D" Association="Self.FK__SIGLA__Id_Curso__5EBF139D">
+            <End Role="CURSO" EntitySet="CURSO" />
+            <End Role="SIGLA" EntitySet="SIGLA" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -438,6 +463,11 @@
             <End Role="CURSO" EntitySet="CURSO" />
             <End Role="COLEGIO" EntitySet="COLEGIO" />
           </AssociationSet>
+          <EntitySet Name="SIGLA" EntityType="OnTourDBModel.SIGLA" />
+          <AssociationSet Name="FK__SIGLA__Id_Curso__5EBF139D" Association="OnTourDBModel.FK__SIGLA__Id_Curso__5EBF139D">
+            <End Role="CURSO" EntitySet="CURSO" />
+            <End Role="SIGLA" EntitySet="SIGLA" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="CURSO">
           <Key>
@@ -446,6 +476,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="COLEGIO" Relationship="OnTourDBModel.FK__COLEGIO__Id_curs__49C3F6B7" FromRole="CURSO" ToRole="COLEGIO" />
+          <NavigationProperty Name="SIGLA" Relationship="OnTourDBModel.FK__SIGLA__Id_Curso__5EBF139D" FromRole="CURSO" ToRole="SIGLA" />
         </EntityType>
         <Association Name="FK__COLEGIO__Id_curs__49C3F6B7">
           <End Type="OnTourDBModel.CURSO" Role="CURSO" Multiplicity="1" />
@@ -456,6 +487,27 @@
             </Principal>
             <Dependent Role="COLEGIO">
               <PropertyRef Name="Id_curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SIGLA">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Id_Curso" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CURSO" Relationship="OnTourDBModel.FK__SIGLA__Id_Curso__5EBF139D" FromRole="SIGLA" ToRole="CURSO" />
+        </EntityType>
+        <Association Name="FK__SIGLA__Id_Curso__5EBF139D">
+          <End Type="OnTourDBModel.CURSO" Role="CURSO" Multiplicity="1" />
+          <End Type="OnTourDBModel.SIGLA" Role="SIGLA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CURSO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SIGLA">
+              <PropertyRef Name="Id_Curso" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -547,6 +599,15 @@
           <EntitySetMapping Name="CURSO">
             <EntityTypeMapping TypeName="OnTourDBModel.CURSO">
               <MappingFragment StoreEntitySet="CURSO">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SIGLA">
+            <EntityTypeMapping TypeName="OnTourDBModel.SIGLA">
+              <MappingFragment StoreEntitySet="SIGLA">
+                <ScalarProperty Name="Id_Curso" ColumnName="Id_Curso" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>

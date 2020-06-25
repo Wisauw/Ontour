@@ -34,5 +34,6 @@ namespace CapaDALC
         public DbSet<REGION> REGION { get; set; }
         public DbSet<SERVICIO> SERVICIO { get; set; }
         public DbSet<CURSO> CURSO { get; set; }
+        public DbSet<SIGLA> SIGLA { get; set; }
     }
 }

@@ -35,6 +35,14 @@ namespace OnTour
             cboRegion.SelectedIndex = -1;
         }
 
+        private void CboRegion_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            cboComuna.ItemsSource = new Comuna().listadoComunas((int)cboRegion.SelectedValue);
+            cboComuna.DisplayMemberPath = "Nombre";
+            cboComuna.SelectedValuePath = "Id";
+            cboComuna.SelectedIndex = -1;
+        }
+
         private void BtnMenuPrincipal_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Menu());
@@ -43,15 +51,7 @@ namespace OnTour
         private void BtnInfo_Click_1(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new informacion());
-        }
-
-        private void CboRegion_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            cboComuna.ItemsSource = new Comuna().listadoComunas((int)cboRegion.SelectedValue);
-            cboComuna.DisplayMemberPath = "Nombre";
-            cboComuna.SelectedValuePath = "Id";
-            cboComuna.SelectedIndex = -1;
-        }
+        }              
 
         private void BtnPrint_Click_1(object sender, RoutedEventArgs e)
         {
