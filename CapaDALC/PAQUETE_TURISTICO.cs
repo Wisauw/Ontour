@@ -21,11 +21,9 @@ namespace CapaDALC
     
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public int Id_Destino { get; set; }
         public int Id_Servicio { get; set; }
     
         public virtual ICollection<CLIENTE> CLIENTE { get; set; }
-        public virtual DESTINO DESTINO { get; set; }
         public virtual SERVICIO SERVICIO { get; set; }
     }
 }

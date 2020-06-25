@@ -48,7 +48,6 @@
     <Compile Include="Colegio.cs" />
     <Compile Include="Comuna.cs" />
     <Compile Include="Curso.cs" />
-    <Compile Include="Destino.cs" />
     <Compile Include="Ejecutivo.cs" />
     <Compile Include="PaqueteTuristico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

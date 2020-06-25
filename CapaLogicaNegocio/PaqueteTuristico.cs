@@ -9,8 +9,7 @@ namespace CapaLogicaNegocio
     public class PaqueteTuristico
     {
         public int Id { get; set; }
-        public string Nombre { get; set; }
-        public Destino Destino { get; set; }
+        public string Nombre { get; set; }        
         public Servicio Servicio { get; set; }
 
         public PaqueteTuristico()
@@ -21,8 +20,7 @@ namespace CapaLogicaNegocio
         private void Init()
         {
             Id = 0;
-            Nombre = String.Empty;
-            Destino = new Destino();
+            Nombre = String.Empty;            
             Servicio = new Servicio();
         }
     }

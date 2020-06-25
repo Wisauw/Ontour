@@ -60,9 +60,6 @@
     <Compile Include="CURSO.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
-    <Compile Include="DESTINO.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
-    </Compile>
     <Compile Include="EJECUTIVO.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
