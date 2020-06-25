@@ -22,7 +22,7 @@
         <AssociationConnector Association="OnTourDBModel.FK__COLEGIO__Id_curs__49C3F6B7" />
         <EntityTypeShape EntityType="OnTourDBModel.SIGLA" Width="1.5" PointX="0.5" PointY="4.375" />
         <AssociationConnector Association="OnTourDBModel.FK__SIGLA__Id_Curso__5EBF139D" />
-        <EntityTypeShape EntityType="OnTourDBModel.COTIZACION" Width="1.5" PointX="9.5" PointY="5.875" />
+        <EntityTypeShape EntityType="OnTourDBModel.COTIZACION" Width="1.5" PointX="8.75" PointY="6" />
         <AssociationConnector Association="OnTourDBModel.FK__COTIZACIO__Id_Pa__6FE99F9F" />
         <AssociationConnector Association="OnTourDBModel.FK__COTIZACIO__Id_Re__70DDC3D8" />
       </Diagram>
