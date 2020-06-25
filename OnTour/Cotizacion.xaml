@@ -69,7 +69,7 @@
         <Label Content="Cantidad alumnos" HorizontalAlignment="Left" Margin="178,347,0,0" VerticalAlignment="Top"/>
         <Label Content="Cantidad profesores/apoderados" HorizontalAlignment="Left" Margin="382,347,0,0" VerticalAlignment="Top"/>
         <Label Content="Mensaje" HorizontalAlignment="Left" Margin="178,456,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="361,424,0,0" VerticalAlignment="Top" Width="268" Background="White" materialDesign:HintAssist.Hint="Seleccione servicios adicionales" />
+        <ComboBox x:Name="cboServicios" HorizontalAlignment="Left" Margin="361,424,0,0" VerticalAlignment="Top" Width="268" Background="White" materialDesign:HintAssist.Hint="Seleccione servicios adicionales" />
         <Label Content="Seleccione paquete turistico" HorizontalAlignment="Left" Margin="178,384,0,0" VerticalAlignment="Top"/>
         <Label Content="Servicio adicionales" HorizontalAlignment="Left" Margin="178,428,0,0" VerticalAlignment="Top"/>
         <ComboBox HorizontalAlignment="Left" Margin="361,380,0,0" VerticalAlignment="Top" Width="268" Background="White" materialDesign:HintAssist.Hint="Seleccione un paquete" />

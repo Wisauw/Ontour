@@ -25,6 +25,15 @@ namespace OnTour
         {
             InitializeComponent();
             CargarRegiones();
+            CargarServicios();
+        }
+
+        private void CargarServicios()
+        {
+            cboServicios.ItemsSource = new Servicio().listadoServicio();
+            cboServicios.DisplayMemberPath = "Nombre";
+            cboServicios.SelectedValuePath = "Id";
+            cboServicios.SelectedIndex = -1;
         }
 
         private void CargarRegiones()
