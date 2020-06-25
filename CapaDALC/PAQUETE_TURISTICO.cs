@@ -17,6 +17,7 @@ namespace CapaDALC
         public PAQUETE_TURISTICO()
         {
             this.CLIENTE = new HashSet<CLIENTE>();
+            this.COTIZACION = new HashSet<COTIZACION>();
         }
     
         public int Id { get; set; }
@@ -25,5 +26,6 @@ namespace CapaDALC
     
         public virtual ICollection<CLIENTE> CLIENTE { get; set; }
         public virtual SERVICIO SERVICIO { get; set; }
+        public virtual ICollection<COTIZACION> COTIZACION { get; set; }
     }
 }

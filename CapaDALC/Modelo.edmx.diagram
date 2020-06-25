@@ -5,12 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="51ab711eaa154a149d5d50a7f9a71de8" Name="Diagram1">
-        <EntityTypeShape EntityType="OnTourDBModel.CLIENTE" Width="1.75" PointX="5.25" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="OnTourDBModel.COLEGIO" Width="1.5" PointX="2.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="OnTourDBModel.COMUNA" Width="1.5" PointX="2.875" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnTourDBModel.CLIENTE" Width="1.75" PointX="5.375" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnTourDBModel.COLEGIO" Width="1.5" PointX="2.875" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnTourDBModel.COMUNA" Width="1.5" PointX="2.5" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="OnTourDBModel.EJECUTIVO" Width="1.625" PointX="5.625" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="OnTourDBModel.PAQUETE_TURISTICO" Width="2" PointX="8" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="OnTourDBModel.REGION" Width="1.5" PointX="2.875" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnTourDBModel.PAQUETE_TURISTICO" Width="2" PointX="9" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnTourDBModel.REGION" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="OnTourDBModel.SERVICIO" Width="1.5" PointX="8.375" PointY="0.625" IsExpanded="true" />
         <AssociationConnector Association="OnTourDBModel.FK__CLIENTE__Id_Cole__31EC6D26" ManuallyRouted="false" />
         <AssociationConnector Association="OnTourDBModel.FK__CLIENTE__Id_Ejec__32E0915F" ManuallyRouted="false" />
@@ -22,6 +22,9 @@
         <AssociationConnector Association="OnTourDBModel.FK__COLEGIO__Id_curs__49C3F6B7" />
         <EntityTypeShape EntityType="OnTourDBModel.SIGLA" Width="1.5" PointX="0.5" PointY="4.375" />
         <AssociationConnector Association="OnTourDBModel.FK__SIGLA__Id_Curso__5EBF139D" />
+        <EntityTypeShape EntityType="OnTourDBModel.COTIZACION" Width="1.5" PointX="9.5" PointY="5.875" />
+        <AssociationConnector Association="OnTourDBModel.FK__COTIZACIO__Id_Pa__6FE99F9F" />
+        <AssociationConnector Association="OnTourDBModel.FK__COTIZACIO__Id_Re__70DDC3D8" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

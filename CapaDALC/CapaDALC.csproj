@@ -57,6 +57,9 @@
     <Compile Include="COMUNA.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
+    <Compile Include="COTIZACION.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="CURSO.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
