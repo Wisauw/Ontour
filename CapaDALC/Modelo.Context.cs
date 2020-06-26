@@ -28,10 +28,12 @@ namespace CapaDALC
         public DbSet<CLIENTE> CLIENTE { get; set; }
         public DbSet<COLEGIO> COLEGIO { get; set; }
         public DbSet<COMUNA> COMUNA { get; set; }
-        public DbSet<DESTINO> DESTINO { get; set; }
         public DbSet<EJECUTIVO> EJECUTIVO { get; set; }
         public DbSet<PAQUETE_TURISTICO> PAQUETE_TURISTICO { get; set; }
         public DbSet<REGION> REGION { get; set; }
         public DbSet<SERVICIO> SERVICIO { get; set; }
+        public DbSet<CURSO> CURSO { get; set; }
+        public DbSet<SIGLA> SIGLA { get; set; }
+        public DbSet<COTIZACION> COTIZACION { get; set; }
     }
 }

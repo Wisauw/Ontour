@@ -25,8 +25,8 @@
                 <Image HorizontalAlignment="Left" Height="24" Margin="149,208,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/usuario (1).png"/>
                 <Rectangle Fill="#FFF3E44B" Stroke="Black" Margin="-14,-100,-15,-57" Height="877" VerticalAlignment="Top" />
                 <Image HorizontalAlignment="Left" Height="24" Margin="149,354,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/usuario (1).png"/>
-                <ComboBox x:Name="cmbCursoContratar" HorizontalAlignment="Left" Margin="321,358,0,0" VerticalAlignment="Top" Width="131" Background="White" materialDesign:HintAssist.Hint="Seleccione un curso"/>
-                <ComboBox x:Name="cmbSigla" HorizontalAlignment="Left" Margin="518,358,0,0" VerticalAlignment="Top" Width="127" Background="White" materialDesign:HintAssist.Hint="Seleccione la letra" />
+                <ComboBox x:Name="cboCursoContratar" HorizontalAlignment="Left" Margin="321,358,0,0" VerticalAlignment="Top" Width="131" Background="White" materialDesign:HintAssist.Hint="Seleccione un curso" SelectionChanged="CboCursoContratar_SelectionChanged"/>
+                <ComboBox x:Name="cboSigla" HorizontalAlignment="Left" Margin="518,358,0,0" VerticalAlignment="Top" Width="127" Background="White" materialDesign:HintAssist.Hint="Seleccione la letra" />
                 <Image HorizontalAlignment="Left" Height="24" Margin="149,449,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/usuario (1).png"/>
 
             </Grid>

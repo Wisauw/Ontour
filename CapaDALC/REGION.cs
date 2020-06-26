@@ -18,6 +18,7 @@ namespace CapaDALC
         {
             this.CLIENTE = new HashSet<CLIENTE>();
             this.COMUNA = new HashSet<COMUNA>();
+            this.COTIZACION = new HashSet<COTIZACION>();
         }
     
         public int Id { get; set; }
@@ -25,5 +26,6 @@ namespace CapaDALC
     
         public virtual ICollection<CLIENTE> CLIENTE { get; set; }
         public virtual ICollection<COMUNA> COMUNA { get; set; }
+        public virtual ICollection<COTIZACION> COTIZACION { get; set; }
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CapaLogicaNegocio;
 
 namespace OnTour
 {
@@ -23,6 +24,23 @@ namespace OnTour
         public ReClientexaml()
         {
             InitializeComponent();
+            CargarCursos();
+        }
+
+        private void CargarCursos()
+        {
+            cboCursoContratar.ItemsSource = new Curso().listadoCurso();
+            cboCursoContratar.DisplayMemberPath = "Nombre";
+            cboCursoContratar.SelectedValuePath = "Id";
+            cboCursoContratar.SelectedIndex = -1;
+        }
+
+        private void CboCursoContratar_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            cboSigla.ItemsSource = new Sigla().listadoSiglas((int)cboCursoContratar.SelectedValue);
+            cboSigla.DisplayMemberPath = "Nombre";
+            cboSigla.SelectedValuePath = "Id";
+            cboSigla.SelectedIndex = -1;
         }
 
         private void BtnMenu_Click(object sender, RoutedEventArgs e)
@@ -38,6 +56,6 @@ namespace OnTour
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Menu());
-        }
+        }        
     }
 }

@@ -17,15 +17,15 @@ namespace CapaDALC
         public PAQUETE_TURISTICO()
         {
             this.CLIENTE = new HashSet<CLIENTE>();
+            this.COTIZACION = new HashSet<COTIZACION>();
         }
     
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public int Id_Destino { get; set; }
         public int Id_Servicio { get; set; }
     
         public virtual ICollection<CLIENTE> CLIENTE { get; set; }
-        public virtual DESTINO DESTINO { get; set; }
         public virtual SERVICIO SERVICIO { get; set; }
+        public virtual ICollection<COTIZACION> COTIZACION { get; set; }
     }
 }

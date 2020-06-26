@@ -57,7 +57,10 @@
     <Compile Include="COMUNA.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
-    <Compile Include="DESTINO.cs">
+    <Compile Include="COTIZACION.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CURSO.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="EJECUTIVO.cs">
@@ -86,6 +89,9 @@
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="SERVICIO.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIGLA.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
   </ItemGroup>
