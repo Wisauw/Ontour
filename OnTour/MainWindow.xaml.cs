@@ -27,44 +27,53 @@ namespace OnTour
             InitializeComponent();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void BtnIniciarSesion_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new ReClientexaml();
+            Logeo logeo = new Logeo();
+            logeo.ShowDialog();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Cotizacion();
-        }
+            int index = int.Parse(((Button)e.Source).Uid);
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new Menu();
+            CursorGrid.Margin = new Thickness(15 + (160 * index), 45, 0, 0);
+
+            switch (index) {
+                case 0:
+                    PantallaPrincipal.Content = new Menu();
+                    break;
+
+                case 1:
+                    PantallaPrincipal.Content = new ReClientexaml();
+                    break;
+
+                case 2:
+                    PantallaPrincipal.Content = new PaqueteTuristico();
+                    break;
+
+                case 3:
+                    PantallaPrincipal.Content = new Cotizacion();
+                    break;
+
+                case 4:
+                    PantallaPrincipal.Content = new Nosotros();
+                    break;
+
+                case 5:
+                    PantallaPrincipal.Content = new informacion();
+                    break;
+
+
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new PaqueteTuristico();
+            this.Close();
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new Nosotros();
-        }
-
-        private void Button_Click_5(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new informacion();
-        }
-
-
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void BtnIniciarSesion_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Logeo logeo = new Logeo();
             logeo.ShowDialog();
