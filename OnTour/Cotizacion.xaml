@@ -98,9 +98,6 @@
             <materialDesign:DialogHost.DialogContent>
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20" Width="300" Height="250">
                     <TextBlock Text="Se ha enviado la cotización al Email registrado" VerticalAlignment="Top" Padding="2"/>
-
-
-
                     <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Style="{StaticResource MaterialDesignRaisedButton}" Content="Cerrar" Padding="2" VerticalAlignment="Bottom"></Button>
                 </Grid>
             </materialDesign:DialogHost.DialogContent>
