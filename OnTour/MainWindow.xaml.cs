@@ -42,6 +42,7 @@ namespace OnTour
             switch (index) {
                 case 0:
                     PantallaPrincipal.Content = new Menu();
+                    //CursorGrid.Background = Brushes.OrangeRed;
                     break;
 
                 case 1:
@@ -77,6 +78,14 @@ namespace OnTour
         {
             Logeo logeo = new Logeo();
             logeo.ShowDialog();
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
         }
     }
     }

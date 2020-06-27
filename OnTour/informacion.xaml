@@ -6,11 +6,10 @@
       xmlns:local="clr-namespace:OnTour"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d"
-      Title="informacion" Width="675.5" Height="921">
+      Title="informacion" Height="765" Width="990">
 
-    <Grid Margin="-122,-35,-129,-16" Height="1389" VerticalAlignment="Bottom">
-        <Rectangle Fill="#FFF3E44B" HorizontalAlignment="Left" Height="1499" Margin="-44,-68,-45,-42" Stroke="Black" VerticalAlignment="Top" Width="1220"/>
-        <Image HorizontalAlignment="Left" Height="780" Margin="54,504,0,0" VerticalAlignment="Top" Width="776" Source="imagenes/Sitio-web-en-Construcción_.png"/>
+    <Grid Height="765" Background="#FFF3E44B">
+        <Image HorizontalAlignment="Left" Height="765" Margin="100 10 0 0" VerticalAlignment="Top" Width="776" Source="imagenes/Sitio-web-en-Construcción_.png"/>
 
     </Grid>
 </Page> 

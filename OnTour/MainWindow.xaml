@@ -7,7 +7,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         x:Class="OnTour.MainWindow"
         mc:Ignorable="d"
-        Title="OnTour" Height="875" Width="990" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Title="OnTour" Height="990" Width="990" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="None" MouseDown="Window_MouseDown"
         Icon="imagenes/Ontour logo.png">
 
 
@@ -16,8 +16,8 @@
             <Image HorizontalAlignment="Left" Height="76" Margin="30,0,0,-36" VerticalAlignment="Top" Width="93" Source="imagenes/Ontour logo.png"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="20 0">
                 <Button Content="Iniciar Sesión" Background="White" BorderBrush="{x:Null}" Foreground="Black" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Click="Button_Click_1" />
-                <Button  Background="White" BorderBrush="{x:Null}" Foreground="Black" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"  Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Click="Button_Click">
-                    <materialDesign:PackIcon Kind="SignOut"/>
+                <Button Background="White" Margin="10 0 0 0" BorderBrush="{x:Null}" Foreground="Black" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"  Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Click="Button_Click">
+                    <materialDesign:PackIcon Kind="Shutdown" Height="33" Width="36"/>
                 </Button>
             </StackPanel>
         </Grid>
@@ -29,7 +29,6 @@
                 <Button  Uid="3" Width="160" Height="50" Content="Cotización" Background="White" BorderBrush="{x:Null}" Foreground="Black" Click="Button_Click_6"/>
                 <Button  Uid="4" Width="160" Height="50" Content="FAQ" Background="White" BorderBrush="{x:Null}" Foreground="Black" Click="Button_Click_6"/>
                 <Button  Uid="5" Width="160" Height="50" Content="Ayuda" Background="White" BorderBrush="{x:Null}" Foreground="Black" Click="Button_Click_6"/>
-                
             </StackPanel>
             <Grid x:Name="CursorGrid" Width="150" Height="5" Background="Black" HorizontalAlignment="Left" Margin="16 45 0 0"/>
         </Grid>
@@ -46,6 +45,22 @@
             </materialDesign:DialogHost.DialogContent>
         </materialDesign:DialogHost>-->
             <!--#endregion-->
+        </Grid>
+        <Grid Margin="0 0 0 0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Uid="5" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Left" Margin="5 0 0 0"  VerticalAlignment="Top" Width="31"  Click="Button_Click_6" Height="27" Background="#FF04000C" >
+                <materialDesign:PackIcon Kind="AboutVariant" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="18" ></materialDesign:PackIcon>
+            </Button>
+                <Button x:Name="btnFace" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Left" Margin="5 0 0 0"  VerticalAlignment="Top" Width="32"   Height="27" Background="Black" RenderTransformOrigin="-0.586,0.537">
+                <materialDesign:PackIcon Kind="Facebook" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="18" ></materialDesign:PackIcon>
+            </Button>
+                <Button x:Name="btnWsp" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Left" Margin="5 0 0 0"  VerticalAlignment="Top" Width="32" Height="27" Background="Black" RenderTransformOrigin="-0.586,0.537">
+                <materialDesign:PackIcon Kind="Whatsapp" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="18" ></materialDesign:PackIcon>
+            </Button>
+                <Button x:Name="btnLocalizacion" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Left" Margin="5 0 10 0" VerticalAlignment="Top" Width="32"  Height="27" Background="Black" RenderTransformOrigin="-0.586,0.537">
+                <materialDesign:PackIcon Kind="MapMarker" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="18" ></materialDesign:PackIcon>
+            </Button>
+            </StackPanel>
         </Grid>
 
     </StackPanel>

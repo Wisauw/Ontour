@@ -4,88 +4,60 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:OnTour"
-      mc:Ignorable="d" d:DesignWidth="800"
+      mc:Ignorable="d"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      Title="ReClientexaml" Height="875" Width="990">
+      Title="ReClientexaml" Height="765" Width="990">
 
 
-    <Grid Margin="-14,-275,14,285">
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+    <Grid Width="990" Height="765" Background="#FFF3E44B">
 
-        <DockPanel Margin="6,286,10,-176">
-            <Grid Width="775">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="775"/>
-                </Grid.ColumnDefinitions>
-                <Image HorizontalAlignment="Left" Height="24" Margin="149,208,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/usuario (1).png"/>
-                <Rectangle Fill="#FFF3E44B" Stroke="Black" Margin="-14,-100,-15,-57" Height="877" VerticalAlignment="Top" />
-                <Image HorizontalAlignment="Left" Height="24" Margin="149,354,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/usuario (1).png"/>
-                <ComboBox x:Name="cboCursoContratar" HorizontalAlignment="Left" Margin="321,358,0,0" VerticalAlignment="Top" Width="131" Background="White" materialDesign:HintAssist.Hint="Seleccione un curso" SelectionChanged="CboCursoContratar_SelectionChanged"/>
-                <ComboBox x:Name="cboSigla" HorizontalAlignment="Left" Margin="518,358,0,0" VerticalAlignment="Top" Width="127" Background="White" materialDesign:HintAssist.Hint="Seleccione la letra" />
-                <Image HorizontalAlignment="Left" Height="24" Margin="149,449,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/usuario (1).png"/>
 
-            </Grid>
 
-        </DockPanel>
+        <Image HorizontalAlignment="Left" Height="24" Margin="216,378,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/usuario (1).png"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="216,474,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/usuario (1).png"/>
+        <ComboBox x:Name="cboCursoContratar" HorizontalAlignment="Left" Margin="386,380,0,0" VerticalAlignment="Top" Width="131" Background="White" materialDesign:HintAssist.Hint="Seleccione un curso" SelectionChanged="CboCursoContratar_SelectionChanged"/>
+        <ComboBox x:Name="cboSigla" HorizontalAlignment="Left" Margin="580,380,0,0" VerticalAlignment="Top" Width="127" Background="White" materialDesign:HintAssist.Hint="Seleccione la letra" />
+        <Image HorizontalAlignment="Left" Height="24" Margin="216,232,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/usuario (1).png"/>
+
         <!--#region Labels,txtbox y eso-->
-        <Label Content="REGISTRO CLIENTE" HorizontalAlignment="Left" Margin="286,290,0,0" VerticalAlignment="Top" Width="238" FontFamily="Segoe UI Black" FontSize="24" Foreground="black"/>
-        <Label Content="Teléfono colegio*" HorizontalAlignment="Left" Margin="188,449,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.156,0.088"/>
-        <Rectangle Fill="black" HorizontalAlignment="Left" Height="9" Margin="328,331,0,0" Stroke="Black" VerticalAlignment="Top" Width="154"/>
-        <Image HorizontalAlignment="Left" Height="26" Margin="156,402,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (1).png"/>
-        <Image HorizontalAlignment="Left" Height="25" Margin="158,446,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (3).png"/>
-        <Label Content="Nombre rector*" HorizontalAlignment="Left" Margin="190,495,0,0" VerticalAlignment="Top"/>
-        <Label Content="E-Mail rector" HorizontalAlignment="Left" Margin="188,591,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nombre colegio*" HorizontalAlignment="Left" Margin="190,356,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.483,0.289"/>
-        <Label Content="Dirección colegio*" HorizontalAlignment="Left" Margin="188,403,0,0" VerticalAlignment="Top"/>
-        <Label Content="Participantes" HorizontalAlignment="Left" Margin="188,690,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtNombrecolegio" HorizontalAlignment="Left" Height="22" Margin="332,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese nombre del establecimiento"/>
-        <TextBox x:Name="txtDireccionColegio" HorizontalAlignment="Left" Height="22" Margin="332,405,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese dirección del establecimiento"/>
-        <TextBox x:Name="txtTelefonoColegio" HorizontalAlignment="Left" Height="24" Margin="332,449,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese numero del establecimiento"/>
-        <TextBox x:Name="txtNombreRector" HorizontalAlignment="Left" Height="24" Margin="332,497,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese nombre del rector "/>
-        <Image HorizontalAlignment="Left" Height="24" Margin="158,592,0,0" VerticalAlignment="Top" Width="24" Source="imagenes/pngocean.com (2).png"/>
-        <Image HorizontalAlignment="Left" Height="25" Margin="158,347,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (4).png"/>
-        <Image HorizontalAlignment="Left" Height="22" Margin="158,691,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (7).png"/>
-        <Label Content="Teléfono rector*" HorizontalAlignment="Left" Margin="188,544,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.156,0.088"/>
-        <Image HorizontalAlignment="Left" Height="25" Margin="158,543,0,0" VerticalAlignment="Top" Width="24" Source="imagenes/pngocean.com (3).png" RenderTransformOrigin="0.547,1.089"/>
-        <TextBox x:Name="txtTelefonoRector" HorizontalAlignment="Left" Height="24" Margin="332,547,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White"
+        <Label Content="REGISTRO CLIENTE" HorizontalAlignment="Left" Margin="393,5,0,0" VerticalAlignment="Top" Width="238" FontFamily="Segoe UI Black" FontSize="24" Foreground="black"/>
+        <Label Content="Teléfono colegio*" HorizontalAlignment="Left" Margin="249,186,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.156,0.088"/>
+        <Rectangle Fill="black" HorizontalAlignment="Left" Height="9" Margin="435,46,0,0" Stroke="Black" VerticalAlignment="Top" Width="154"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="216,139,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (1).png"/>
+        <Image HorizontalAlignment="Left" Height="25" Margin="216,184,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (3).png"/>
+        <Label Content="Nombre rector*" HorizontalAlignment="Left" Margin="251,232,0,0" VerticalAlignment="Top"/>
+        <Label Content="E-Mail rector" HorizontalAlignment="Left" Margin="249,328,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nombre colegio*" HorizontalAlignment="Left" Margin="249,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.483,0.289"/>
+        <Label Content="Dirección colegio*" HorizontalAlignment="Left" Margin="249,140,0,0" VerticalAlignment="Top"/>
+        <Label Content="Participantes" HorizontalAlignment="Left" Margin="249,427,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNombrecolegio" HorizontalAlignment="Left" Height="22" Margin="393,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese nombre del establecimiento"/>
+        <TextBox x:Name="txtDireccionColegio" HorizontalAlignment="Left" Height="22" Margin="393,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese dirección del establecimiento"/>
+        <TextBox x:Name="txtTelefonoColegio" HorizontalAlignment="Left" Height="24" Margin="393,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese numero del establecimiento"/>
+        <TextBox x:Name="txtNombreRector" HorizontalAlignment="Left" Height="24" Margin="393,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese nombre del rector "/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="216,328,0,0" VerticalAlignment="Top" Width="24" Source="imagenes/pngocean.com (2).png" RenderTransformOrigin="0.292,0.458"/>
+        <Image HorizontalAlignment="Left" Height="25" Margin="216,97,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (4).png"/>
+        <Image HorizontalAlignment="Left" Height="22" Margin="219,428,0,0" VerticalAlignment="Top" Width="26" Source="imagenes/pngocean.com (7).png"/>
+        <Label Content="Teléfono rector*" HorizontalAlignment="Left" Margin="249,281,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.156,0.088"/>
+        <Image HorizontalAlignment="Left" Height="25" Margin="216,280,0,0" VerticalAlignment="Top" Width="24" Source="imagenes/pngocean.com (3).png" RenderTransformOrigin="0.547,1.089"/>
+        <TextBox x:Name="txtTelefonoRector" HorizontalAlignment="Left" Height="24" Margin="393,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White"
                  materialDesign:HintAssist.Hint="Ingrese numero de telefono del rector " />
-        <TextBox x:Name="txtemailRector" HorizontalAlignment="Left" Height="24" Margin="332,593,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese E-Mail del rector"/>
-        <Label Content="Curso a contratar*" HorizontalAlignment="Left" Margin="188,641,0,0" VerticalAlignment="Top"/>
-        <Label Content="Sigla*" HorizontalAlignment="Left" Margin="474,643,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nombre representante*" HorizontalAlignment="Left" Margin="188,737,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtParticipantes" HorizontalAlignment="Left" Height="24" Margin="332,691,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Background="White" materialDesign:HintAssist.Hint="0" materialDesign:HintAssist.HelperText="Ingrese numero de alumnos que posee el curso"/>
-        <TextBox x:Name="txtNombreRepresentante" HorizontalAlignment="Left" Height="24" Margin="332,738,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese nombre del representante del curso"/>
-        <Label Content="Teléfono representante*" HorizontalAlignment="Left" Margin="190,783,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.156,0.088"/>
-        <Image HorizontalAlignment="Left" Height="25" Margin="158,783,0,0" VerticalAlignment="Top" Width="24" Source="imagenes/pngocean.com (3).png"/>
-        <TextBox x:Name="txtTelefonoRepresentante" HorizontalAlignment="Left" Height="24" Margin="332,784,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese numero de telefono del representante" materialDesign:HintAssist.HelperText="Debe comenzar con +569"/>
-        <Label Content="E-Mail representante*" HorizontalAlignment="Left" Margin="190,828,0,-24" VerticalAlignment="Top"/>
-        <Image HorizontalAlignment="Left" Height="24" Margin="160,829,0,-23" VerticalAlignment="Top" Width="24" Source="imagenes/pngocean.com (2).png"/>
-        <TextBox x:Name="txtEmailRepresentante" HorizontalAlignment="Left" Height="24" Margin="332,830,0,-24" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese E-Mail del representante"/>
+        <TextBox x:Name="txtemailRector" HorizontalAlignment="Left" Height="24" Margin="393,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese E-Mail del rector"/>
+        <Label Content="Curso a contratar*" HorizontalAlignment="Left" Margin="249,378,0,0" VerticalAlignment="Top"/>
+        <Label Content="Sigla*" HorizontalAlignment="Left" Margin="535,380,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nombre representante*" HorizontalAlignment="Left" Margin="249,474,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtParticipantes" HorizontalAlignment="Left" Height="24" Margin="393,428,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" Background="White" materialDesign:HintAssist.Hint="0" materialDesign:HintAssist.HelperText="Ingrese numero de alumnos que posee el curso"/>
+        <TextBox x:Name="txtNombreRepresentante" HorizontalAlignment="Left" Height="24" Margin="393,475,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese nombre del representante del curso"/>
+        <Label Content="Teléfono representante*" HorizontalAlignment="Left" Margin="251,520,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.156,0.088"/>
+        <Image HorizontalAlignment="Left" Height="25" Margin="216,520,0,0" VerticalAlignment="Top" Width="24" Source="imagenes/pngocean.com (3).png" RenderTransformOrigin="0.083,0.387"/>
+        <TextBox x:Name="txtTelefonoRepresentante" HorizontalAlignment="Left" Height="24" Margin="393,521,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese numero de telefono del representante" materialDesign:HintAssist.HelperText="Debe comenzar con +569"/>
+        <Label Content="E-Mail representante*" HorizontalAlignment="Left" Margin="248,570,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="216,569,0,0" VerticalAlignment="Top" Width="24" Source="imagenes/pngocean.com (2).png" RenderTransformOrigin="8.75,-6.292"/>
+        <TextBox x:Name="txtEmailRepresentante" HorizontalAlignment="Left" Height="24" Margin="392,570,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese E-Mail del representante"/>
         <!--#endregion-->
 
-        <Button x:Name="btnMenu" Style="{StaticResource MaterialDesignRaisedButton}" Content="Menú principal" HorizontalAlignment="Left" Margin="202,889,0,-90.333" VerticalAlignment="Top" Width="134" Background="White" Click="BtnMenu_Click" Foreground="#FF0E0000"/>
-        <Button x:Name="btnCancelar" Style="{StaticResource MaterialDesignRaisedButton}"  Content="Cancelar" HorizontalAlignment="Left" Margin="366,889,0,-90.333" VerticalAlignment="Top" Width="90" Background="White" Foreground="#FF0E0000" Click="BtnCancelar_Click"/>
-        <Button x:Name="btnRegistrarCliente" Style="{StaticResource MaterialDesignRaisedButton}" Content="REGISTRAR CLIENTE" HorizontalAlignment="Left" Margin="502,889,0,-90.333" VerticalAlignment="Top" Width="167" Background="Black" Height="32" Foreground="White"/>
-
-        <!--#region Botones de ayuda-->
-        <Button x:Name="btnInfo" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Left" Margin="744,952,0,-148.333" VerticalAlignment="Top" Width="31"  Click="BtnInfo_Click_1" Height="27" Background="#FF04000C">
-            <materialDesign:PackIcon Kind="AboutVariant" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="18" ></materialDesign:PackIcon>
-        </Button>
-        <Button x:Name="btnFace" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Left" Margin="712,952,0,-148.333" VerticalAlignment="Top" Width="32" Height="27" Background="Black" RenderTransformOrigin="-0.586,0.537">
-            <materialDesign:PackIcon Kind="Facebook" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="18" ></materialDesign:PackIcon>
-        </Button>
-        <Button x:Name="btnWsp" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Left" Margin="680,953,0,-149.333" VerticalAlignment="Top" Width="32"  Height="27" Background="Black" RenderTransformOrigin="-0.586,0.537">
-            <materialDesign:PackIcon Kind="Whatsapp" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="18" ></materialDesign:PackIcon>
-        </Button>
-        <Button x:Name="btnLocalizacion" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Left" Margin="648,953,0,-149.333" VerticalAlignment="Top" Width="32"   Height="27" Background="Black" RenderTransformOrigin="-0.586,0.537">
-            <materialDesign:PackIcon Kind="MapMarker" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="18" ></materialDesign:PackIcon>
-        </Button>
-        <!--#endregion-->
+        <Button x:Name="btnMenu" Style="{StaticResource MaterialDesignRaisedButton}" Content="Menú principal" HorizontalAlignment="Left" Margin="261,675,0,0" VerticalAlignment="Top" Width="134" Background="White" Click="BtnMenu_Click" Foreground="#FF0E0000"/>
+        <Button x:Name="btnCancelar" Style="{StaticResource MaterialDesignRaisedButton}"  Content="Cancelar" HorizontalAlignment="Left" Margin="645,675,0,0" VerticalAlignment="Top" Width="90" Background="White" Foreground="#FF0E0000" Click="BtnCancelar_Click"/>
+        <Button x:Name="btnRegistrarCliente" Style="{StaticResource MaterialDesignRaisedButton}" Content="REGISTRAR CLIENTE" HorizontalAlignment="Left" Margin="435,675,0,0" VerticalAlignment="Top" Width="167" Background="Black" Height="32" Foreground="White"/>
 
     </Grid>
 </Page>
