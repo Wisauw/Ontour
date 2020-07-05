@@ -21,7 +21,7 @@ namespace CapaLogicaNegocio
         public string Mensaje { get; set; }
         public PaqueteTuristico PaqueteTuristico { get; set; }
         public Region Region { get; set; }
-        
+
 
         public Cotizacion()
         {

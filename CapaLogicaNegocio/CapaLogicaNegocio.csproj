@@ -47,6 +47,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Colegio.cs" />
     <Compile Include="Comuna.cs" />
+    <Compile Include="Cotizacion.cs" />
     <Compile Include="Curso.cs" />
     <Compile Include="Ejecutivo.cs" />
     <Compile Include="PaqueteTuristico.cs" />
