@@ -21,6 +21,10 @@ namespace OnTour
     /// </summary>
     public partial class ReClientexaml : Page
     {
+        //GLOBAL
+        Cliente cli = new Cliente();
+        
+
         public ReClientexaml()
         {
             InitializeComponent();
@@ -56,6 +60,11 @@ namespace OnTour
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Menu());
-        }        
+        }
+
+        private void BtnRegistrarCliente_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

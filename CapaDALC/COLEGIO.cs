@@ -28,6 +28,9 @@ namespace CapaDALC
         public string Nombre_Representante { get; set; }
         public string Telefono_Representante { get; set; }
         public int Id_curso { get; set; }
+        public Nullable<int> Participantes { get; set; }
+        public string Email_Rector { get; set; }
+        public string Email_Representante { get; set; }
     
         public virtual ICollection<CLIENTE> CLIENTE { get; set; }
         public virtual CURSO CURSO { get; set; }

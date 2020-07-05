@@ -30,6 +30,9 @@
           <Property Name="Nombre_Representante" Type="nvarchar" MaxLength="70" Nullable="false" />
           <Property Name="Telefono_Representante" Type="nvarchar" MaxLength="12" Nullable="false" />
           <Property Name="Id_curso" Type="int" Nullable="false" />
+          <Property Name="Participantes" Type="int" />
+          <Property Name="Email_Rector" Type="varchar" MaxLength="50" />
+          <Property Name="Email_Representante" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="COMUNA">
           <Key>
@@ -308,6 +311,9 @@
           <NavigationProperty Name="CLIENTE" Relationship="Self.FK__CLIENTE__Id_Cole__31EC6D26" FromRole="COLEGIO" ToRole="CLIENTE" />
           <Property Name="Id_curso" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CURSO" Relationship="OnTourDBModel.FK__COLEGIO__Id_curs__49C3F6B7" FromRole="COLEGIO" ToRole="CURSO" />
+          <Property Name="Participantes" Type="Int32" />
+          <Property Name="Email_Rector" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email_Representante" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="COMUNA">
           <Key>
@@ -587,6 +593,9 @@
           <EntitySetMapping Name="COLEGIO">
             <EntityTypeMapping TypeName="OnTourDBModel.COLEGIO">
               <MappingFragment StoreEntitySet="COLEGIO">
+                <ScalarProperty Name="Email_Representante" ColumnName="Email_Representante" />
+                <ScalarProperty Name="Email_Rector" ColumnName="Email_Rector" />
+                <ScalarProperty Name="Participantes" ColumnName="Participantes" />
                 <ScalarProperty Name="Id_curso" ColumnName="Id_curso" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
