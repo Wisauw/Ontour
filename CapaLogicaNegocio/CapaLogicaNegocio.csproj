@@ -50,7 +50,7 @@
     <Compile Include="Cotizacion.cs" />
     <Compile Include="Curso.cs" />
     <Compile Include="Ejecutivo.cs" />
-    <Compile Include="PaqueteTuristico.cs" />
+    <Compile Include="Paquete.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Region.cs" />
     <Compile Include="Servicio.cs" />

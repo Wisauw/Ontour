@@ -11,6 +11,7 @@ namespace CapaLogicaNegocio
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
+        public Paquete Paquete { get; set; }
         private OnTourDBEntities conexion;
 
         public Servicio()
@@ -21,18 +22,23 @@ namespace CapaLogicaNegocio
         private void Init()
         {
             Id = 0;
-            Nombre = String.Empty;
+            Nombre = String.Empty;       
+            Paquete = new Paquete();
             conexion = new OnTourDBEntities();
         }
 
-        public IEnumerable<object> listadoServicio()
+        public IEnumerable<object> listadoServicios(int idPaquete)
         {
             try
             {
-                return conexion.SERVICIO.ToList();
+                var listado = (from c in conexion.SERVICIO
+                               where c.Id_Paquete== idPaquete
+                               select c).ToList();
+                return listado;
             }
             catch (Exception ex)
             {
+
                 return null;
             }
         }

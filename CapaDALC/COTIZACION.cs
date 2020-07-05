@@ -28,7 +28,7 @@ namespace CapaDALC
         public int Id_Paquete_Turistico { get; set; }
         public int Id_Region { get; set; }
     
-        public virtual PAQUETE_TURISTICO PAQUETE_TURISTICO { get; set; }
         public virtual REGION REGION { get; set; }
+        public virtual PAQUETE_TURISTICO PAQUETE_TURISTICO { get; set; }
     }
 }

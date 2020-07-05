@@ -18,14 +18,14 @@ namespace CapaDALC
         {
             this.CLIENTE = new HashSet<CLIENTE>();
             this.COTIZACION = new HashSet<COTIZACION>();
+            this.SERVICIO = new HashSet<SERVICIO>();
         }
     
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public int Id_Servicio { get; set; }
     
         public virtual ICollection<CLIENTE> CLIENTE { get; set; }
-        public virtual SERVICIO SERVICIO { get; set; }
         public virtual ICollection<COTIZACION> COTIZACION { get; set; }
+        public virtual ICollection<SERVICIO> SERVICIO { get; set; }
     }
 }

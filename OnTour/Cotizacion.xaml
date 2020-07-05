@@ -55,7 +55,7 @@
         <ComboBox x:Name="cboServicios" HorizontalAlignment="Left" Margin="433,429,0,0" VerticalAlignment="Top" Width="268" Background="White" materialDesign:HintAssist.Hint="Seleccione servicios adicionales" />
         <Label Content="Seleccione paquete turistico" HorizontalAlignment="Left" Margin="250,389,0,0" VerticalAlignment="Top"/>
         <Label Content="Servicio adicionales" HorizontalAlignment="Left" Margin="250,433,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="433,385,0,0" VerticalAlignment="Top" Width="268" Background="White" materialDesign:HintAssist.Hint="Seleccione un paquete" />
+        <ComboBox x:Name="cboPaquete" HorizontalAlignment="Left" Margin="433,385,0,0" VerticalAlignment="Top" Width="268" Background="White" materialDesign:HintAssist.Hint="Seleccione un paquete" SelectionChanged="CboPaquete_SelectionChanged" />
         <TextBox HorizontalAlignment="Left" Height="25" Margin="382,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese nombre completo" />
         <TextBox HorizontalAlignment="Left" Height="25" Margin="382,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese E-Mail" />
         <TextBox HorizontalAlignment="Left" Height="25" Margin="382,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese su numero de telefono" materialDesign:HintAssist.HelperText="Debe comenzar con +569" />

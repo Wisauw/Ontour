@@ -25,15 +25,15 @@ namespace OnTour
         {
             InitializeComponent();
             CargarRegiones();
-            CargarServicios();
+            CargarPaquetes();
         }
 
-        private void CargarServicios()
+        private void CargarPaquetes()
         {
-            cboServicios.ItemsSource = new Servicio().listadoServicio();
-            cboServicios.DisplayMemberPath = "Nombre";
-            cboServicios.SelectedValuePath = "Id";
-            cboServicios.SelectedIndex = -1;
+            cboPaquete.ItemsSource = new Paquete().listadoPaquete();
+            cboPaquete.DisplayMemberPath = "Nombre";
+            cboPaquete.SelectedValuePath = "Id";
+            cboPaquete.SelectedIndex = -1;
         }
 
         private void CargarRegiones()
@@ -50,6 +50,14 @@ namespace OnTour
             cboComuna.DisplayMemberPath = "Nombre";
             cboComuna.SelectedValuePath = "Id";
             cboComuna.SelectedIndex = -1;
+        }
+
+        private void CboPaquete_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            cboServicios.ItemsSource = new Servicio().listadoServicios((int)cboPaquete.SelectedValue);
+            cboServicios.DisplayMemberPath = "Nombre";
+            cboServicios.SelectedValuePath = "Id";
+            cboServicios.SelectedIndex = -1;
         }
 
         private void BtnMenuPrincipal_Click(object sender, RoutedEventArgs e)
@@ -78,5 +86,7 @@ namespace OnTour
                 this.IsEnabled = true;
             }
         }
+
+        
     }
 }

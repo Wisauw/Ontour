@@ -19,7 +19,7 @@ namespace CapaLogicaNegocio
         public int Cantidad_Alumnos { get; set; }
         public int Cantidad_profesores { get; set; }
         public string Mensaje { get; set; }
-        public PaqueteTuristico PaqueteTuristico { get; set; }
+        public Paquete PaqueteTuristico { get; set; }
         public Region Region { get; set; }
 
 
@@ -41,7 +41,7 @@ namespace CapaLogicaNegocio
             Cantidad_Alumnos = 0;
             Cantidad_profesores = 0;
             Mensaje = String.Empty;
-            PaqueteTuristico = new PaqueteTuristico();
+            PaqueteTuristico = new Paquete();
             Region = new Region();
         }
     }

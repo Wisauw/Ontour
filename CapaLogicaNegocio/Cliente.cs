@@ -13,7 +13,7 @@ namespace CapaLogicaNegocio
         public String Email { get; set; }
         public Colegio Colegio { get; set; }
         public Ejecutivo Ejecutivo { get; set; }
-        public PaqueteTuristico PaqueteTuristico { get; set; }
+        public Paquete PaqueteTuristico { get; set; }
         public Region Region { get; set; }
 
         public Cliente()
@@ -28,7 +28,7 @@ namespace CapaLogicaNegocio
             Email = String.Empty;
             Colegio = new Colegio();
             Ejecutivo = new Ejecutivo();
-            PaqueteTuristico = new PaqueteTuristico();
+            PaqueteTuristico = new Paquete();
             Region = new Region();
         }
     }

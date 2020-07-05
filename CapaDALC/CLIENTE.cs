@@ -24,7 +24,7 @@ namespace CapaDALC
     
         public virtual COLEGIO COLEGIO { get; set; }
         public virtual EJECUTIVO EJECUTIVO { get; set; }
-        public virtual PAQUETE_TURISTICO PAQUETE_TURISTICO { get; set; }
         public virtual REGION REGION { get; set; }
+        public virtual PAQUETE_TURISTICO PAQUETE_TURISTICO { get; set; }
     }
 }
