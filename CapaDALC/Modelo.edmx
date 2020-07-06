@@ -53,8 +53,8 @@
           <Property Name="Telefono" Type="nvarchar" MaxLength="12" Nullable="false" />
           <Property Name="Nombre_Colegio" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Origen" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="Ida" Type="datetime" Nullable="false" />
-          <Property Name="Vuelta" Type="datetime" Nullable="false" />
+          <Property Name="Ida" Type="date" Nullable="false" />
+          <Property Name="Vuelta" Type="date" Nullable="false" />
           <Property Name="Cantidad_Alumnos" Type="int" Nullable="false" />
           <Property Name="Cantidad_Profesores" Type="int" Nullable="false" />
           <Property Name="Mensaje" Type="nvarchar" MaxLength="300" Nullable="false" />
@@ -561,8 +561,8 @@
           <Property Name="Telefono" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
           <Property Name="Nombre_Colegio" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Origen" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Ida" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Vuelta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Ida" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Vuelta" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Cantidad_Alumnos" Type="Int32" Nullable="false" />
           <Property Name="Cantidad_Profesores" Type="Int32" Nullable="false" />
           <Property Name="Mensaje" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
