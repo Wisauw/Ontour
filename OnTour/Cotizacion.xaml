@@ -74,16 +74,14 @@
         <Button x:Name="btnMenuPrincipal" Style="{StaticResource MaterialDesignRaisedButton}" Content="Menú principal" HorizontalAlignment="Left" Margin="245,681,0,0" VerticalAlignment="Top" Width="138" Background="White" Click="BtnMenuPrincipal_Click" Foreground="Black"/>
         <Button x:Name="btnCancelar" Style="{StaticResource MaterialDesignRaisedButton}" Content="Cancelar" HorizontalAlignment="Left" Margin="607,681,0,0" VerticalAlignment="Top" Width="89" Background="White" Foreground="Black"/>
         <!--Esta parte de programacion esta hecha para que al presionar el boton de solicitar muestre una ventana emergente tipo Android-->
-        <materialDesign:DialogHost CloseOnClickAway="True">
+        <materialDesign:DialogHost CloseOnClickAway="True" Identifier="DHCotiza">
             <materialDesign:DialogHost.DialogContent>
                 <Grid Height="180" Width="335">
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20" Width="300" Height="100">
-                        <TextBlock Text="Se ha enviado la cotización al Email registrado" VerticalAlignment="Top" Padding="2"/>
-                        <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Style="{StaticResource MaterialDesignRaisedButton}" Content="Cerrar" Padding="2" VerticalAlignment="Bottom"></Button>
                     </StackPanel>
                 </Grid>
             </materialDesign:DialogHost.DialogContent>
-            <Button x:Name="btnSolicitarCotizacion" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" Style="{StaticResource MaterialDesignRaisedButton}"  Content="Solicitar cotización" HorizontalAlignment="Left" Margin="426,685,0,0" VerticalAlignment="Top" Width="154" Background="Black" Height="33" Foreground="White" Click="BtnSolicitarCotizacion_Click"/>
+            <Button x:Name="btnSolicitarCotizacion" Style="{StaticResource MaterialDesignRaisedButton}"  Content="Solicitar cotización" HorizontalAlignment="Left" Margin="426,685,0,0" VerticalAlignment="Top" Width="154" Background="Black" Height="33" Foreground="White" Click="BtnSolicitarCotizacion_Click"/>
         </materialDesign:DialogHost>
         <!--#endregion-->
         <!--#region Botones de ayuda-->

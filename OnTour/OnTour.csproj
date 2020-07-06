@@ -81,11 +81,17 @@
     <Compile Include="Cotizacion.xaml.cs">
       <DependentUpon>Cotizacion.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dialogo\DialogoError.xaml.cs">
+    <Compile Include="Dialogo\DialogoCLiente\DialogoError.xaml.cs">
       <DependentUpon>DialogoError.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dialogo\OkDialogo.xaml.cs">
+    <Compile Include="Dialogo\DialogoCLiente\OkDialogo.xaml.cs">
       <DependentUpon>OkDialogo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogo\Cotizacion\DialogCotizaBien.xaml.cs">
+      <DependentUpon>DialogCotizaBien.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogo\Cotizacion\ErrorCoti.xaml.cs">
+      <DependentUpon>ErrorCoti.xaml</DependentUpon>
     </Compile>
     <Compile Include="informacion.xaml.cs">
       <DependentUpon>informacion.xaml</DependentUpon>
@@ -109,11 +115,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dialogo\DialogoError.xaml">
+    <Page Include="Dialogo\DialogoCLiente\DialogoError.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dialogo\OkDialogo.xaml">
+    <Page Include="Dialogo\DialogoCLiente\OkDialogo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogo\Cotizacion\DialogCotizaBien.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogo\Cotizacion\ErrorCoti.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

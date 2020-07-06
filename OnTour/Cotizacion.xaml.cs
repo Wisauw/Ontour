@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CapaLogicaNegocio;
+using MaterialDesignThemes.Wpf;
+using OnTour.Dialogo.Cotizacion;
 
 namespace OnTour
 {
@@ -90,7 +92,7 @@ namespace OnTour
             }
         }
 
-        private void BtnSolicitarCotizacion_Click(object sender, RoutedEventArgs e)
+        private async void BtnSolicitarCotizacion_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -111,18 +113,20 @@ namespace OnTour
 
                 if (coti.agregarCotizacion() == true)
                 {
-                    MessageBox.Show("Cotización enviada");
-                    
+                    var dialog = new DialogCotizaBien(); 
+                    var result = (bool)await DialogHost.Show(dialog, "DHCotiza");
+
                 }
                 else
                 {
-                    MessageBox.Show("Error al solicitar cotización");
+                    var dialog = new ErrorCoti();
+                    var result = (bool)await DialogHost.Show(dialog, "DHCotiza");
                 }
             }
             catch (Exception)
             {
-
-                MessageBox.Show("Error al solicitar cotización");
+                var dialog = new ErrorCoti();
+                var result = (bool)await DialogHost.Show(dialog, "DHCotiza");
             }
         }
     }
