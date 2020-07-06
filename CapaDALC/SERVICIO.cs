@@ -14,10 +14,16 @@ namespace CapaDALC
     
     public partial class SERVICIO
     {
+        public SERVICIO()
+        {
+            this.COTIZACION = new HashSet<COTIZACION>();
+        }
+    
         public int Id { get; set; }
         public string Nombre { get; set; }
         public int Id_Paquete { get; set; }
     
         public virtual PAQUETE_TURISTICO PAQUETE_TURISTICO { get; set; }
+        public virtual ICollection<COTIZACION> COTIZACION { get; set; }
     }
 }

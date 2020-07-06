@@ -21,6 +21,9 @@ namespace OnTour
     /// </summary>
     public partial class Cotizacion : Page
     {
+        //GLOBAL
+        ClaseCotizacion coti = new ClaseCotizacion();
+
         public Cotizacion()
         {
             InitializeComponent();
@@ -87,6 +90,40 @@ namespace OnTour
             }
         }
 
-        
+        private void BtnSolicitarCotizacion_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                coti.Nombre_completo = txtNombre_completo.Text;
+                coti.Email = txtEmail.Text;
+                coti.Telefono = txtTelefono.Text;
+                coti.Nombre_Colegio = txtNombre_Colegio.Text;
+                coti.Region = new Region() { Id = (int)cboRegion.SelectedValue };
+                coti.Comuna = new Comuna() { Id = (int)cboComuna.SelectedValue };
+                coti.Origen = txtOrigen.Text;
+                coti.Ida = DtpIda.SelectedDate.Value;
+                coti.Vuelta = DtpVuelta.SelectedDate.Value;
+                coti.Cantidad_Alumnos = int.Parse(txtCantidadAlumnos.Text);
+                coti.Cantidad_profesores = int.Parse(txtCantidadProfesores.Text);
+                coti.PaqueteTuristico = new Paquete() { Id = (int)cboPaquete.SelectedValue };
+                coti.Servicio = new Servicio() { Id = (int)cboServicios.SelectedValue };
+                coti.Mensaje = txtMensaje.Text;
+
+                if (coti.agregarCotizacion() == true)
+                {
+                    MessageBox.Show("Cotización enviada");
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Error al solicitar cotización");
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error al solicitar cotización");
+            }
+        }
     }
 }

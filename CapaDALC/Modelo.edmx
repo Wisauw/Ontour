@@ -47,19 +47,21 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre_Completo" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Telefono" Type="nvarchar" MaxLength="12" Nullable="false" />
           <Property Name="Nombre_Colegio" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Origen" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="Ida" Type="datetime" Nullable="false" />
-          <Property Name="Vuelta" Type="datetime" Nullable="false" />
+          <Property Name="Ida" Type="date" Nullable="false" />
+          <Property Name="Vuelta" Type="date" Nullable="false" />
           <Property Name="Cantidad_Alumnos" Type="int" Nullable="false" />
           <Property Name="Cantidad_Profesores" Type="int" Nullable="false" />
           <Property Name="Mensaje" Type="nvarchar" MaxLength="300" Nullable="false" />
           <Property Name="Id_Paquete_Turistico" Type="int" Nullable="false" />
           <Property Name="Id_Region" Type="int" Nullable="false" />
+          <Property Name="Id_comuna" Type="int" Nullable="false" />
+          <Property Name="Id_Servicio" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="CURSO">
           <Key>
@@ -189,7 +191,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__COTIZACIO__Id_Pa__06CD04F7">
+        <Association Name="FK__COTIZACIO__Id_co__634EBE90">
+          <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="1" />
+          <End Role="COTIZACION" Type="Self.COTIZACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COMUNA">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="COTIZACION">
+              <PropertyRef Name="Id_comuna" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__COTIZACIO__Id_Pa__625A9A57">
           <End Role="PAQUETE_TURISTICO" Type="Self.PAQUETE_TURISTICO" Multiplicity="1" />
           <End Role="COTIZACION" Type="Self.COTIZACION" Multiplicity="*" />
           <ReferentialConstraint>
@@ -201,7 +215,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__COTIZACIO__Id_Re__70DDC3D8">
+        <Association Name="FK__COTIZACIO__Id_Re__65370702">
           <End Role="REGION" Type="Self.REGION" Multiplicity="1" />
           <End Role="COTIZACION" Type="Self.COTIZACION" Multiplicity="*" />
           <ReferentialConstraint>
@@ -210,6 +224,18 @@
             </Principal>
             <Dependent Role="COTIZACION">
               <PropertyRef Name="Id_Region" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__COTIZACIO__Id_Se__6442E2C9">
+          <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="1" />
+          <End Role="COTIZACION" Type="Self.COTIZACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="COTIZACION">
+              <PropertyRef Name="Id_Servicio" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -276,12 +302,20 @@
             <End Role="REGION" EntitySet="REGION" />
             <End Role="COMUNA" EntitySet="COMUNA" />
           </AssociationSet>
-          <AssociationSet Name="FK__COTIZACIO__Id_Pa__06CD04F7" Association="Self.FK__COTIZACIO__Id_Pa__06CD04F7">
+          <AssociationSet Name="FK__COTIZACIO__Id_co__634EBE90" Association="Self.FK__COTIZACIO__Id_co__634EBE90">
+            <End Role="COMUNA" EntitySet="COMUNA" />
+            <End Role="COTIZACION" EntitySet="COTIZACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COTIZACIO__Id_Pa__625A9A57" Association="Self.FK__COTIZACIO__Id_Pa__625A9A57">
             <End Role="PAQUETE_TURISTICO" EntitySet="PAQUETE_TURISTICO" />
             <End Role="COTIZACION" EntitySet="COTIZACION" />
           </AssociationSet>
-          <AssociationSet Name="FK__COTIZACIO__Id_Re__70DDC3D8" Association="Self.FK__COTIZACIO__Id_Re__70DDC3D8">
+          <AssociationSet Name="FK__COTIZACIO__Id_Re__65370702" Association="Self.FK__COTIZACIO__Id_Re__65370702">
             <End Role="REGION" EntitySet="REGION" />
+            <End Role="COTIZACION" EntitySet="COTIZACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COTIZACIO__Id_Se__6442E2C9" Association="Self.FK__COTIZACIO__Id_Se__6442E2C9">
+            <End Role="SERVICIO" EntitySet="SERVICIO" />
             <End Role="COTIZACION" EntitySet="COTIZACION" />
           </AssociationSet>
           <AssociationSet Name="FK__SERVICIO__Id_Paq__04E4BC85" Association="Self.FK__SERVICIO__Id_Paq__04E4BC85">
@@ -342,6 +376,7 @@
           <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Id_Region" Type="Int32" Nullable="false" />
           <NavigationProperty Name="REGION" Relationship="Self.FK__COMUNA__Id_Regio__2B3F6F97" FromRole="COMUNA" ToRole="REGION" />
+          <NavigationProperty Name="COTIZACION" Relationship="OnTourDBModel.FK__COTIZACIO__Id_co__3A4CA8FD" FromRole="COMUNA" ToRole="COTIZACION" />
         </EntityType>
         <EntityType Name="EJECUTIVO">
           <Key>
@@ -464,6 +499,14 @@
             <End Role="SIGLA" EntitySet="SIGLA" />
             <End Role="COLEGIO" EntitySet="COLEGIO" />
           </AssociationSet>
+          <AssociationSet Name="FK__COTIZACIO__Id_co__3A4CA8FD" Association="OnTourDBModel.FK__COTIZACIO__Id_co__3A4CA8FD">
+            <End Role="COMUNA" EntitySet="COMUNA" />
+            <End Role="COTIZACION" EntitySet="COTIZACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COTIZACIO__Id_Se__4D5F7D71" Association="OnTourDBModel.FK__COTIZACIO__Id_Se__4D5F7D71">
+            <End Role="SERVICIO" EntitySet="SERVICIO" />
+            <End Role="COTIZACION" EntitySet="COTIZACION" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="CURSO">
           <Key>
@@ -518,8 +561,8 @@
           <Property Name="Telefono" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
           <Property Name="Nombre_Colegio" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Origen" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Ida" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Vuelta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Ida" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Vuelta" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Cantidad_Alumnos" Type="Int32" Nullable="false" />
           <Property Name="Cantidad_Profesores" Type="Int32" Nullable="false" />
           <Property Name="Mensaje" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
@@ -527,6 +570,10 @@
           <Property Name="Id_Region" Type="Int32" Nullable="false" />
           <NavigationProperty Name="REGION" Relationship="OnTourDBModel.FK__COTIZACIO__Id_Re__70DDC3D8" FromRole="COTIZACION" ToRole="REGION" />
           <NavigationProperty Name="PAQUETE_TURISTICO" Relationship="OnTourDBModel.FK__COTIZACIO__Id_Pa__06CD04F7" FromRole="COTIZACION" ToRole="PAQUETE_TURISTICO" />
+          <Property Name="Id_comuna" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="COMUNA" Relationship="OnTourDBModel.FK__COTIZACIO__Id_co__3A4CA8FD" FromRole="COTIZACION" ToRole="COMUNA" />
+          <Property Name="Id_Servicio" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SERVICIO" Relationship="OnTourDBModel.FK__COTIZACIO__Id_Se__4D5F7D71" FromRole="COTIZACION" ToRole="SERVICIO" />
         </EntityType>
         <Association Name="FK__COTIZACIO__Id_Re__70DDC3D8">
           <End Type="OnTourDBModel.REGION" Role="REGION" Multiplicity="1" />
@@ -558,6 +605,7 @@
           <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Id_Paquete" Type="Int32" Nullable="false" />
           <NavigationProperty Name="PAQUETE_TURISTICO" Relationship="OnTourDBModel.FK__SERVICIO__Id_Paq__04E4BC85" FromRole="SERVICIO" ToRole="PAQUETE_TURISTICO" />
+          <NavigationProperty Name="COTIZACION" Relationship="OnTourDBModel.FK__COTIZACIO__Id_Se__4D5F7D71" FromRole="SERVICIO" ToRole="COTIZACION" />
         </EntityType>
         <Association Name="FK__CLIENTE__Id_Paqu__05D8E0BE">
           <End Type="OnTourDBModel.PAQUETE_TURISTICO" Role="PAQUETE_TURISTICO" Multiplicity="1" />
@@ -604,6 +652,30 @@
             </Principal>
             <Dependent Role="COLEGIO">
               <PropertyRef Name="Id_Sigla" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__COTIZACIO__Id_co__3A4CA8FD">
+          <End Type="OnTourDBModel.COMUNA" Role="COMUNA" Multiplicity="1" />
+          <End Type="OnTourDBModel.COTIZACION" Role="COTIZACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COMUNA">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="COTIZACION">
+              <PropertyRef Name="Id_comuna" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__COTIZACIO__Id_Se__4D5F7D71">
+          <End Type="OnTourDBModel.SERVICIO" Role="SERVICIO" Multiplicity="1" />
+          <End Type="OnTourDBModel.COTIZACION" Role="COTIZACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="COTIZACION">
+              <PropertyRef Name="Id_Servicio" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -690,6 +762,8 @@
           <EntitySetMapping Name="COTIZACION">
             <EntityTypeMapping TypeName="OnTourDBModel.COTIZACION">
               <MappingFragment StoreEntitySet="COTIZACION">
+                <ScalarProperty Name="Id_Servicio" ColumnName="Id_Servicio" />
+                <ScalarProperty Name="Id_comuna" ColumnName="Id_comuna" />
                 <ScalarProperty Name="Id_Region" ColumnName="Id_Region" />
                 <ScalarProperty Name="Id_Paquete_Turistico" ColumnName="Id_Paquete_Turistico" />
                 <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
