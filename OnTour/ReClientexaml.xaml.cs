@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CapaLogicaNegocio;
+using MaterialDesignThemes.Wpf;
+using OnTour.Dialogo;
 
 
 namespace OnTour
@@ -63,7 +65,7 @@ namespace OnTour
             NavigationService.Navigate(new Menu());
         }
 
-        private void BtnRegistrarCliente_Click(object sender, RoutedEventArgs e)
+        private async void BtnRegistrarCliente_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -82,18 +84,23 @@ namespace OnTour
 
                 if (cole.agregarColegio() == true)
                 {
-                    MessageBox.Show("Cliente agregado");
+                    var dialog = new user(); // me manie y le puse user como nombre al dialogo xdd
+                    var result = (bool)await DialogHost.Show(dialog, "DHEstado");
+                    
                 }
                 else
                 {
-
-                    MessageBox.Show("Error al agregar cliente");
+                    var dialog = new DialogoError(); // Este dialogo si esta bien definido ya que llama al control user dialogoError
+                    var result = (bool)await DialogHost.Show(dialog, "DHEstado");
+                    
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al agregar cliente");
+                var dialog = new DialogoError(); 
+                var result = (bool)await DialogHost.Show(dialog, "DHEstado");
+               
             }
         }
     }

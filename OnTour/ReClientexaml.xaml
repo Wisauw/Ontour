@@ -57,7 +57,19 @@
 
         <Button x:Name="btnMenu" Style="{StaticResource MaterialDesignRaisedButton}" Content="Menú principal" HorizontalAlignment="Left" Margin="261,675,0,0" VerticalAlignment="Top" Width="134" Background="White" Click="BtnMenu_Click" Foreground="#FF0E0000"/>
         <Button x:Name="btnCancelar" Style="{StaticResource MaterialDesignRaisedButton}"  Content="Cancelar" HorizontalAlignment="Left" Margin="645,675,0,0" VerticalAlignment="Top" Width="90" Background="White" Foreground="#FF0E0000" Click="BtnCancelar_Click"/>
-        <Button x:Name="btnRegistrarCliente" Style="{StaticResource MaterialDesignRaisedButton}" Content="REGISTRAR CLIENTE" HorizontalAlignment="Left" Margin="435,675,0,0" VerticalAlignment="Top" Width="167" Background="Black" Height="32" Foreground="White" Click="BtnRegistrarCliente_Click"/>
+
+        <materialDesign:DialogHost CloseOnClickAway="True" Identifier="DHEstado">
+            <materialDesign:DialogHost.DialogContent>
+                <Grid Height="180" Width="335">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20" Width="300" Height="100">
+                    </StackPanel>
+                </Grid>
+            </materialDesign:DialogHost.DialogContent>
+            <Button x:Name="btnRegistrarCliente"  Style="{StaticResource MaterialDesignRaisedButton}" Content="REGISTRAR CLIENTE" HorizontalAlignment="Left" Margin="435,675,0,0" VerticalAlignment="Top" Width="167" Background="Black" Height="32" Foreground="White" Click="BtnRegistrarCliente_Click"/>
+        </materialDesign:DialogHost>
+        
+        
+       
 
     </Grid>
 </Page>
