@@ -14,10 +14,16 @@ namespace CapaDALC
     
     public partial class SIGLA
     {
+        public SIGLA()
+        {
+            this.COLEGIO = new HashSet<COLEGIO>();
+        }
+    
         public int Id { get; set; }
         public string Nombre { get; set; }
         public int Id_Curso { get; set; }
     
         public virtual CURSO CURSO { get; set; }
+        public virtual ICollection<COLEGIO> COLEGIO { get; set; }
     }
 }

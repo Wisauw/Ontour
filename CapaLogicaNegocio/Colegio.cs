@@ -16,11 +16,13 @@ namespace CapaLogicaNegocio
         public string Nombre_Rector { get; set; }
         public string Telefono_Rector { get; set; }
         public string Email_Rector { get; set; }
+        public Curso Curso { get; set; }
+        public Sigla Sigla { get; set; }
         public int Participantes { get; set; }
         public string Nombre_Representante { get; set; }
         public string Telefono_Representante { get; set; }
         public string Email_Representante { get; set; }
-        public Curso Curso { get; set; }        
+        
         private OnTourDBEntities conexion;
 
         public Colegio()
@@ -37,12 +39,47 @@ namespace CapaLogicaNegocio
             Nombre_Rector = String.Empty;
             Telefono_Rector = String.Empty;
             Email_Rector = String.Empty;
+            Curso = new Curso();
+            Sigla = new Sigla();
             Participantes = 0;
             Nombre_Representante = String.Empty;
             Telefono_Representante = String.Empty;
             Email_Representante = String.Empty;
-            Curso = new Curso();
+                      
             conexion = new OnTourDBEntities();
+        }
+
+
+        public bool agregarColegio()
+        {
+            try
+            {
+                COLEGIO cole = new COLEGIO();
+                cole.Id = this.Id;
+                cole.Nombre = this.Nombre;
+                cole.Direccion = this.Direccion;
+                cole.Telefono = this.Telefono;
+                cole.Nombre_Rector = this.Nombre_Rector;
+                cole.Telefono_Rector = this.Telefono_Rector;
+                cole.Email_Rector = this.Email_Rector;
+                cole.Id_curso = this.Curso.Id;
+                cole.Id_Sigla = this.Sigla.Id;             
+                cole.Participantes = this.Participantes;
+                cole.Nombre_Representante = this.Nombre_Representante;
+                cole.Telefono_Representante = this.Telefono_Representante;
+                cole.Email_Representante = this.Email_Representante;
+
+             
+
+                conexion.COLEGIO.Add(cole);
+                conexion.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
         }
     }
 }

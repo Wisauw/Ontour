@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CapaLogicaNegocio;
 
+
 namespace OnTour
 {
     /// <summary>
@@ -22,8 +23,8 @@ namespace OnTour
     public partial class ReClientexaml : Page
     {
         //GLOBAL
-        Cliente cli = new Cliente();
-        
+        Colegio cole = new Colegio();
+
 
         public ReClientexaml()
         {
@@ -64,7 +65,36 @@ namespace OnTour
 
         private void BtnRegistrarCliente_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                cole.Nombre = txtNombrecolegio.Text;
+                cole.Direccion = txtDireccionColegio.Text;
+                cole.Telefono = txtTelefonoColegio.Text;
+                cole.Nombre_Rector = txtNombreRector.Text;
+                cole.Telefono_Rector = txtTelefonoRector.Text;
+                cole.Email_Rector = txtemailRector.Text;
+                cole.Curso = new Curso() { Id = (int)cboCursoContratar.SelectedValue };
+                cole.Sigla = new Sigla() { Id = (int)cboSigla.SelectedValue };
+                cole.Participantes = int.Parse(txtParticipantes.Text);
+                cole.Nombre_Representante = txtNombreRepresentante.Text;
+                cole.Telefono_Representante = txtTelefonoRepresentante.Text;
+                cole.Email_Representante = txtEmailRepresentante.Text;
 
+                if (cole.agregarColegio() == true)
+                {
+                    MessageBox.Show("Cliente agregado");
+                }
+                else
+                {
+
+                    MessageBox.Show("Error al agregar cliente");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar cliente");
+            }
         }
     }
 }

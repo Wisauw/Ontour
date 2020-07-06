@@ -31,8 +31,10 @@ namespace CapaDALC
         public Nullable<int> Participantes { get; set; }
         public string Email_Rector { get; set; }
         public string Email_Representante { get; set; }
+        public int Id_Sigla { get; set; }
     
         public virtual ICollection<CLIENTE> CLIENTE { get; set; }
         public virtual CURSO CURSO { get; set; }
+        public virtual SIGLA SIGLA { get; set; }
     }
 }

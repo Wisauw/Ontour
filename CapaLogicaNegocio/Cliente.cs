@@ -15,7 +15,7 @@ namespace CapaLogicaNegocio
         public Colegio Colegio { get; set; }
         public Ejecutivo Ejecutivo { get; set; }
         public Paquete PaqueteTuristico { get; set; }
-        public Region Region { get; set; }
+        public Region Region { get; set; }        
         private OnTourDBEntities conexion;
 
         public Cliente()
