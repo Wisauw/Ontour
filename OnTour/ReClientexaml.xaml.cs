@@ -86,7 +86,6 @@ namespace OnTour
                 }
                 else
                 {
-
                     MessageBox.Show("Error al agregar cliente");
                 }
 

@@ -25,11 +25,10 @@
         <Image HorizontalAlignment="Left" Height="22" Margin="222,194,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
         <Image HorizontalAlignment="Left" Height="22" Margin="222,220,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
         <Image HorizontalAlignment="Left" Height="26" Margin="220,247,0,0" VerticalAlignment="Top" Width="27" Source="imagenes/pngocean.com (1).png"/>
-        <Image HorizontalAlignment="Left" Height="26" Margin="220,281,0,0" VerticalAlignment="Top" Width="27" Source="imagenes/pngocean.com (1).png"/>
         <Image HorizontalAlignment="Left" Height="22" Margin="303,317,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (6).png"/>
         <Image HorizontalAlignment="Left" Height="22" Margin="467,317,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (6).png"/>
         <TextBox x:Name="txtCantidadAlumnos" HorizontalAlignment="Left" Height="22" Margin="369,349,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" Background="White" materialDesign:HintAssist.Hint="0"/>
-        <TextBox x:Name="txtCantidadAlumnos_Copy" HorizontalAlignment="Left" Height="22" Margin="654,349,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="45" Background="White" materialDesign:HintAssist.Hint="0"/>
+        <TextBox x:Name="txtCantidadProfesores" HorizontalAlignment="Left" Height="22" Margin="654,349,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="45" Background="White" materialDesign:HintAssist.Hint="0"/>
         <Image HorizontalAlignment="Left" Height="22" Margin="222,385,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
         <Image HorizontalAlignment="Left" Height="22" Margin="222,431,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (5).png"/>
         <Image HorizontalAlignment="Left" Height="22" Margin="221,349,0,0" VerticalAlignment="Top" Width="25" Source="imagenes/pngocean.com (7).png"/>
@@ -46,7 +45,6 @@
         <Label Content="Región" HorizontalAlignment="Left" Margin="250,195,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.481,0.557"/>
         <Label Content="Comuna" HorizontalAlignment="Left" Margin="250,225,0,0" VerticalAlignment="Top"/>
         <Label Content="Origen" HorizontalAlignment="Left" Margin="250,253,0,0" VerticalAlignment="Top"/>
-        <Label Content="Destino" HorizontalAlignment="Left" Margin="250,281,0,0" VerticalAlignment="Top"/>
         <Label Content="Ida" HorizontalAlignment="Left" Margin="333,318,0,0" VerticalAlignment="Top"/>
         <Label Content="Vuelta" HorizontalAlignment="Left" Margin="497,318,0,0" VerticalAlignment="Top"/>
         <Label Content="Cantidad alumnos" HorizontalAlignment="Left" Margin="250,352,0,0" VerticalAlignment="Top"/>
@@ -56,15 +54,14 @@
         <Label Content="Seleccione paquete turistico" HorizontalAlignment="Left" Margin="250,389,0,0" VerticalAlignment="Top"/>
         <Label Content="Servicio adicionales" HorizontalAlignment="Left" Margin="250,433,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cboPaquete" HorizontalAlignment="Left" Margin="433,385,0,0" VerticalAlignment="Top" Width="268" Background="White" materialDesign:HintAssist.Hint="Seleccione un paquete" SelectionChanged="CboPaquete_SelectionChanged" />
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="382,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese nombre completo" />
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="382,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese E-Mail" />
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="382,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese su numero de telefono" materialDesign:HintAssist.HelperText="Debe comenzar con +569" />
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="382,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese nombre del establecimiento"/>
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="382,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese Origen" />
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="382,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese Destino" />
+        <TextBox x:Name="txtNombre_completo" HorizontalAlignment="Left" Height="25" Margin="382,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese nombre completo" />
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="25" Margin="382,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese E-Mail" />
+        <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Height="25" Margin="382,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese su numero de telefono" materialDesign:HintAssist.HelperText="Debe comenzar con +569" />
+        <TextBox x:Name="txtNombre_Colegio" HorizontalAlignment="Left" Height="25" Margin="382,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese nombre del establecimiento"/>
+        <TextBox x:Name="txtOrigen" HorizontalAlignment="Left" Height="25" Margin="382,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Background="White" materialDesign:HintAssist.Hint="Ingrese Origen" />
         <DatePicker x:Name="DtpVuelta" HorizontalAlignment="Left" Margin="541,315,0,0" VerticalAlignment="Top"/>
         <DatePicker x:Name="DtpIda" HorizontalAlignment="Left" Margin="362,313,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="168" Margin="252,490,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="444" Background="White" materialDesign:HintAssist.Hint="Escriba su mensaje" />
+        <TextBox x:Name="txtMensaje" HorizontalAlignment="Left" Height="168" Margin="252,490,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="444" Background="White" materialDesign:HintAssist.Hint="Escriba su mensaje" />
         <ScrollBar HorizontalAlignment="Left" Margin="679,490,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.186,-0.093" Height="166" Width="16"/>
         <Rectangle Fill="black" HorizontalAlignment="Left" Height="10" Margin="408,47,0,0" Stroke="Black" VerticalAlignment="Top" Width="154"/>
         <ComboBox x:Name="cboRegion" HorizontalAlignment="Left" Margin="382,193,0,0" VerticalAlignment="Top" Width="220" Background="White" materialDesign:HintAssist.Hint="Seleccione una region" SelectionChanged="CboRegion_SelectionChanged" />
@@ -86,7 +83,7 @@
                     </StackPanel>
                 </Grid>
             </materialDesign:DialogHost.DialogContent>
-            <Button x:Name="btnSolicitarCotizacion" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" Style="{StaticResource MaterialDesignRaisedButton}"  Content="Solicitar cotización" HorizontalAlignment="Left" Margin="426,685,0,0" VerticalAlignment="Top" Width="154" Background="Black" Height="33" Foreground="White"/>
+            <Button x:Name="btnSolicitarCotizacion" Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" Style="{StaticResource MaterialDesignRaisedButton}"  Content="Solicitar cotización" HorizontalAlignment="Left" Margin="426,685,0,0" VerticalAlignment="Top" Width="154" Background="Black" Height="33" Foreground="White" Click="BtnSolicitarCotizacion_Click"/>
         </materialDesign:DialogHost>
         <!--#endregion-->
         <!--#region Botones de ayuda-->

@@ -27,8 +27,12 @@ namespace CapaDALC
         public string Mensaje { get; set; }
         public int Id_Paquete_Turistico { get; set; }
         public int Id_Region { get; set; }
+        public int Id_comuna { get; set; }
+        public int Id_Servicio { get; set; }
     
         public virtual REGION REGION { get; set; }
         public virtual PAQUETE_TURISTICO PAQUETE_TURISTICO { get; set; }
+        public virtual COMUNA COMUNA { get; set; }
+        public virtual SERVICIO SERVICIO { get; set; }
     }
 }

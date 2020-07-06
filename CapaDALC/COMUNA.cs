@@ -14,10 +14,16 @@ namespace CapaDALC
     
     public partial class COMUNA
     {
+        public COMUNA()
+        {
+            this.COTIZACION = new HashSet<COTIZACION>();
+        }
+    
         public int Id { get; set; }
         public string Nombre { get; set; }
         public int Id_Region { get; set; }
     
         public virtual REGION REGION { get; set; }
+        public virtual ICollection<COTIZACION> COTIZACION { get; set; }
     }
 }

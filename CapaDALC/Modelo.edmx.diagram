@@ -26,6 +26,8 @@
         <AssociationConnector Association="OnTourDBModel.FK__COTIZACIO__Id_Pa__06CD04F7" />
         <AssociationConnector Association="OnTourDBModel.FK__SERVICIO__Id_Paq__04E4BC85" />
         <AssociationConnector Association="OnTourDBModel.FK__COLEGIO__Id_Sigl__14270015" />
+        <AssociationConnector Association="OnTourDBModel.FK__COTIZACIO__Id_co__3A4CA8FD" />
+        <AssociationConnector Association="OnTourDBModel.FK__COTIZACIO__Id_Se__4D5F7D71" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
