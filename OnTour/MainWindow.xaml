@@ -15,7 +15,7 @@
         <Grid Height="40" Background="black">
             <Image HorizontalAlignment="Left" Height="76" Margin="30,0,0,-36" VerticalAlignment="Top" Width="93" Source="imagenes/Ontour logo.png"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="20 0">
-                <Button x:Name="Bievenido"  Background="White" BorderBrush="{x:Null}" Foreground="Black" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"  />
+                <Button x:Name="Bievenido"  Background="White" BorderBrush="{x:Null}" Foreground="Black" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Click="Bievenido_Click"  />
                 <Button Background="White" Margin="10 0 0 0" BorderBrush="{x:Null}" Foreground="Black" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"  Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Click="Button_Click">
                     <materialDesign:PackIcon Kind="Shutdown" Height="33" Width="36"/>
                 </Button>

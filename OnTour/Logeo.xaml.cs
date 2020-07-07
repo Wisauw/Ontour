@@ -26,7 +26,7 @@ namespace OnTour
         MainWindow ventanaprincipal = new MainWindow();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            System.Windows.Application.Current.Shutdown();
         }
 
         private void BtnIniciar_Click(object sender, RoutedEventArgs e)
@@ -34,14 +34,22 @@ namespace OnTour
 
             if (txtUsuario.Text == "Admin" && txtPass.Password == "Admin")
             {
+
+                //Terminado.IsOpen = true;
                 ventanaprincipal.Show();
                 this.Close();
                 ventanaprincipal.Bievenido.Content = "Hola, Admin";
             }
-            if (txtUsuario.Text == "empleado" && txtPass.Password == "123") {
+            if (txtUsuario.Text == "empleado" && txtPass.Password == "123")
+            {
+                //Terminado.IsOpen = true;
                 ventanaprincipal.Show();
                 this.Close();
                 ventanaprincipal.Bievenido.Content = "Hola, Empleado";
+            }
+            else {
+                if (txtUsuario.Text == "" | txtPass.Password == "")
+                    MessageBox.Show("debe rellenar ambos cuadros de texto");
             }
         }
 

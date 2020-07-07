@@ -26,13 +26,6 @@ namespace OnTour
         {
             InitializeComponent();
         }
-
-        private void BtnIniciarSesion_Click(object sender, RoutedEventArgs e)
-        {
-            Logeo logeo = new Logeo();
-            logeo.ShowDialog();
-        }
-
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
             int index = int.Parse(((Button)e.Source).Uid);
@@ -74,17 +67,22 @@ namespace OnTour
             this.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Logeo logeo = new Logeo();
-            logeo.ShowDialog();
-        }
+   
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
                 DragMove();
+            }
+        }
+
+        private void Bievenido_Click(object sender, RoutedEventArgs e)
+        {
+            if (Bievenido.Content.ToString() == "Hola, Admin")
+            {
+                Admin admin = new Admin();
+                admin.Show();
             }
         }
     }

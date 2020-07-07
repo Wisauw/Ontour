@@ -37,5 +37,15 @@
         <materialDesign:PackIcon Kind="Account" Foreground="Black" Margin="102,106,0,0" Height="36" Width="37" Grid.Row="1"/>
         <materialDesign:PackIcon Kind="FormTextboxPassword" Foreground="Black" Margin="102,197,0,0" Height="36" Width="37" Grid.Row="1"/>
         <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Margin="146,222,0,0" Grid.Row="1" VerticalAlignment="Top" Width="241" Height="40" Background="White" materialDesign:HintAssist.Hint="********"/>
+
+        <!--<materialDesign:DialogHost x:Name="Terminado" IsOpen="False" Identifier="Terminado">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel Margin="20">
+                    <TextBlock Text="Has iniciado sesión correctamente"/>
+                    <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" CommandTarget="{Binding ElementName=Terminado}" Content="Aceptar" Style="{DynamicResource MaterialDesignRaisedAccentButton}" Background="Black" Foreground="White" BorderBrush="Black" Margin="0 15 0 0"/>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>-->
     </Grid>
+    
 </Window>
