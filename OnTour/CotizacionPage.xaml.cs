@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CapaLogicaNegocio;
 
 namespace OnTour
 {
@@ -23,6 +24,13 @@ namespace OnTour
         public CotizacionPage()
         {
             InitializeComponent();
+            CargarGrid();
+        }
+
+        private void CargarGrid()
+        {
+            dgrListaCot.ItemsSource = new ClaseCotizacion().ListarCotizacion();
+            dgrListaCot.Items.Refresh();
         }
     }
 }

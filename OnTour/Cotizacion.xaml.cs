@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,11 @@ namespace OnTour
             InitializeComponent();
             CargarRegiones();
             CargarPaquetes();
+        }
+
+        internal IEnumerable ListarCotizacion()
+        {
+            throw new NotImplementedException();
         }
 
         private void CargarPaquetes()

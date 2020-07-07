@@ -13,6 +13,24 @@
     <Grid Height="920" Margin="0 100 0 0">
         <Label Content="        COTIZACION" HorizontalAlignment="Center" Margin="267,0,295,0" VerticalAlignment="Top" Width="238" FontFamily="Segoe UI Black" FontSize="24" Foreground="black"/>
         <Rectangle Fill="black" HorizontalAlignment="Left" Height="9" Margin="416,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="154"/>
+        <DataGrid AutoGenerateColumns="False" x:Name="dgrListaCot" HorizontalAlignment="Left" Height="375" Margin="105,145,0,0" VerticalAlignment="Top" Width="760">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="NOMBRE" Binding="{Binding Nombre_Completo}"/>
+                <DataGridTextColumn Header="TELEFONO" Binding="{Binding Telefono}"/>
+                <DataGridTextColumn Header="NOMBRE_COLEGIO" Binding="{Binding Nombre_Colegio}"/>
+                <DataGridTextColumn Header="REGION" Binding="{Binding Region.Nombre}"/>
+                <DataGridTextColumn Header="COMUNA" Binding="{Binding Comuna.Nombre}"/>
+                <DataGridTextColumn Header="ORIGEN" Binding="{Binding Origen}"/>
+                <DataGridTextColumn Header="IDA" Binding="{Binding Ida, StringFormat=\{0:dd-MM-yyyy \}}"/>
+                <DataGridTextColumn Header="VUELTA" Binding="{Binding Vueta}"/>
+                <DataGridTextColumn Header="CANTIDAD_ALUMNOS" Binding="{Binding Cantidad_Alumnos}"/>
+                <DataGridTextColumn Header="CANTIDAD_PROFESORES" Binding="{Binding Cantidad_Profesores}"/>
+                <DataGridTextColumn Header="PAQUETE_TURISTICO" Binding="{Binding Paquete_Turistico.Nombre}"/>
+                <DataGridTextColumn Header="SERVICIOS_ADICIONALES" Binding="{Binding Servicio.Nombre}"/>
+                <DataGridTextColumn Header="MENSAJE" Binding="{Binding Mensaje}"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Page>
