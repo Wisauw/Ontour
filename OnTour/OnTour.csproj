@@ -87,6 +87,9 @@
     <Compile Include="Cotizacion.xaml.cs">
       <DependentUpon>Cotizacion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CotizacionPage.xaml.cs">
+      <DependentUpon>CotizacionPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialogo\DialogoCLiente\DialogoError.xaml.cs">
       <DependentUpon>DialogoError.xaml</DependentUpon>
     </Compile>
@@ -126,6 +129,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Cotizacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CotizacionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

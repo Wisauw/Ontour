@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CapaLogicaNegocio;
 
 namespace OnTour
 {
@@ -23,6 +24,12 @@ namespace OnTour
         public Clientes()
         {
             InitializeComponent();
+            CargarGrid();
+        }
+        private void CargarGrid()
+        {
+            dgrLista.ItemsSource = new Colegio().ListarColegio();
+            dgrLista.Items.Refresh();
         }
     }
 }

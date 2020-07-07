@@ -6,21 +6,29 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:OnTour"
         mc:Ignorable="d"
-        Title="Administrador" Height="450" Width="800"
+        Title="Administrador" Height="990" Width="990"
         Background="#FFF3E44B"
         Icon="imagenes/Ontour logo.png">
-    <Grid Margin="0,0,0.333,344.667">
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="15 15 0 0" >
-            <Button Uid="1" Width="160" Height="50" Content="Registros Clientes" Background="White" BorderBrush="{x:Null}" Foreground="Black" Click="Button_Click"/>
-            <Button Uid="0" Width="160" Height="50" Content="Cotizaciones"  Background="White" BorderBrush="{x:Null}" Foreground="Black"  Click="Button_Click"/>
-            
-        </StackPanel>
-        <Grid x:Name="CursorGrid" Width="150" Height="5" Background="Black" HorizontalAlignment="Left" Margin="21,56,0,357"/>
-
-        <Grid>
-            <Frame x:Name="FrameAdmin" Content="Frame" HorizontalAlignment="Left" Height="350" Margin="0,71,0,-0.333" VerticalAlignment="Top" Width="783"/>
+    <StackPanel Background="#FFF3E44B">
+        <Grid Height="40" Background="black">
+            <Image HorizontalAlignment="Left" Height="76" Margin="30,0,0,-36" VerticalAlignment="Top" Width="93" Source="imagenes/Ontour logo.png"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="20 0">
+                <Button x:Name="Close" Background="White" Margin="10 0 0 0" BorderBrush="{x:Null}" Foreground="Black" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"  Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Click="Close_Click">
+                    <materialDesign:PackIcon Kind="Shutdown" Height="33" Width="36"/>
+                </Button>
+            </StackPanel>
         </Grid>
-    </Grid>
-    
+        <Grid Height="70" Margin="0 20 0 0">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="15 15 0 0 ">
+                <Button  Uid="0" Width="160" Height="50" Content="Clientes" Background="White" BorderBrush="{x:Null}" Foreground="Black" Click="Button_Click"/>
+                <Button  Uid="1" Width="160" Height="50" Content="Cotización" Background="White" BorderBrush="{x:Null}" Foreground="Black" Click="Button_Click"/>
+            </StackPanel>
+            <Grid x:Name="CursorGrid" Width="150" Height="5" Background="Black" HorizontalAlignment="Left" Margin="16 45 0 0"/>
+        </Grid>
+        <Grid Height="765">
+            <Frame x:Name="FrameAdmin" NavigationUIVisibility="Hidden" Source="/OnTour;component/Clientes.xaml"></Frame>
+        </Grid>
+    </StackPanel>
+
 
 </Window>

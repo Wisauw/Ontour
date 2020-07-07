@@ -23,13 +23,34 @@ namespace OnTour
         public Admin()
         {
             InitializeComponent();
-            CargarGrid();
+            
         }
 
-        private void CargarGrid()
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            dgrLista.ItemsSource = new Colegio().ListarColegio();
-            dgrLista.Items.Refresh();
+                int index = int.Parse(((Button)e.Source).Uid);
+
+                CursorGrid.Margin = new Thickness(15 + (160 * index), 45, 0, 0);
+
+                switch (index)
+                {
+                    case 0:
+                        FrameAdmin.Content = new Clientes();
+                        //CursorGrid.Background = Brushes.OrangeRed;
+                        break;
+
+                    case 1:
+                        FrameAdmin.Content = new CotizacionPage();
+                        break;
+
+
+                }
+            
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

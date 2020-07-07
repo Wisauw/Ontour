@@ -81,6 +81,7 @@ namespace CapaLogicaNegocio
                 return false;
             }
         }
+
         public IEnumerable<object> ListarColegio() {
             try
             {
