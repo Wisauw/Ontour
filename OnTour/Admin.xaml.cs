@@ -20,6 +20,17 @@ namespace OnTour
     /// </summary>
     public partial class Admin : Window
     {
+        public static Admin ventana;
+
+        public static Admin getInstance()
+        {
+            if (ventana == null)
+            {
+                ventana = new Admin();
+            }
+            return ventana;
+        }
+
         public Admin()
         {
             InitializeComponent();
@@ -51,6 +62,11 @@ namespace OnTour
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            ventana = null;
         }
     }
 }

@@ -42,5 +42,22 @@ namespace CapaLogicaNegocio
                 return null;
             }
         }
+        public IEnumerable<object> FiltrarSigla(int idCurso)
+        {
+            try
+            {
+                var listado = (from c in conexion.SIGLA
+                               where c.Id_Curso == idCurso
+                               select c).ToList();
+                return listado;
+            }
+            catch (Exception ex)
+            {
+
+                return null;
+            }
+        }
+
     }
+    
 }

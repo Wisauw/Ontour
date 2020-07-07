@@ -22,7 +22,7 @@ namespace CapaLogicaNegocio
         public string Nombre_Representante { get; set; }
         public string Telefono_Representante { get; set; }
         public string Email_Representante { get; set; }
-        
+
         private OnTourDBEntities conexion;
 
         public Colegio()
@@ -45,7 +45,7 @@ namespace CapaLogicaNegocio
             Nombre_Representante = String.Empty;
             Telefono_Representante = String.Empty;
             Email_Representante = String.Empty;
-                      
+
             conexion = new OnTourDBEntities();
         }
 
@@ -63,13 +63,13 @@ namespace CapaLogicaNegocio
                 cole.Telefono_Rector = this.Telefono_Rector;
                 cole.Email_Rector = this.Email_Rector;
                 cole.Id_curso = this.Curso.Id;
-                cole.Id_Sigla = this.Sigla.Id;             
+                cole.Id_Sigla = this.Sigla.Id;
                 cole.Participantes = this.Participantes;
                 cole.Nombre_Representante = this.Nombre_Representante;
                 cole.Telefono_Representante = this.Telefono_Representante;
                 cole.Email_Representante = this.Email_Representante;
 
-             
+
 
                 conexion.COLEGIO.Add(cole);
                 conexion.SaveChanges();
@@ -82,15 +82,17 @@ namespace CapaLogicaNegocio
             }
         }
 
-        public IEnumerable<object> ListarColegio() {
+        public IEnumerable<object> ListarColegio()
+        {
             try
             {
                 var listado = (from a in conexion.COLEGIO
-                               select new{
+                               select new
+                               {
                                    ID = a.Id,
                                    NOMBRE = a.Nombre,
                                    DIRECCION = a.Direccion,
-                                   TELEFONO= a.Telefono,
+                                   TELEFONO = a.Telefono,
                                    NOMBRE_RECTOR = a.Nombre_Rector,
                                    TELEFONO_RECTOR = a.Telefono_Rector,
                                    NOMBRE_REPRESENTANTE = a.Nombre_Representante,
@@ -100,11 +102,103 @@ namespace CapaLogicaNegocio
 
 
 
-                }
+                               }
                                ).ToList();
                 return listado;
             }
-            catch(Exception ex)
+            catch (Exception ex)
+            {
+
+                return null;
+            }
+        }
+        public IEnumerable<object> FiltrarCurso(int idcurso)
+        {
+            try
+            {
+                var listado = (from a in conexion.COLEGIO where a.Id_curso == idcurso
+                               select new
+                               {
+                                   ID = a.Id,
+                                   NOMBRE = a.Nombre,
+                                   DIRECCION = a.Direccion,
+                                   TELEFONO = a.Telefono,
+                                   NOMBRE_RECTOR = a.Nombre_Rector,
+                                   TELEFONO_RECTOR = a.Telefono_Rector,
+                                   NOMBRE_REPRESENTANTE = a.Nombre_Representante,
+                                   CURSO = a.CURSO.Nombre,
+                                   SIGLA = a.SIGLA.Nombre,
+                                   PARTICIPANTES = a.Participantes
+
+
+
+                               }
+                               ).ToList();
+                return listado;
+            }
+            catch (Exception ex)
+            {
+
+                return null;
+            }
+        }
+        public IEnumerable<object> FiltrarNombre(string nombre)
+        {
+            try
+            {
+                var listado = (from a in conexion.COLEGIO
+                               where a.Nombre.Contains(nombre)
+                               select new
+                               {
+                                   ID = a.Id,
+                                   NOMBRE = a.Nombre,
+                                   DIRECCION = a.Direccion,
+                                   TELEFONO = a.Telefono,
+                                   NOMBRE_RECTOR = a.Nombre_Rector,
+                                   TELEFONO_RECTOR = a.Telefono_Rector,
+                                   NOMBRE_REPRESENTANTE = a.Nombre_Representante,
+                                   CURSO = a.CURSO.Nombre,
+                                   SIGLA = a.SIGLA.Nombre,
+                                   PARTICIPANTES = a.Participantes
+
+
+
+                               }
+                               ).ToList();
+                return listado;
+            }
+            catch (Exception ex)
+            {
+
+                return null;
+            }
+        }
+        public IEnumerable<object> FiltrarRepresentante(string nombre)
+        {
+            try
+            {
+                var listado = (from a in conexion.COLEGIO
+                               where a.Nombre_Representante.Contains(nombre)
+                               select new
+                               {
+                                   ID = a.Id,
+                                   NOMBRE = a.Nombre,
+                                   DIRECCION = a.Direccion,
+                                   TELEFONO = a.Telefono,
+                                   NOMBRE_RECTOR = a.Nombre_Rector,
+                                   TELEFONO_RECTOR = a.Telefono_Rector,
+                                   NOMBRE_REPRESENTANTE = a.Nombre_Representante,
+                                   CURSO = a.CURSO.Nombre,
+                                   SIGLA = a.SIGLA.Nombre,
+                                   PARTICIPANTES = a.Participantes
+
+
+
+                               }
+                               ).ToList();
+                return listado;
+            }
+            catch (Exception ex)
             {
 
                 return null;

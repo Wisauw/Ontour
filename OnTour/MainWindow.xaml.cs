@@ -14,6 +14,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CapaLogicaNegocio;
 
 namespace OnTour
 {
@@ -22,6 +23,9 @@ namespace OnTour
     /// </summary>
     public partial class MainWindow : Window
     {
+       
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -81,8 +85,8 @@ namespace OnTour
         {
             if (Bievenido.Content.ToString() == "Hola, Admin")
             {
-                Admin admin = new Admin();
-                admin.Show();
+                Admin.getInstance().Show();
+                Admin.getInstance().Activate();
             }
         }
     }
