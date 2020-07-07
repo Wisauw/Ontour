@@ -105,7 +105,7 @@ namespace CapaLogicaNegocio
                                    Vuelta = a.Vuelta,
                                    Cantidad_Alumnos = a.Cantidad_Alumnos,
                                    Cantidad_profesores = a.Cantidad_Profesores,
-                                   PaqueteTuristico = new Paquete() { Id =a.Id_Paquete_Turistico, Nombre =a.PAQUETE_TURISTICO.Nombre},
+                                   PaqueteTuristico = new Paquete() { Id = a.Id_Paquete_Turistico, Nombre = a.PAQUETE_TURISTICO.Nombre },
                                    Servicio = new Servicio() { Id = a.Id_Servicio, Nombre = a.SERVICIO.Nombre},
                                    Mensaje = a.Mensaje
                                }

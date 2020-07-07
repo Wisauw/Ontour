@@ -23,8 +23,8 @@
                 <DataGridTextColumn Header="COMUNA" Binding="{Binding Comuna.Nombre}"/>
                 <DataGridTextColumn Header="ORIGEN" Binding="{Binding Origen}"/>
                 <DataGridTextColumn Header="IDA" Binding="{Binding Ida, StringFormat=\{0:dd-MM-yyyy \}}"/>
-                <DataGridTextColumn Header="VUELTA" Binding="{Binding Vueta}"/>
-                <DataGridTextColumn Header="CANTIDAD_ALUMNOS" Binding="{Binding Cantidad_Alumnos}"/>
+                <DataGridTextColumn Header="VUELTA" Binding="{Binding Vueta, StringFormat=\{0:dd-MM-yyyy \}}"/>
+                <DataGridTextColumn Header="CANTIDAD_ALUMNOS" Binding="{Binding Cantidad_alumnos}"/>
                 <DataGridTextColumn Header="CANTIDAD_PROFESORES" Binding="{Binding Cantidad_Profesores}"/>
                 <DataGridTextColumn Header="PAQUETE_TURISTICO" Binding="{Binding Paquete_Turistico.Nombre}"/>
                 <DataGridTextColumn Header="SERVICIOS_ADICIONALES" Binding="{Binding Servicio.Nombre}"/>
