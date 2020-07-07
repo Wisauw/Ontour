@@ -6,13 +6,17 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:OnTour"
       mc:Ignorable="d" 
-      Height="990" Width="990"
+      Height="875" Width="990"
       Title="Clientes" Background="#FFF3E44B">
 
-    <Grid Height="920" Margin="0 100 0 0">
+    <Grid Height="875" Margin="0 0 0 0">
         <Label Content="        CLIENTES" HorizontalAlignment="Center" Margin="277,0,285,0" VerticalAlignment="Top" Width="238" FontFamily="Segoe UI Black" FontSize="24" Foreground="black"/>
         <Rectangle Fill="black" HorizontalAlignment="Left" Height="9" Margin="410,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="154"/>
-        <DataGrid x:Name="dgrLista" HorizontalAlignment="Left" Height="375" Margin="105,145,0,0" VerticalAlignment="Top" Width="760"/>
+        <DataGrid x:Name="dgrLista" HorizontalAlignment="Left" Height="375" Margin="95,178,0,0" VerticalAlignment="Top" Width="760"/>
+        <ComboBox x:Name="cmbCurso" HorizontalAlignment="Left" Margin="260,88,0,0" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Curso" BorderThickness="1" SelectionChanged="CmbCurso_SelectionChanged"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="28" Margin="95,88,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Nombre Colegio" BorderThickness="1" KeyUp="TxtNombre_KeyUp"/>
+        <Button x:Name="btnlimpiar" Content="Limpiar" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="725,88,0,0" VerticalAlignment="Top" Width="95" Background="Black" Click="Btnlimpiar_Click" Height="28"/>
+        <TextBox x:Name="txtrepresentante" HorizontalAlignment="Left" Height="28" Margin="430,88,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Background="White" materialDesign:HintAssist.Hint="Nombre Representante" BorderThickness="1" KeyUp="Txtrepresentante_KeyUp"/>
 
     </Grid>
 </Page>

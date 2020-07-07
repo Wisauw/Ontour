@@ -25,10 +25,48 @@ namespace OnTour
         {
             InitializeComponent();
             CargarGrid();
+            CargarCursos();
+
+
         }
+
+        private void CargarCursos()
+        {
+            cmbCurso.ItemsSource = new Curso().listadoCurso();
+            cmbCurso.DisplayMemberPath = "Nombre";
+            cmbCurso.SelectedValuePath = "Id";
+            cmbCurso.SelectedIndex = -1;
+        }
+
         private void CargarGrid()
         {
             dgrLista.ItemsSource = new Colegio().ListarColegio();
+            dgrLista.Items.Refresh();
+        }
+
+        private void CmbCurso_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            dgrLista.ItemsSource = new Colegio().FiltrarCurso((int)cmbCurso.SelectedValue);
+            dgrLista.Items.Refresh();
+        }
+
+        private void TxtNombre_KeyUp(object sender, KeyEventArgs e)
+        {
+            dgrLista.ItemsSource = new Colegio().FiltrarNombre(txtNombre.Text);
+            dgrLista.Items.Refresh();
+        }
+
+        private void Btnlimpiar_Click(object sender, RoutedEventArgs e)
+        {
+            txtNombre.Text = "";
+            txtrepresentante.Text = "";
+            cmbCurso.SelectedValue = -1;
+            CargarGrid();
+        }
+
+        private void Txtrepresentante_KeyUp(object sender, KeyEventArgs e)
+        {
+            dgrLista.ItemsSource = new Colegio().FiltrarRepresentante(txtrepresentante.Text);
             dgrLista.Items.Refresh();
         }
     }
