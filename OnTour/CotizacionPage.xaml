@@ -16,17 +16,17 @@
         <DataGrid AutoGenerateColumns="False" x:Name="dgrListaCot" HorizontalAlignment="Left" Height="375" Margin="105,145,0,0" VerticalAlignment="Top" Width="760">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
-                <DataGridTextColumn Header="NOMBRE" Binding="{Binding Nombre_Completo}"/>
+                <DataGridTextColumn Header="NOMBRE" Binding="{Binding Nombre_completo}"/>
                 <DataGridTextColumn Header="TELEFONO" Binding="{Binding Telefono}"/>
                 <DataGridTextColumn Header="NOMBRE_COLEGIO" Binding="{Binding Nombre_Colegio}"/>
                 <DataGridTextColumn Header="REGION" Binding="{Binding Region.Nombre}"/>
                 <DataGridTextColumn Header="COMUNA" Binding="{Binding Comuna.Nombre}"/>
                 <DataGridTextColumn Header="ORIGEN" Binding="{Binding Origen}"/>
                 <DataGridTextColumn Header="IDA" Binding="{Binding Ida, StringFormat=\{0:dd-MM-yyyy \}}"/>
-                <DataGridTextColumn Header="VUELTA" Binding="{Binding Vueta, StringFormat=\{0:dd-MM-yyyy \}}"/>
-                <DataGridTextColumn Header="CANTIDAD_ALUMNOS" Binding="{Binding Cantidad_alumnos}"/>
-                <DataGridTextColumn Header="CANTIDAD_PROFESORES" Binding="{Binding Cantidad_Profesores}"/>
-                <DataGridTextColumn Header="PAQUETE_TURISTICO" Binding="{Binding Paquete_Turistico.Nombre}"/>
+                <DataGridTextColumn Header="VUELTA" Binding="{Binding Vuelta, StringFormat=\{0:dd-MM-yyyy \}}"/>
+                <DataGridTextColumn Header="CANTIDAD_ALUMNOS" Binding="{Binding Cantidad_Alumnos}"/>
+                <DataGridTextColumn Header="CANTIDAD_PROFESORES" Binding="{Binding Cantidad_profesores}"/>
+                <DataGridTextColumn Header="PAQUETE_TURISTICO" Binding="{Binding PaqueteTuristico.Nombre}"/>
                 <DataGridTextColumn Header="SERVICIOS_ADICIONALES" Binding="{Binding Servicio.Nombre}"/>
                 <DataGridTextColumn Header="MENSAJE" Binding="{Binding Mensaje}"/>
             </DataGrid.Columns>
