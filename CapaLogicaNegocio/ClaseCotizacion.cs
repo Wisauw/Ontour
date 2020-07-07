@@ -87,7 +87,21 @@ namespace CapaLogicaNegocio
             }
         }
 
+        public IEnumerable<object> listarCot()
+        {
+            try
+            {
+                var listado = (from a in conexion.COTIZACION
+                               select a).ToList();
 
+                return listado;
+            }
+            catch (Exception ex)
+            {
+
+                return null;
+            }
+        }
 
     }
 }
