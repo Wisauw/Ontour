@@ -81,5 +81,33 @@ namespace CapaLogicaNegocio
                 return false;
             }
         }
+        public IEnumerable<object> ListarColegio() {
+            try
+            {
+                var listado = (from a in conexion.COLEGIO
+                               select new{
+                                   ID = a.Id,
+                                   NOMBRE = a.Nombre,
+                                   DIRECCION = a.Direccion,
+                                   TELEFONO= a.Telefono,
+                                   NOMBRE_RECTOR = a.Nombre_Rector,
+                                   TELEFONO_RECTOR = a.Telefono_Rector,
+                                   NOMBRE_REPRESENTANTE = a.Nombre_Representante,
+                                   CURSO = a.CURSO.Nombre,
+                                   SIGLA = a.SIGLA.Nombre,
+                                   PARTICIPANTES = a.Participantes
+
+
+
+                }
+                               ).ToList();
+                return listado;
+            }
+            catch(Exception ex)
+            {
+
+                return null;
+            }
+        }
     }
 }

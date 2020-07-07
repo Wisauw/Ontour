@@ -9,9 +9,18 @@
         Title="Administrador" Height="450" Width="800"
         Background="#FFF3E44B"
         Icon="imagenes/Ontour logo.png">
-    <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="80,115,0,0" TextWrapping="Wrap" Text="Aqui van los graficos, dinero y todos los demas elementos del administrador" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+    <Grid Margin="0,0,0.333,344.667">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="15 15 0 0" >
+            <Button Uid="1" Width="160" Height="50" Content="Registros Clientes" Background="White" BorderBrush="{x:Null}" Foreground="Black" Click="Button_Click"/>
+            <Button Uid="0" Width="160" Height="50" Content="Cotizaciones"  Background="White" BorderBrush="{x:Null}" Foreground="Black"  Click="Button_Click"/>
+            
+        </StackPanel>
+        <Grid x:Name="CursorGrid" Width="150" Height="5" Background="Black" HorizontalAlignment="Left" Margin="21,56,0,357"/>
 
-
+        <Grid>
+            <Frame x:Name="FrameAdmin" Content="Frame" HorizontalAlignment="Left" Height="350" Margin="0,71,0,-0.333" VerticalAlignment="Top" Width="783"/>
+        </Grid>
     </Grid>
+    
+
 </Window>
