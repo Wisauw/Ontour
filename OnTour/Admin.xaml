@@ -23,7 +23,11 @@
                 <Button  Uid="0" Width="160" Height="50" Content="Clientes" Background="White" BorderBrush="{x:Null}" Foreground="Black" Click="Button_Click"/>
                 <Button  Uid="1" Width="160" Height="50" Content="Cotización" Background="White" BorderBrush="{x:Null}" Foreground="Black" Click="Button_Click"/>
             </StackPanel>
-            <Grid x:Name="CursorGrid" Width="150" Height="5" Background="Black" HorizontalAlignment="Left" Margin="16 45 0 0"/>
+            <Grid x:Name="CursorGrid" Width="150" Height="5" Background="Black" HorizontalAlignment="Left" Margin="16 45 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
         </Grid>
         <Grid Height="765">
             <Frame x:Name="FrameAdmin" NavigationUIVisibility="Hidden" Source="/OnTour;component/Clientes.xaml"></Frame>

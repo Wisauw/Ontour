@@ -87,12 +87,29 @@ namespace CapaLogicaNegocio
             }
         }
 
-        public IEnumerable<object> listarCot()
+        public IEnumerable<object> ListarCotizacion()
         {
             try
             {
                 var listado = (from a in conexion.COTIZACION
-                               select a).ToList();
+                               select new
+                               {
+                                   ID = a.Id,
+                                   NOMBRE = a.Nombre_Completo,
+                                   TELEFONO = a.Telefono,
+                                   NOMBRE_COLEGIO = a.Nombre_Colegio,
+                                   REGION = a.REGION.Nombre,
+                                   COMUNA = a.COMUNA.Nombre,
+                                   ORIGEN = a.Origen,
+                                   IDA = a.Ida,
+                                   VUELTA = a.Vuelta,
+                                   CANTIDAD_ALUMNOS = a.Cantidad_Alumnos,
+                                   CANTIDAD_PROFESORES = a.Cantidad_Profesores,
+                                   PAQUETE_TURISTICO = a.PAQUETE_TURISTICO.Nombre,
+                                   SERVICIOS_ADICIONALES = a.SERVICIO.Nombre,
+                                   MENSAJE = a.Mensaje
+                               }
+                               ).ToList();
 
                 return listado;
             }

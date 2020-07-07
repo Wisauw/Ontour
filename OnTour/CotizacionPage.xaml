@@ -13,6 +13,7 @@
     <Grid Height="920" Margin="0 100 0 0">
         <Label Content="        COTIZACION" HorizontalAlignment="Center" Margin="267,0,295,0" VerticalAlignment="Top" Width="238" FontFamily="Segoe UI Black" FontSize="24" Foreground="black"/>
         <Rectangle Fill="black" HorizontalAlignment="Left" Height="9" Margin="416,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="154"/>
+        <DataGrid x:Name="dgrListaCot" HorizontalAlignment="Left" Height="375" Margin="105,145,0,0" VerticalAlignment="Top" Width="760"/>
 
     </Grid>
 </Page>
