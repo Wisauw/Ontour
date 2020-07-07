@@ -23,7 +23,7 @@ namespace OnTour
         {
             InitializeComponent();
         }
-
+        MainWindow ventanaprincipal = new MainWindow();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -34,10 +34,14 @@ namespace OnTour
 
             if (txtUsuario.Text == "Admin" && txtPass.Password == "Admin")
             {
+                ventanaprincipal.Show();
                 this.Close();
+                ventanaprincipal.Bievenido.Content = "Hola, Admin";
             }
             if (txtUsuario.Text == "empleado" && txtPass.Password == "123") {
+                ventanaprincipal.Show();
                 this.Close();
+                ventanaprincipal.Bievenido.Content = "Hola, Empleado";
             }
         }
 
