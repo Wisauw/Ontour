@@ -24,6 +24,21 @@ namespace OnTour
     {
         Colegio colegio = new Colegio();
 
+        public Colegio ColegioSeleccionado
+        {
+            get
+            {
+                if (dgrLista.HasItems)
+                {
+                    if (dgrLista.SelectedItem != null)
+                    {
+                        return (Colegio)dgrLista.SelectedItem;
+                    }
+                }
+                return null;
+            }
+        }
+
         public Clientes()
         {
             InitializeComponent();
@@ -76,6 +91,22 @@ namespace OnTour
         private void Btneliminar_Click(object sender, RoutedEventArgs e)
         {
             
+            try
+            {
+                colegio.Id = (ColegioSeleccionado.Id);
+                if (colegio.eliminarColegio() == true)
+                {
+                    MessageBox.Show("se borro");
+                }
+                else {
+                    MessageBox.Show("no se puedo borrar");
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("error al borrar");
+            }
         }
 
         private void Btnmodificar_Click(object sender, RoutedEventArgs e)

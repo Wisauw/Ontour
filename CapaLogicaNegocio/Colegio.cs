@@ -84,6 +84,7 @@ namespace CapaLogicaNegocio
         public bool eliminarColegio() {
             try
             {
+                
                 conexion.COLEGIO.Remove(conexion.COLEGIO.Find(this.Id));
                 conexion.SaveChanges();
                 return true;

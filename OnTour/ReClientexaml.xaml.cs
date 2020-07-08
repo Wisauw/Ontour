@@ -103,6 +103,18 @@ namespace OnTour
             if (!Validacion.ValidarCampoDeTextoObligatorio(txtTelefonoRector.Text, "Telefono Rector")) return false;
             if (!Validacion.ValidarCampoDeTextoObligatorio(txtemailRector.Text, "Email Rector")) return false;
 
+            if (cboCursoContratar.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debes seleccionar un Curso", "Error");
+                return false;
+            }
+            if (cboSigla.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debes seleccionar una Sigla", "Error");
+                return false;
+            }
+            if (!Validacion.ValidarCantidad(txtParticipantes.Text, "Nombre Representante")) return false;
+
             if (!Validacion.ValidarCampoDeTextoObligatorio(txtNombreRepresentante.Text, "Nombre Representante")) return false;
             if (!Validacion.ValidarCampoDeTextoObligatorio(txtTelefonoRepresentante.Text, "Telefono Representante")) return false;
             if (!Validacion.ValidarCampoDeTextoObligatorio(txtEmailRepresentante.Text, "Correo Representante")) return false;
