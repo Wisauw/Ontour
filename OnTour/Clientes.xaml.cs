@@ -93,7 +93,8 @@ namespace OnTour
 
             try
             {
-                colegio.Id = int.Parse(txtId.Text);
+                //txtId.Text = this.ColegioSeleccionado.Id.ToString();
+                colegio.Id = int.Parse(this.ColegioSeleccionado.Id.ToString());
 
                 if (colegio.EliminarColegio() == true)
                 {
@@ -103,7 +104,7 @@ namespace OnTour
                 }
                 else
                 {
-                    MessageBox.Show("Cotizacion no se pudo eliminar");
+                    MessageBox.Show(" no se pudo eliminar el Cliente");
                 }
             }
             catch (Exception ex)

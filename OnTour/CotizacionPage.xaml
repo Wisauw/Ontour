@@ -35,7 +35,6 @@
         <TextBox x:Name="txtNombre_Cole" HorizontalAlignment="Left" Height="28" Margin="360,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Nombre Colegio" BorderThickness="1" KeyUp="TxtNombre_Cole_KeyUp_1"  />
         <ComboBox x:Name="cmbRegion" HorizontalAlignment="Left" Margin="536,111,0,0" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Region" BorderThickness="1" RenderTransformOrigin="0.483,1.071" SelectionChanged="CmbRegion_SelectionChanged_1" />
         <Button x:Name="btnlimpiar" Content="Limpiar" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="743,108,0,0" VerticalAlignment="Top" Width="95" Background="Black"  Height="28" Click="Btnlimpiar_Click"/>
-        <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="28" Margin="106,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56" Background="White" materialDesign:HintAssist.Hint="ID" BorderThickness="1" />
         <Button x:Name="btneliminar" Content="Eliminar" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="545,585,0,0" VerticalAlignment="Top" Width="95" Background="#c70039" Click="BtnEliminar_Click" Height="28"/>
         <Button x:Name="btnmodificar" Content="Modificar" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="320,585,0,0" VerticalAlignment="Top" Width="95" Background="Black"  Height="28"/>
     </Grid>

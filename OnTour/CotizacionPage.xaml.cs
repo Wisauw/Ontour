@@ -23,6 +23,20 @@ namespace OnTour
     {
         //GLOBAL
         ClaseCotizacion coti = new ClaseCotizacion();
+        public ClaseCotizacion CotizacionSeleccionado
+        {
+            get
+            {
+                if (dgrListaCot.HasItems)
+                {
+                    if (dgrListaCot.SelectedItem != null)
+                    {
+                        return (ClaseCotizacion)dgrListaCot.SelectedItem;
+                    }
+                }
+                return null;
+            }
+        }
 
         public CotizacionPage()
         {
@@ -49,7 +63,7 @@ namespace OnTour
         {
             txtNombre.Text = "";
             txtNombre_Cole.Text = "";
-            txtId.Text = "";
+            //txtId.Text = "";
             cmbRegion.SelectedValue = -1;
             CargarGrid();
         }
@@ -71,34 +85,43 @@ namespace OnTour
             dgrListaCot.ItemsSource = new ClaseCotizacion().FiltrarRegion((int)cmbRegion.SelectedValue);
         }
 
-        private void TxtId_KeyUp(object sender, KeyEventArgs e)
-        {
-            dgrListaCot.ItemsSource = new ClaseCotizacion().FiltrarId (int.Parse(txtId.Text));
-            dgrListaCot.Items.Refresh();
-        }
+        //private void TxtId_KeyUp(object sender, KeyEventArgs e)
+        //{
+        //    dgrListaCot.ItemsSource = new ClaseCotizacion().FiltrarId (int.Parse(txtId.Text));
+        //    dgrListaCot.Items.Refresh();
+        //}
 
         private void BtnEliminar_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (this.CotizacionSeleccionado == null)
             {
-                coti.Id = int.Parse(txtId.Text);
+                MessageBox.Show("Selecciona algo antes de borrar");
+            }
+            else
+            {
+                try
+                {
+                    //txtId.Text = this.CotizacionSeleccionado.Id.ToString();
+                    coti.Id = int.Parse(CotizacionSeleccionado.Id.ToString());
 
-                if(coti.EliminarCotizacion() == true)
-                {
-                    MessageBox.Show("Cotizacion eliminada");
-                    txtId.Text = "";
-                    dgrListaCot.Items.Refresh();
+                    if (coti.EliminarCotizacion() == true)
+                    {
+                        MessageBox.Show("Cotizacion eliminada");
+                        //txtId.Text = "";
+                        dgrListaCot.Items.Refresh();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cotizacion no se pudo eliminar");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Cotizacion no se pudo eliminar");
+
+                    MessageBox.Show("Error al eliminar");
                 }
             }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Error al eliminar");
-            }
+               
         }
     }
 
