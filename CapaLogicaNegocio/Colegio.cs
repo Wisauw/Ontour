@@ -81,6 +81,20 @@ namespace CapaLogicaNegocio
                 return false;
             }
         }
+        public bool eliminarColegio() {
+            try
+            {
+                conexion.COLEGIO.Remove(conexion.COLEGIO.Find(this.Id));
+                conexion.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+
+        }
 
         public IEnumerable<object> ListarColegio()
         {

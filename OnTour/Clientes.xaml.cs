@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,8 @@ namespace OnTour
     /// </summary>
     public partial class Clientes : Page
     {
+        Colegio colegio = new Colegio();
+
         public Clientes()
         {
             InitializeComponent();
@@ -68,6 +71,16 @@ namespace OnTour
         {
             dgrLista.ItemsSource = new Colegio().FiltrarRepresentante(txtrepresentante.Text);
             dgrLista.Items.Refresh();
+        }
+
+        private void Btneliminar_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Btnmodificar_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
