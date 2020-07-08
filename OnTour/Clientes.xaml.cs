@@ -22,7 +22,7 @@ namespace OnTour
     /// </summary>
     public partial class Clientes : Page
     {
-        Colegio colegio = new Colegio();
+        Colegio cole = new Colegio();
 
         public Colegio ColegioSeleccionado
         {
@@ -91,26 +91,32 @@ namespace OnTour
         private void Btneliminar_Click(object sender, RoutedEventArgs e)
         {
 
-            try
+            if (this.ColegioSeleccionado == null)
             {
-                //txtId.Text = this.ColegioSeleccionado.Id.ToString();
-                colegio.Id = int.Parse(this.ColegioSeleccionado.Id.ToString());
-
-                if (colegio.EliminarColegio() == true)
-                {
-                    MessageBox.Show("Colegio eliminada");
-                    txtId.Text = "";
-                    dgrLista.Items.Refresh();
-                }
-                else
-                {
-                    MessageBox.Show(" no se pudo eliminar el Cliente");
-                }
+                MessageBox.Show("Selecciona algo antes de borrar");
             }
-            catch (Exception ex)
+            else
             {
+                try
+                {
 
-                MessageBox.Show("Error al eliminar");
+                    cole.Id = int.Parse(ColegioSeleccionado.Id.ToString());
+
+                    if (cole.EliminarColegio() == true)
+                    {
+                        MessageBox.Show("Cliente eliminado");
+                        CargarGrid();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo eliminar el cliente");
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Error al eliminar");
+                }
             }
         }
 
@@ -119,10 +125,6 @@ namespace OnTour
 
         }
 
-        private void TxtId_KeyUp(object sender, KeyEventArgs e)
-        {
-            dgrLista.ItemsSource = new Colegio().FiltrarId(int.Parse(txtId.Text));
-            dgrLista.Items.Refresh();
-        }
+        
     }
 }

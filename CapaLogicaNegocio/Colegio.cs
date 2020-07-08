@@ -97,23 +97,23 @@ namespace CapaLogicaNegocio
 
         }
 
-        public IEnumerable<object> ListarColegio()
+        public List<Colegio> ListarColegio()
         {
             try
             {
                 var listado = (from a in conexion.COLEGIO
-                               select new
+                               select new Colegio
                                {
-                                   ID = a.Id,
-                                   NOMBRE = a.Nombre,
-                                   DIRECCION = a.Direccion,
-                                   TELEFONO = a.Telefono,
-                                   NOMBRE_RECTOR = a.Nombre_Rector,
-                                   TELEFONO_RECTOR = a.Telefono_Rector,
-                                   NOMBRE_REPRESENTANTE = a.Nombre_Representante,
-                                   CURSO = a.CURSO.Nombre,
-                                   SIGLA = a.SIGLA.Nombre,
-                                   PARTICIPANTES = a.Participantes
+                                   Id = a.Id,
+                                   Nombre = a.Nombre,
+                                   Direccion = a.Direccion,
+                                   Telefono = a.Telefono,
+                                   Nombre_Rector = a.Nombre_Rector,
+                                   Telefono_Rector = a.Telefono_Rector,
+                                   Nombre_Representante = a.Nombre_Representante,
+                                   Curso = new Curso() { Id = a.Id_curso, Nombre = a.CURSO.Nombre },
+                                   Sigla = new Sigla() { Id = a.Id_Sigla, Nombre = a.SIGLA.Nombre },
+                                   Participantes = a.Participantes.Value
 
 
 
@@ -127,23 +127,23 @@ namespace CapaLogicaNegocio
                 return null;
             }
         }
-        public IEnumerable<object> FiltrarCurso(int idcurso)
+        public List<Colegio> FiltrarCurso(int idcurso)
         {
             try
             {
                 var listado = (from a in conexion.COLEGIO where a.Id_curso == idcurso
-                               select new
+                               select new Colegio
                                {
-                                   ID = a.Id,
-                                   NOMBRE = a.Nombre,
-                                   DIRECCION = a.Direccion,
-                                   TELEFONO = a.Telefono,
-                                   NOMBRE_RECTOR = a.Nombre_Rector,
-                                   TELEFONO_RECTOR = a.Telefono_Rector,
-                                   NOMBRE_REPRESENTANTE = a.Nombre_Representante,
-                                   CURSO = a.CURSO.Nombre,
-                                   SIGLA = a.SIGLA.Nombre,
-                                   PARTICIPANTES = a.Participantes
+                                   Id = a.Id,
+                                   Nombre = a.Nombre,
+                                   Direccion = a.Direccion,
+                                   Telefono = a.Telefono,
+                                   Nombre_Rector = a.Nombre_Rector,
+                                   Telefono_Rector = a.Telefono_Rector,
+                                   Nombre_Representante = a.Nombre_Representante,
+                                   Curso = new Curso() { Id = a.Id_curso, Nombre = a.CURSO.Nombre },
+                                   Sigla = new Sigla() { Id = a.Id_Sigla, Nombre = a.SIGLA.Nombre },
+                                   Participantes = a.Participantes.Value
 
 
 
@@ -157,24 +157,24 @@ namespace CapaLogicaNegocio
                 return null;
             }
         }
-        public IEnumerable<object> FiltrarNombre(string nombre)
+        public List<Colegio> FiltrarNombre(string nombre)
         {
             try
             {
                 var listado = (from a in conexion.COLEGIO
                                where a.Nombre.Contains(nombre)
-                               select new
+                               select new Colegio
                                {
-                                   ID = a.Id,
-                                   NOMBRE = a.Nombre,
-                                   DIRECCION = a.Direccion,
-                                   TELEFONO = a.Telefono,
-                                   NOMBRE_RECTOR = a.Nombre_Rector,
-                                   TELEFONO_RECTOR = a.Telefono_Rector,
-                                   NOMBRE_REPRESENTANTE = a.Nombre_Representante,
-                                   CURSO = a.CURSO.Nombre,
-                                   SIGLA = a.SIGLA.Nombre,
-                                   PARTICIPANTES = a.Participantes
+                                   Id = a.Id,
+                                   Nombre = a.Nombre,
+                                   Direccion = a.Direccion,
+                                   Telefono = a.Telefono,
+                                   Nombre_Rector = a.Nombre_Rector,
+                                   Telefono_Rector = a.Telefono_Rector,
+                                   Nombre_Representante = a.Nombre_Representante,
+                                   Curso = new Curso() { Id = a.Id_curso, Nombre = a.CURSO.Nombre },
+                                   Sigla = new Sigla() { Id = a.Id_Sigla, Nombre = a.SIGLA.Nombre },
+                                   Participantes = a.Participantes.Value
 
 
 
@@ -188,24 +188,24 @@ namespace CapaLogicaNegocio
                 return null;
             }
         }
-        public IEnumerable<object> FiltrarRepresentante(string nombre)
+        public List<Colegio> FiltrarRepresentante(string nombre)
         {
             try
             {
                 var listado = (from a in conexion.COLEGIO
                                where a.Nombre_Representante.Contains(nombre)
-                               select new
+                               select new Colegio
                                {
-                                   ID = a.Id,
-                                   NOMBRE = a.Nombre,
-                                   DIRECCION = a.Direccion,
-                                   TELEFONO = a.Telefono,
-                                   NOMBRE_RECTOR = a.Nombre_Rector,
-                                   TELEFONO_RECTOR = a.Telefono_Rector,
-                                   NOMBRE_REPRESENTANTE = a.Nombre_Representante,
-                                   CURSO = a.CURSO.Nombre,
-                                   SIGLA = a.SIGLA.Nombre,
-                                   PARTICIPANTES = a.Participantes
+                                   Id = a.Id,
+                                   Nombre = a.Nombre,
+                                   Direccion = a.Direccion,
+                                   Telefono = a.Telefono,
+                                   Nombre_Rector = a.Nombre_Rector,
+                                   Telefono_Rector = a.Telefono_Rector,
+                                   Nombre_Representante = a.Nombre_Representante,
+                                   Curso = new Curso() { Id = a.Id_curso, Nombre = a.CURSO.Nombre },
+                                   Sigla = new Sigla() { Id = a.Id_Sigla, Nombre = a.SIGLA.Nombre },
+                                   Participantes = a.Participantes.Value
 
 
 
@@ -221,24 +221,24 @@ namespace CapaLogicaNegocio
         }
         
 
-        public IEnumerable<object> FiltrarId(int id)
+        public List<Colegio> FiltrarId(int id)
         {
             try
             {
                 var listado = (from a in conexion.COLEGIO
                                where a.Id == id
-                               select new
+                               select new Colegio
                                {
-                                   ID = a.Id,
-                                   NOMBRE = a.Nombre,
-                                   DIRECCION = a.Direccion,
-                                   TELEFONO = a.Telefono,
-                                   NOMBRE_RECTOR = a.Nombre_Rector,
-                                   TELEFONO_RECTOR = a.Telefono_Rector,
-                                   NOMBRE_REPRESENTANTE = a.Nombre_Representante,
-                                   CURSO = a.CURSO.Nombre,
-                                   SIGLA = a.SIGLA.Nombre,
-                                   PARTICIPANTES = a.Participantes
+                                   Id = a.Id,
+                                   Nombre = a.Nombre,
+                                   Direccion = a.Direccion,
+                                   Telefono = a.Telefono,
+                                   Nombre_Rector = a.Nombre_Rector,
+                                   Telefono_Rector = a.Telefono_Rector,
+                                   Nombre_Representante = a.Nombre_Representante,
+                                   Curso = new Curso() { Id = a.Id_curso, Nombre = a.CURSO.Nombre },
+                                   Sigla = new Sigla() { Id = a.Id_Sigla, Nombre = a.SIGLA.Nombre },
+                                   Participantes = a.Participantes.Value
 
 
 

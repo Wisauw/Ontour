@@ -19,7 +19,6 @@
         <TextBox x:Name="txtrepresentante" HorizontalAlignment="Left" Height="28" Margin="512,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Background="White" materialDesign:HintAssist.Hint="Nombre Representante" BorderThickness="1" KeyUp="Txtrepresentante_KeyUp"/>
         <Button x:Name="btneliminar" Content="Eliminar" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="545,585,0,0" VerticalAlignment="Top" Width="95" Background="#c70039" Click="Btneliminar_Click" Height="28"/>
         <Button x:Name="btnmodificar" Content="Modificar" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="320,585,0,0" VerticalAlignment="Top" Width="95" Background="Black" Click="Btnmodificar_Click" Height="28"/>
-        <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="28" Margin="100,116,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56" Background="White" materialDesign:HintAssist.Hint="ID" BorderThickness="1" KeyUp="TxtId_KeyUp" />
 
     </Grid>
 </Page>

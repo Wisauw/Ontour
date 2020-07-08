@@ -8,7 +8,8 @@
         x:Class="OnTour.MainWindow"
         mc:Ignorable="d"
         Title="OnTour" Height="990" Width="990" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="None" MouseDown="Window_MouseDown"
-        Icon="imagenes/Ontour logo.png">
+        Icon="imagenes/Ontour logo.png"
+    BorderThickness="5">
 
 
     <StackPanel Background="#FFF3E44B">
