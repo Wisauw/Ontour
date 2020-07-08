@@ -13,10 +13,12 @@
         <Label Content="        CLIENTES" HorizontalAlignment="Center" Margin="277,0,285,0" VerticalAlignment="Top" Width="238" FontFamily="Segoe UI Black" FontSize="24" Foreground="black"/>
         <Rectangle Fill="black" HorizontalAlignment="Left" Height="9" Margin="410,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="154"/>
         <DataGrid x:Name="dgrLista" HorizontalAlignment="Left" Height="375" Margin="95,178,0,0" VerticalAlignment="Top" Width="760"/>
-        <ComboBox x:Name="cmbCurso" HorizontalAlignment="Left" Margin="260,88,0,0" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Curso" BorderThickness="1" SelectionChanged="CmbCurso_SelectionChanged"/>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="28" Margin="95,88,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Nombre Colegio" BorderThickness="1" KeyUp="TxtNombre_KeyUp"/>
-        <Button x:Name="btnlimpiar" Content="Limpiar" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="725,88,0,0" VerticalAlignment="Top" Width="95" Background="Black" Click="Btnlimpiar_Click" Height="28"/>
-        <TextBox x:Name="txtrepresentante" HorizontalAlignment="Left" Height="28" Margin="430,88,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Background="White" materialDesign:HintAssist.Hint="Nombre Representante" BorderThickness="1" KeyUp="Txtrepresentante_KeyUp" TextChanged="Txtrepresentante_TextChanged"/>
+        <ComboBox x:Name="cmbCurso" HorizontalAlignment="Left" Margin="275,115,0,0" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Curso" BorderThickness="1" SelectionChanged="CmbCurso_SelectionChanged"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="28" Margin="110,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Nombre Colegio" BorderThickness="1" KeyUp="TxtNombre_KeyUp"/>
+        <Button x:Name="btnlimpiar" Content="Limpiar" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="740,115,0,0" VerticalAlignment="Top" Width="95" Background="Black" Click="Btnlimpiar_Click" Height="28"/>
+        <TextBox x:Name="txtrepresentante" HorizontalAlignment="Left" Height="28" Margin="445,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Background="White" materialDesign:HintAssist.Hint="Nombre Representante" BorderThickness="1" KeyUp="Txtrepresentante_KeyUp"/>
+        <Button x:Name="btneliminar" Content="Eliminar" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="545,585,0,0" VerticalAlignment="Top" Width="95" Background="#c70039" Click="Btneliminar_Click" Height="28"/>
+        <Button x:Name="btnmodificar" Content="Modificar" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="320,585,0,0" VerticalAlignment="Top" Width="95" Background="Black" Click="Btnmodificar_Click" Height="28"/>
 
     </Grid>
 </Page>
