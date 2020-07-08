@@ -49,6 +49,7 @@ namespace OnTour
         {
             txtNombre.Text = "";
             txtNombre_Cole.Text = "";
+            txtId.Text = "";
             cmbRegion.SelectedValue = -1;
             CargarGrid();
         }
@@ -84,6 +85,8 @@ namespace OnTour
                 if(coti.EliminarCotizacion() == true)
                 {
                     MessageBox.Show("Cotizacion eliminada");
+                    txtId.Text = "";
+                    dgrListaCot.Items.Refresh();
                 }
                 else
                 {
