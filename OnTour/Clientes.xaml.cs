@@ -69,5 +69,10 @@ namespace OnTour
             dgrLista.ItemsSource = new Colegio().FiltrarRepresentante(txtrepresentante.Text);
             dgrLista.Items.Refresh();
         }
+
+        private void Txtrepresentante_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

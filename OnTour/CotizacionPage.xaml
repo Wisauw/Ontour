@@ -13,7 +13,7 @@
     <Grid Height="875" Margin="0 0 0 0">
         <Label Content="        COTIZACION" HorizontalAlignment="Center" Margin="267,0,295,0" VerticalAlignment="Top" Width="238" FontFamily="Segoe UI Black" FontSize="24" Foreground="black"/>
         <Rectangle Fill="black" HorizontalAlignment="Left" Height="9" Margin="416,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="154"/>
-        <DataGrid AutoGenerateColumns="False" x:Name="dgrListaCot" HorizontalAlignment="Left" Height="375" Margin="105,145,0,0" VerticalAlignment="Top" Width="760">
+        <DataGrid AutoGenerateColumns="False" x:Name="dgrListaCot" HorizontalAlignment="Left" Height="376" Margin="102,188,0,0" VerticalAlignment="Top" Width="760">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="NOMBRE" Binding="{Binding Nombre_completo}"/>
@@ -31,6 +31,10 @@
                 <DataGridTextColumn Header="MENSAJE" Binding="{Binding Mensaje}"/>
             </DataGrid.Columns>
         </DataGrid>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="28" Margin="132,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Nombre" BorderThickness="1" KeyUp="TxtNombre_KeyUp_1" />
+        <TextBox x:Name="txtNombre_Cole" HorizontalAlignment="Left" Height="28" Margin="298,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Nombre Colegio" BorderThickness="1" KeyUp="TxtNombre_Cole_KeyUp_1"  />
+        <ComboBox x:Name="cmbRegion" HorizontalAlignment="Left" Margin="474,106,0,0" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Region" BorderThickness="1" RenderTransformOrigin="0.483,1.071" SelectionChanged="CmbRegion_SelectionChanged_1" />
+        <Button x:Name="btnlimpiar" Content="Limpiar" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="743,106,0,0" VerticalAlignment="Top" Width="95" Background="Black"  Height="28" Click="Btnlimpiar_Click"/>
 
     </Grid>
 </Page>
