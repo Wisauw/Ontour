@@ -100,6 +100,7 @@ namespace OnTour
 
         private async void BtnSolicitarCotizacion_Click(object sender, RoutedEventArgs e)
         {
+            if (!ValidarFormulario()) return;
             try
             {
                 coti.Nombre_completo = txtNombre_completo.Text;
@@ -134,6 +135,52 @@ namespace OnTour
                 var dialog = new ErrorCoti();
                 var result = (bool)await DialogHost.Show(dialog, "DHCotiza");
             }
+        }
+        private bool ValidarFormulario()
+        {
+            if (!Validacion.ValidarCampoDeTextoObligatorio(txtNombre_completo.Text, "Nombre Colegio")) return false;
+            if (!Validacion.ValidarCampoDeTextoObligatorio(txtEmail.Text, "Dirección Colegio")) return false;
+            if (!Validacion.ValidarCampoDeTextoObligatorio(txtTelefono.Text, "Telefono Colegio")) return false;
+
+            if (!Validacion.ValidarCampoDeTextoObligatorio(txtNombre_Colegio.Text, "Nombre Colegio")) return false;
+
+            if (cboRegion.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debes seleccionar una Region", "Error");
+                return false;
+            }
+            if (cboComuna.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debes seleccionar una Comuna", "Error");
+                return false;
+            }
+
+            if (!Validacion.ValidarCampoDeTextoObligatorio(txtOrigen.Text, "Origen")) return false;
+
+            if (!Validacion.ValidarCampoDeTextoObligatorio(DtpIda.Text, "Ida")) return false;
+            if (!Validacion.ValidarCampoDeTextoObligatorio(DtpVuelta.Text, "Vuelta")) return false;
+
+
+
+            if (!Validacion.ValidarCantidad(txtCantidadAlumnos.Text, "Cantidad Alumnos")) return false;
+            if (!Validacion.ValidarCantidad(txtCantidadProfesores.Text, "Cantidad Profesores")) return false;
+
+            
+
+            if (cboPaquete.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debes seleccionar un Paquete", "Error");
+                return false;
+            }
+            if (cboServicios.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debes seleccionar un Servicio", "Error");
+                return false;
+            }
+
+
+
+            return true;
         }
     }
 }
