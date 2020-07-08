@@ -111,10 +111,12 @@ namespace CapaLogicaNegocio
                                    Nombre_Rector = a.Nombre_Rector,
                                    Telefono_Rector = a.Telefono_Rector,
                                    Nombre_Representante = a.Nombre_Representante,
+                                   Telefono_Representante = a.Telefono_Representante,
                                    Curso = new Curso() { Id = a.Id_curso, Nombre = a.CURSO.Nombre },
                                    Sigla = new Sigla() { Id = a.Id_Sigla, Nombre = a.SIGLA.Nombre },
-                                   Participantes = a.Participantes.Value
-
+                                   Participantes = a.Participantes.Value,
+                                   Email_Rector= a.Email_Rector,
+                                   Email_Representante= a.Email_Representante
 
 
                                }
@@ -141,9 +143,12 @@ namespace CapaLogicaNegocio
                                    Nombre_Rector = a.Nombre_Rector,
                                    Telefono_Rector = a.Telefono_Rector,
                                    Nombre_Representante = a.Nombre_Representante,
+                                   Telefono_Representante = a.Telefono_Representante,
                                    Curso = new Curso() { Id = a.Id_curso, Nombre = a.CURSO.Nombre },
                                    Sigla = new Sigla() { Id = a.Id_Sigla, Nombre = a.SIGLA.Nombre },
-                                   Participantes = a.Participantes.Value
+                                   Participantes = a.Participantes.Value,
+                                   Email_Rector = a.Email_Rector,
+                                   Email_Representante = a.Email_Representante
 
 
 
@@ -172,9 +177,12 @@ namespace CapaLogicaNegocio
                                    Nombre_Rector = a.Nombre_Rector,
                                    Telefono_Rector = a.Telefono_Rector,
                                    Nombre_Representante = a.Nombre_Representante,
+                                   Telefono_Representante = a.Telefono_Representante,
                                    Curso = new Curso() { Id = a.Id_curso, Nombre = a.CURSO.Nombre },
                                    Sigla = new Sigla() { Id = a.Id_Sigla, Nombre = a.SIGLA.Nombre },
-                                   Participantes = a.Participantes.Value
+                                   Participantes = a.Participantes.Value,
+                                   Email_Rector = a.Email_Rector,
+                                   Email_Representante = a.Email_Representante
 
 
 
@@ -203,9 +211,12 @@ namespace CapaLogicaNegocio
                                    Nombre_Rector = a.Nombre_Rector,
                                    Telefono_Rector = a.Telefono_Rector,
                                    Nombre_Representante = a.Nombre_Representante,
+                                   Telefono_Representante = a.Telefono_Representante,
                                    Curso = new Curso() { Id = a.Id_curso, Nombre = a.CURSO.Nombre },
                                    Sigla = new Sigla() { Id = a.Id_Sigla, Nombre = a.SIGLA.Nombre },
-                                   Participantes = a.Participantes.Value
+                                   Participantes = a.Participantes.Value,
+                                   Email_Rector = a.Email_Rector,
+                                   Email_Representante = a.Email_Representante
 
 
 
@@ -236,9 +247,12 @@ namespace CapaLogicaNegocio
                                    Nombre_Rector = a.Nombre_Rector,
                                    Telefono_Rector = a.Telefono_Rector,
                                    Nombre_Representante = a.Nombre_Representante,
+                                   Telefono_Representante = a.Telefono_Representante,
                                    Curso = new Curso() { Id = a.Id_curso, Nombre = a.CURSO.Nombre },
                                    Sigla = new Sigla() { Id = a.Id_Sigla, Nombre = a.SIGLA.Nombre },
-                                   Participantes = a.Participantes.Value
+                                   Participantes = a.Participantes.Value,
+                                   Email_Rector = a.Email_Rector,
+                                   Email_Representante = a.Email_Representante
 
 
 

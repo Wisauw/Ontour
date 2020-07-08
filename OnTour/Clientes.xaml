@@ -12,7 +12,24 @@
     <Grid Height="875" Margin="0 0 0 0">
         <Label Content="        CLIENTES" HorizontalAlignment="Center" Margin="277,0,285,0" VerticalAlignment="Top" Width="238" FontFamily="Segoe UI Black" FontSize="24" Foreground="black"/>
         <Rectangle Fill="black" HorizontalAlignment="Left" Height="9" Margin="410,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="154"/>
-        <DataGrid x:Name="dgrLista" HorizontalAlignment="Left" Height="375" Margin="95,178,0,0" VerticalAlignment="Top" Width="760"/>
+        <DataGrid x:Name="dgrLista" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="375" Margin="95,178,0,0" VerticalAlignment="Top" Width="760">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="NOMBRE" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Header="DIRECCION" Binding="{Binding Direccion}"/>
+                <DataGridTextColumn Header="TELEFONO" Binding="{Binding Telefono}"/>
+                <DataGridTextColumn Header="NOMBRE_RECTOR" Binding="{Binding Nombre_Rector}"/>
+                <DataGridTextColumn Header="TELEFONO_RECTOR" Binding="{Binding Telefono_Rector}"/>
+                <DataGridTextColumn Header="NOMBRE_REPRESENTANTE" Binding="{Binding Nombre_Representante}"/>
+                <DataGridTextColumn Header="TELEFONO_REPRESENTANTE" Binding="{Binding Telefono_Representante}"/>
+                <DataGridTextColumn Header="CURSO" Binding="{Binding Curso.Nombre}"/>
+                <DataGridTextColumn Header="SIGLA" Binding="{Binding Sigla.Nombre}"/>
+                <DataGridTextColumn Header="PARTICIPANTES" Binding="{Binding Participantes}"/>
+                <DataGridTextColumn Header="EMAIL RECTOR" Binding="{Binding Email_Rector}"/>
+                <DataGridTextColumn Header="EMAIL REPRESENTANTE" Binding="{Binding Email_Representante}"/>
+               
+            </DataGrid.Columns>
+        </DataGrid>
         <ComboBox x:Name="cmbCurso" HorizontalAlignment="Left" Margin="342,115,0,0" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Curso" BorderThickness="1" SelectionChanged="CmbCurso_SelectionChanged"/>
         <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="28" Margin="177,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Nombre Colegio" BorderThickness="1" KeyUp="TxtNombre_KeyUp"/>
         <Button x:Name="btnlimpiar" Content="Limpiar" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="740,115,0,0" VerticalAlignment="Top" Width="95" Background="Black" Click="Btnlimpiar_Click" Height="28"/>
