@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:OnTour"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         Title="Login Ontour" Height="400" Width="500"
         Icon="imagenes/Ontour logo.png"
         WindowStartupLocation="CenterScreen"
@@ -16,16 +17,16 @@
         BorderThickness="3">
 
     <Grid Background="#FFF3E44B">
-            <materialDesign:ColorZone Mode="PrimaryDark">
+        <materialDesign:ColorZone Mode="PrimaryDark">
             <StackPanel HorizontalAlignment="Right">
                 <Button Width="30" Height="30" materialDesign:ShadowAssist.ShadowDepth="Depth3" Padding="0" Click="Button_Click">
                     <materialDesign:PackIcon Kind="WindowClose"></materialDesign:PackIcon>
                 </Button>
-                
+
             </StackPanel>
-            
+
         </materialDesign:ColorZone>
-        
+
         <Label Content="Login" Margin="185,38,48.666,0" VerticalAlignment="Top" Width="254" FontFamily="Segoe UI Black" FontSize="24" Foreground="black" HorizontalAlignment="Center" Grid.Row="1" Height="40"/>
         <Rectangle Fill="black" HorizontalAlignment="Left" Height="9" Margin="182,78,0,0" Stroke="Black" VerticalAlignment="Top" Width="154" Grid.Row="1"/>
         <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="38" Margin="146,151,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="243" Background="White" materialDesign:HintAssist.Hint="Nombredeprueba1235" Grid.Row="1"/>
@@ -33,7 +34,7 @@
         <Label Content="Contraseña" HorizontalAlignment="Left" Margin="144,197,0,0" VerticalAlignment="Top" Height="39" Width="138" Grid.Row="1"/>
         <Button x:Name="btnIniciar" Style="{StaticResource MaterialDesignRaisedAccentButton}" HorizontalAlignment="Left" Margin="144,306,0,0" VerticalAlignment="Top" Width="243"   Height="44" Content="Iniciar Sesion" Background="Black" Foreground="#FFFAFAFA" BorderBrush="{x:Null}" Grid.Row="1" Click="BtnIniciar_Click">
         </Button>
-        <Image HorizontalAlignment="Left" Height="92" Margin="20,44,0,0" VerticalAlignment="Top" Width="87" Source="imagenes/Ontour logo.png" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="132" Margin="0,19,0,0" VerticalAlignment="Top" Width="129" gif:ImageBehavior.AnimatedSource="imagenes/3dOntour.gif"/>
         <materialDesign:PackIcon Kind="Account" Foreground="Black" Margin="102,106,0,0" Height="36" Width="37" Grid.Row="1"/>
         <materialDesign:PackIcon Kind="FormTextboxPassword" Foreground="Black" Margin="102,197,0,0" Height="36" Width="37" Grid.Row="1"/>
         <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Margin="146,222,0,0" Grid.Row="1" VerticalAlignment="Top" Width="241" Height="40" Background="White" materialDesign:HintAssist.Hint="********"/>
@@ -47,5 +48,5 @@
             </materialDesign:DialogHost.DialogContent>
         </materialDesign:DialogHost>-->
     </Grid>
-    
+
 </Window>
