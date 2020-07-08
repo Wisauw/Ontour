@@ -31,10 +31,12 @@
                 <DataGridTextColumn Header="MENSAJE" Binding="{Binding Mensaje}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="28" Margin="132,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Nombre" BorderThickness="1" KeyUp="TxtNombre_KeyUp_1" />
-        <TextBox x:Name="txtNombre_Cole" HorizontalAlignment="Left" Height="28" Margin="298,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Nombre Colegio" BorderThickness="1" KeyUp="TxtNombre_Cole_KeyUp_1"  />
-        <ComboBox x:Name="cmbRegion" HorizontalAlignment="Left" Margin="474,106,0,0" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Region" BorderThickness="1" RenderTransformOrigin="0.483,1.071" SelectionChanged="CmbRegion_SelectionChanged_1" />
-        <Button x:Name="btnlimpiar" Content="Limpiar" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="743,106,0,0" VerticalAlignment="Top" Width="95" Background="Black"  Height="28" Click="Btnlimpiar_Click"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="28" Margin="199,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Nombre" BorderThickness="1" KeyUp="TxtNombre_KeyUp_1" />
+        <TextBox x:Name="txtNombre_Cole" HorizontalAlignment="Left" Height="28" Margin="365,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Nombre Colegio" BorderThickness="1" KeyUp="TxtNombre_Cole_KeyUp_1"  />
+        <ComboBox x:Name="cmbRegion" HorizontalAlignment="Left" Margin="541,108,0,0" VerticalAlignment="Top" Width="120" Background="White" materialDesign:HintAssist.Hint="Region" BorderThickness="1" RenderTransformOrigin="0.483,1.071" SelectionChanged="CmbRegion_SelectionChanged_1" />
+        <Button x:Name="btnlimpiar" Content="Limpiar" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="743,108,0,0" VerticalAlignment="Top" Width="95" Background="Black"  Height="28" Click="Btnlimpiar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="749,592,0,0" VerticalAlignment="Top" Width="94" Background="Black"  Height="28" Click="BtnEliminar_Click"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="28" Margin="108,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="51" Background="White" materialDesign:HintAssist.Hint="Id" BorderThickness="1" KeyUp="TxtId_KeyUp" />
 
     </Grid>
 </Page>

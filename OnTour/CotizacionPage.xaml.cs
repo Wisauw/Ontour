@@ -21,6 +21,9 @@ namespace OnTour
     /// </summary>
     public partial class CotizacionPage : Page
     {
+        //GLOBAL
+        ClaseCotizacion coti = new ClaseCotizacion();
+
         public CotizacionPage()
         {
             InitializeComponent();
@@ -65,6 +68,33 @@ namespace OnTour
         private void CmbRegion_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
             dgrListaCot.ItemsSource = new ClaseCotizacion().FiltrarRegion((int)cmbRegion.SelectedValue);
+        }
+
+        private void TxtId_KeyUp(object sender, KeyEventArgs e)
+        {
+            dgrListaCot.ItemsSource = new ClaseCotizacion().FiltrarId(int.Parse(txtId.Text));
+        }
+
+        private void BtnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                coti.Id = int.Parse(txtId.Text);
+
+                if(coti.EliminarCotizacion() == true)
+                {
+                    MessageBox.Show("Cotizacion eliminada");
+                }
+                else
+                {
+                    MessageBox.Show("Cotizacion no se epudo eliminar");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al eliminar");
+            }
         }
     }
     
