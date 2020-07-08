@@ -72,6 +72,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9e7cd3b544a090dc, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.2.0.0\lib\net40\WpfAnimatedGif.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -108,6 +111,7 @@
     <Compile Include="Logeo.xaml.cs">
       <DependentUpon>Logeo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Mensaje.cs" />
     <Compile Include="Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
@@ -120,6 +124,7 @@
     <Compile Include="ReClientexaml.xaml.cs">
       <DependentUpon>ReClientexaml.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Validacion.cs" />
     <Page Include="Admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -268,6 +273,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="imagenes\3dOntour.gif" />
     <Content Include="OnTourDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

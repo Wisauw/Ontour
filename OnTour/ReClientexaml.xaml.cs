@@ -56,6 +56,7 @@ namespace OnTour
 
         private async void BtnRegistrarCliente_Click(object sender, RoutedEventArgs e)
         {
+            if (!ValidarFormulario()) return;
             try
             {
                 cole.Nombre = txtNombrecolegio.Text;
@@ -91,6 +92,22 @@ namespace OnTour
                 var result = (bool)await DialogHost.Show(dialog, "DHEstado");
                
             }
+        }
+        private bool ValidarFormulario()
+        {
+            if (!Validacion.ValidarCampoDeTextoObligatorio(txtNombrecolegio.Text, "Nombre Colegio")) return false;
+            if (!Validacion.ValidarCampoDeTextoObligatorio(txtDireccionColegio.Text, "Dirección Colegio")) return false;
+            if (!Validacion.ValidarCampoDeTextoObligatorio(txtTelefonoColegio.Text, "Telefono Colegio")) return false;
+
+            if (!Validacion.ValidarCampoDeTextoObligatorio(txtNombreRector.Text, "Nombre Rector")) return false;
+            if (!Validacion.ValidarCampoDeTextoObligatorio(txtTelefonoRector.Text, "Telefono Rector")) return false;
+            if (!Validacion.ValidarCampoDeTextoObligatorio(txtemailRector.Text, "Email Rector")) return false;
+
+            if (!Validacion.ValidarCampoDeTextoObligatorio(txtNombreRepresentante.Text, "Nombre Representante")) return false;
+            if (!Validacion.ValidarCampoDeTextoObligatorio(txtTelefonoRepresentante.Text, "Telefono Representante")) return false;
+            if (!Validacion.ValidarCampoDeTextoObligatorio(txtEmailRepresentante.Text, "Correo Representante")) return false;
+
+            return true;
         }
     }
 }
