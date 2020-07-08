@@ -71,7 +71,7 @@ namespace OnTour
             dgrListaCot.ItemsSource = new ClaseCotizacion().FiltrarRegion((int)cmbRegion.SelectedValue);
         }
 
-        /*private void TxtId_KeyUp(object sender, KeyEventArgs e)
+        private void TxtId_KeyUp(object sender, KeyEventArgs e)
         {
             dgrListaCot.ItemsSource = new ClaseCotizacion().FiltrarId (int.Parse(txtId.Text));
             dgrListaCot.Items.Refresh();
@@ -91,7 +91,7 @@ namespace OnTour
                 }
                 else
                 {
-                    MessageBox.Show("Cotizacion no se epudo eliminar");
+                    MessageBox.Show("Cotizacion no se pudo eliminar");
                 }
             }
             catch (Exception ex)
@@ -99,7 +99,7 @@ namespace OnTour
 
                 MessageBox.Show("Error al eliminar");
             }
-        }*/
+        }
     }
 
 

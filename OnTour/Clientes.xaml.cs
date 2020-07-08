@@ -90,28 +90,38 @@ namespace OnTour
 
         private void Btneliminar_Click(object sender, RoutedEventArgs e)
         {
-            
+
             try
             {
-                colegio.Id = (ColegioSeleccionado.Id);
-                if (colegio.eliminarColegio() == true)
+                colegio.Id = int.Parse(txtId.Text);
+
+                if (colegio.EliminarColegio() == true)
                 {
-                    MessageBox.Show("se borro");
+                    MessageBox.Show("Colegio eliminada");
+                    txtId.Text = "";
+                    dgrLista.Items.Refresh();
                 }
-                else {
-                    MessageBox.Show("no se puedo borrar");
+                else
+                {
+                    MessageBox.Show("Cotizacion no se pudo eliminar");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                MessageBox.Show("error al borrar");
+                MessageBox.Show("Error al eliminar");
             }
         }
 
         private void Btnmodificar_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void TxtId_KeyUp(object sender, KeyEventArgs e)
+        {
+            dgrLista.ItemsSource = new Colegio().FiltrarId(int.Parse(txtId.Text));
+            dgrLista.Items.Refresh();
         }
     }
 }

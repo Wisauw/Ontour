@@ -219,5 +219,54 @@ namespace CapaLogicaNegocio
                 return null;
             }
         }
+        
+
+        public IEnumerable<object> FiltrarId(int id)
+        {
+            try
+            {
+                var listado = (from a in conexion.COLEGIO
+                               where a.Id == id
+                               select new
+                               {
+                                   ID = a.Id,
+                                   NOMBRE = a.Nombre,
+                                   DIRECCION = a.Direccion,
+                                   TELEFONO = a.Telefono,
+                                   NOMBRE_RECTOR = a.Nombre_Rector,
+                                   TELEFONO_RECTOR = a.Telefono_Rector,
+                                   NOMBRE_REPRESENTANTE = a.Nombre_Representante,
+                                   CURSO = a.CURSO.Nombre,
+                                   SIGLA = a.SIGLA.Nombre,
+                                   PARTICIPANTES = a.Participantes
+
+
+
+                               }
+                               ).ToList();
+                return listado;
+            }
+            catch (Exception ex)
+            {
+
+                return null;
+            }
+        }
+
+
+        public bool EliminarColegio()
+        {
+            try
+            {
+                conexion.COLEGIO.Remove(conexion.COLEGIO.Find(this.Id));
+                conexion.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
     }
 }
