@@ -113,7 +113,7 @@ namespace OnTour
                 MessageBox.Show("Debes seleccionar una Sigla", "Error");
                 return false;
             }
-            if (!Validacion.ValidarCantidad(txtParticipantes.Text, "Nombre Representante")) return false;
+            if (!Validacion.ValidarCantidad(txtParticipantes.Text, "Participantes")) return false;
 
             if (!Validacion.ValidarCampoDeTextoObligatorio(txtNombreRepresentante.Text, "Nombre Representante")) return false;
             if (!Validacion.ValidarCampoDeTextoObligatorio(txtTelefonoRepresentante.Text, "Telefono Representante")) return false;
