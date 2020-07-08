@@ -70,9 +70,10 @@ namespace OnTour
             dgrListaCot.ItemsSource = new ClaseCotizacion().FiltrarRegion((int)cmbRegion.SelectedValue);
         }
 
-        private void TxtId_KeyUp(object sender, KeyEventArgs e)
+        /*private void TxtId_KeyUp(object sender, KeyEventArgs e)
         {
-            dgrListaCot.ItemsSource = new ClaseCotizacion().FiltrarId(int.Parse(txtId.Text));
+            dgrListaCot.ItemsSource = new ClaseCotizacion().FiltrarId (int.Parse(txtId.Text));
+            dgrListaCot.Items.Refresh();
         }
 
         private void BtnEliminar_Click(object sender, RoutedEventArgs e)
@@ -95,8 +96,8 @@ namespace OnTour
 
                 MessageBox.Show("Error al eliminar");
             }
-        }
+        }*/
     }
-    
+
 
 }
